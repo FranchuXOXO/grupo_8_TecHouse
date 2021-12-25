@@ -3,8 +3,6 @@ Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital Hous
 
 # Living House
 
-Proveemos productos y servicios para que el usuario pueda automatizar las tareas mecánicas del hogar. Estos recursos estarán  divididos por categorías.
-
 ## Productos
 
 ## Integrantes del equipo
