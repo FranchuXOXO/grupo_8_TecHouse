@@ -7,8 +7,10 @@ Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital Hous
 
 ## Integrantes del equipo
 
-Matias: soy ingeniero electrónico y actualmente me desempeño como analista de impuestos en EY.
-
+<ul>
+    <li>Matias: soy ingeniero electrónico y actualmente me desempeño como analista de impuestos en EY.</li>
+    <li>Francisco: soy lic. en administración de empresas y actualmente me desempeño como consultor funcional en NCR.</li>
+</ul>
 
 ## Público objetivo
 
