@@ -21,4 +21,7 @@ Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital Hous
     <li>https://lsdomotica.com/</li>
     <li>https://www.smarthome.com/</li>
     <li>https://genesissmarthome.com.ar/</li>
+    <li>https://www.mercadolibre.com.ar/</li>
+    <li>https://shop.samsung.com/ar/</li>
+    <li>https://www.bosch-smarthome.com/es/es/</li>
 </ul>
