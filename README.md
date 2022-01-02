@@ -44,7 +44,7 @@
     <li>Matias: soy ingeniero electrónico y actualmente me desempeño como analista de impuestos en EY.</li>
     <li>Francisco: soy lic. en administración de empresas y actualmente me desempeño como consultor funcional en NCR.</li>
     <li>Ana Salcedo: Soy Licenciada en Contaduría Publica. Me desempeño como asistente administrativa en Estudio Jurídico.</li>
-    <li></li>
+    <li>Marcelo: PM en empresa de comunicaciones satelitales, y muy motivado por obtener nuevas habilidades en la industria del conocimiento.</li>
 </ul>
 
 ## Público objetivo
