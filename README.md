@@ -1,6 +1,6 @@
 # TecHouse
 <p>
-    Es una empresa lider de soluciones tecnológicas para la automatizar ambientes hogareños, ofrenciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
+    Es una empresa lider de soluciones tecnológicas para automatizar ambientes hogareños, ofrenciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
 </p>
 <p>
     Nuestro objetivo es que puedas adoptar a la tecnología como un servicio de placer y disfrute en tu casa, habilitando una experiencia innovadora y cálida en la incorporación de dispositivos de automatización y control de tu hogar, sin complejidades técnicas, perfeccionando tu bienestar.
@@ -37,6 +37,11 @@
         </ul>
     </li>
 </ol>
+    <h3> Ajuste de la oferta al público  </h3>
+    <p>
+    Vamos a ofrecer los productos y servicios de asesoramiento, categorizados, vinculados a documentación y casos de uso, que simplifiquen la elección. El cliente podrá rápidamente seleccionar lo que necesite y adquirirlo. Una vez adquirido el o los productos, nuestro equipo de soporte asesorará al cliente para la correcta instalación de los dispositivos. 
+    </p>
+
 
 <h2><u>Integrantes del equipo</u></h2>
 
