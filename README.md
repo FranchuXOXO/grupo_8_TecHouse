@@ -36,12 +36,13 @@
             <li>Instalación de sistemas de vigilancia con cámaras de Seguridad. Servicio post venta para asesoramiento, soporte y medición de satisfacción de cliente.</li>
         </ul>
     </li>
-</ol>
+    <li>
     <h3> Ajuste de la oferta al público  </h3>
     <p>
     Vamos a ofrecer los productos y servicios de asesoramiento, categorizados, vinculados a documentación y casos de uso, que simplifiquen la elección. El cliente podrá rápidamente seleccionar lo que necesite y adquirirlo. Una vez adquirido el o los productos, nuestro equipo de soporte asesorará al cliente para la correcta instalación de los dispositivos. 
     </p>
-
+    </li>
+</ol>
 
 <h2><u>Integrantes del equipo</u></h2>
 
