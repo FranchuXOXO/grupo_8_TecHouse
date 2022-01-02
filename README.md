@@ -13,10 +13,11 @@
     Queremos ayudarte a que elijas el mejor equipo, el que se adapte a tus necesidades y tengas la mejor experiencia, servicio y apoyo post venta.
 </p>
 
+<br>
 <h2><u>Oferta</u></h2>
 <ol>
     <li>
-        <h3><u>Productos:</u></h3>
+        <h3><u><i>Productos:</i></u></h3>
             <ul>
                 <li>Sistemas de automatización y control de espacios:</li>
             <ul>
@@ -29,7 +30,7 @@
         </ul>
     </li>
     <li>
-        <h3><u>Servicios:</u></h3>
+        <h3><u><i>Servicios:</i></u></h3>
         <ul>
             <li>Asesoramiento e instalación de luces para controlar el nivel de luces de los atenuadores, interruptores y sensores.</li>
             <li>Diseño, instalación y programación de cortinas y persianas automáticas. Instalación de altavoces y amplificadores para satisfacer estándares de audio.</li>
@@ -38,6 +39,7 @@
     </li>
 </ol>
 
+<br>
 <h2><u>Integrantes del equipo</u></h2>
 
 <ul>
@@ -47,10 +49,18 @@
     <li>Marcelo: PM en empresa de comunicaciones satelitales, y muy motivado por obtener nuevas habilidades en la industria del conocimiento.</li>
 </ul>
 
-## Público objetivo
+<br>
+<h2><u>Integrantes del equipo</u></h2>
 
+<ul>
+    <li>Población de estrato económico medio y alto, de condición económica estable</li>
+    <li>Población con nivel educativo e interés por la tecnología</li>
+    <li>Decoradores y diseñadores</li>
+    <li>Proveedores de iluminación y audiovisuales.</li>
+</ul>
 
-## Sitios de referencia:
+<br>
+<h2><u>Sitios de referencia:</u></h2>
 <ul>
     <li>https://www.tienda.philips.com.ar/178-philips-hue</li>
     <li>https://lsdomotica.com/</li>
