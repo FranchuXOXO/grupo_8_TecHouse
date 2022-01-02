@@ -56,7 +56,7 @@
 </ul>
 
 <br>
-<h2><u>Integrantes del equipo</u></h2>
+<h2><u>Público objetivo</u></h2>
 
 <ul>
     <li>Población de estrato económico medio y alto, de condición económica estable</li>
