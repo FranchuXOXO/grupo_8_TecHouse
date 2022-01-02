@@ -1,15 +1,50 @@
-### grupo_8_livingHouse
-Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital House).
+# TecHouse
+<p>
+    Es una empresa lider de soluciones tecnológicas para la automatizar ambientes hogareños, ofrenciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
+</p>
+<p>
+    Nuestro objetivo es que puedas adoptar a la tecnología como un servicio de placer y disfrute en tu casa, habilitando una experiencia innovadora y cálida en la incorporación de dispositivos de automatización y control de tu hogar, sin complejidades técnicas, perfeccionando tu bienestar.
+<p>
+    La tecnología inteligente llegó para mostrarte que podés automatizar un montón de actividades a través de uno o varios dispositivos electrónicos.
+</p>
+<p>
+    Cuando hablamos de Tecnología inteligente, nos referimos a que con ella podemos controlar procesos de nuestro hogar de forma completamente automática, desde tener control de la iluminación, función de monitoreo, tecnología de vigilancia de seguridad, la optimización del consumo de energía, control de clima, entre otros.
+<p>
+    Queremos ayudarte a que elijas el mejor equipo, el que se adapte a tus necesidades y tengas la mejor experiencia, servicio y apoyo post venta.
+</p>
 
-# Living House
+<h2><u>Oferta</u></h2>
+<ol>
+    <li>
+        <h3><u>Productos:</u></h3>
+            <ul>
+                <li>Sistemas de automatización y control de espacios:</li>
+            <ul>
+                <li>Luces</li>
+                <li>Música</li>
+                <li>Clima</li>
+                <li>Cortinas</li>
+                <li>Circuito Cerrado de TV y seguridad</li>
+            </ul>
+        </ul>
+    </li>
+    <li>
+        <h3><u>Servicios:</u></h3>
+        <ul>
+            <li>Asesoramiento e instalación de luces para controlar el nivel de luces de los atenuadores, interruptores y sensores.</li>
+            <li>Diseño, instalación y programación de cortinas y persianas automáticas. Instalación de altavoces y amplificadores para satisfacer estándares de audio.</li>
+            <li>Instalación de sistemas de vigilancia con cámaras de Seguridad. Servicio post venta para asesoramiento, soporte y medición de satisfacción de cliente.</li>
+        </ul>
+    </li>
+</ol>
 
-## Productos
-
-## Integrantes del equipo
+<h2><u>Integrantes del equipo</u></h2>
 
 <ul>
     <li>Matias: soy ingeniero electrónico y actualmente me desempeño como analista de impuestos en EY.</li>
     <li>Francisco: soy lic. en administración de empresas y actualmente me desempeño como consultor funcional en NCR.</li>
+    <li>Ana Salcedo: Soy Licenciada en Contaduría Publica. Me desempeño como asistente administrativa en Estudio Jurídico.</li>
+    <li></li>
 </ul>
 
 ## Público objetivo
@@ -25,3 +60,6 @@ Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital Hous
     <li>https://shop.samsung.com/ar/</li>
     <li>https://www.bosch-smarthome.com/es/es/</li>
 </ul>
+
+### grupo_8_techouse
+Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital House).
