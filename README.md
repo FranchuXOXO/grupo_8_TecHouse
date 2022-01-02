@@ -38,7 +38,7 @@
         </ul>
     </li>
     <li>
-        <h3><i>Ajuste de la oferta al público<i></h3>
+        <h3><i>Ajuste de la oferta al público</i></h3>
         <p>
             Vamos a ofrecer los productos y servicios de asesoramiento, categorizados, vinculados a documentación y casos de uso, que simplifiquen la elección. El cliente podrá rápidamente seleccionar lo que necesite y adquirirlo. Una vez adquirido el o los productos, nuestro equipo de soporte asesorará al cliente para la correcta instalación de los dispositivos. 
         </p>
