@@ -76,6 +76,3 @@
     <li>https://shop.samsung.com/ar/</li>
     <li>https://www.bosch-smarthome.com/es/es/</li>
 </ul>
-
-### grupo_8_techouse
-Repo para el proyecto integrador del Grupo 8 (cursada Full-Stack de Digital House).
