@@ -17,7 +17,7 @@
 <h2><u>Oferta</u></h2>
 <ol>
     <li>
-        <h3><u><i>Productos:</i></u></h3>
+        <h3><i>Productos:</i></h3>
             <ul>
                 <li>Sistemas de automatización y control de espacios:</li>
             <ul>
@@ -30,7 +30,7 @@
         </ul>
     </li>
     <li>
-        <h3><u><i>Servicios:</i></u></h3>
+        <h3><i>Servicios:</i></h3>
         <ul>
             <li>Asesoramiento e instalación de luces para controlar el nivel de luces de los atenuadores, interruptores y sensores.</li>
             <li>Diseño, instalación y programación de cortinas y persianas automáticas. Instalación de altavoces y amplificadores para satisfacer estándares de audio.</li>
@@ -38,10 +38,10 @@
         </ul>
     </li>
     <li>
-    <h3> Ajuste de la oferta al público  </h3>
-    <p>
-    Vamos a ofrecer los productos y servicios de asesoramiento, categorizados, vinculados a documentación y casos de uso, que simplifiquen la elección. El cliente podrá rápidamente seleccionar lo que necesite y adquirirlo. Una vez adquirido el o los productos, nuestro equipo de soporte asesorará al cliente para la correcta instalación de los dispositivos. 
-    </p>
+        <h3><i>Ajuste de la oferta al público<i></h3>
+        <p>
+            Vamos a ofrecer los productos y servicios de asesoramiento, categorizados, vinculados a documentación y casos de uso, que simplifiquen la elección. El cliente podrá rápidamente seleccionar lo que necesite y adquirirlo. Una vez adquirido el o los productos, nuestro equipo de soporte asesorará al cliente para la correcta instalación de los dispositivos. 
+        </p>
     </li>
 </ol>
 
