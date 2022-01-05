@@ -62,7 +62,7 @@
     <li>Población de estrato económico medio y alto, de condición económica estable</li>
     <li>Población con nivel educativo e interés por la tecnología</li>
     <li>Decoradores y diseñadores</li>
-    <li>Proveedores de iluminación y audiovisuales...</li>
+    <li>Proveedores de iluminación y audiovisuales</li>
 </ul>
 
 <br>
