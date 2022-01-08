@@ -14,7 +14,7 @@
 </p>
 
 <br>
-<h2><u>Ofertas</u></h2>
+<h2><u>Oferta</u></h2>
 <ol>
     <li>
         <h3><i>Productos:</i></h3>
