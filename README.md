@@ -1,6 +1,6 @@
 # TecHouse
 <p>
-    Es una empresa lider de soluciones tecnológicas para automatizar ambientes hogareños, ofrenciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
+    Es una empresa lider de soluciones tecnológicas para automatizar ambientes hogareños, ofreciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
 </p>
 <p>
     Nuestro objetivo es que puedas adoptar a la tecnología como un servicio de placer y disfrute en tu casa, habilitando una experiencia innovadora y cálida en la incorporación de dispositivos de automatización y control de tu hogar, sin complejidades técnicas, perfeccionando tu bienestar.
@@ -75,4 +75,9 @@
     <li>https://www.mercadolibre.com.ar/</li>
     <li>https://shop.samsung.com/ar/</li>
     <li>https://www.bosch-smarthome.com/es/es/</li>
+</ul>
+
+<h2><u>Acceso al tablero de Sprints</u></h2>
+<ul>
+<li>https://trello.com/b/Bn7DnKOr/proyecto-dh</li>
 </ul>
