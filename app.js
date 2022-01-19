@@ -11,5 +11,5 @@ app.listen(3000, () => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './src/views/productCart.html'));
+    res.sendFile(path.resolve(__dirname, './src/views/index.html'));
 });

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* acá comienza el estilo del header mobile*/
+body {
+    margin: 0px;
+}
+.header-principal-desktop{
+    display: none;
+}
+.barra-principal-desktop{
+    display: none;
+}
+
+.header-principal{
+    display: flex;
+    max-width: 100vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.header-principal img {
+    width: 50%;
+}
+
+.header-botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.header-botones a{
+    text-align: right;
+    font-size: 150%;
+    color: #F8E0D8;
+    margin-top: 5px;
+}
+
+.header-botones p{
+    color: #F8E0D8;
+    margin: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.barra-principal{
+    display: flex;
+    background-color: #00A997;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    justify-content: space-around;
+    padding-top: 2px;
+    align-items: center;
+}
+
+.barra-principal a{
+    text-decoration: none;
+    color: white;
+}
+
+.barra-principal i {
+    font-size: 150%;
+
+}
+/* acá comienza el estilo del main general*/
+
+.imgCarrousel {
+    display: flex;
+}
+.imgCarrousel img{
+    width: 100%;
+}
+.experienciasMain {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.experienciasMain video{
+    object-fit: cover;
+    width: 23.5vw;
+    box-shadow: 10px 5px 5px grey;
+}
+.experienciasMain a{
+    width: 23.5vw;
+}
+.container { position:relative; }
+.container video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    width: 100%;
+    background-color: #00A997; opacity: 0.7;
+}
+.overlay p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vw;
+    padding-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+/* acá comienza el estilo del footer mobile*/
+.piePagina{
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3.5vw;
+}
+
+.piePagina a {
+   text-decoration: none;
+   color: #F8E0D8;
+}
+
+.piePagina ul {
+    padding: 0;
+}
+
+.piePagina li{
+    list-style: none;
+}
+
+/* acá comienza el estilo del header desktop*/
+@media (min-width: 450px){
+    .header-principal-desktop{
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: black;
+        color: #F8E0D8;
+        font-family: 'Roboto', sans-serif;
+        align-items: flex-end;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .header-principal{
+        display: none;
+    }
+    .header-principal-desktop a {
+        display: block;
+        justify-content: space-around;
+        color: #F8E0D8;
+        text-decoration: none;
+        padding-bottom: 4px;
+        font-size: 2vw;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .header-principal-desktop i {
+        padding-right: 5px;
+        font-size: 2vw;
+    }
+    .header-principal-desktop img {
+        width: 25%;
+    }
+    .header-searchBar-desktop {
+        align-items: top;
+
+    }
+    .barra-principal{
+        display:none;
+    }
+    .header-principal-desktop-columna1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-searchBar-desktop {
+        padding-bottom: 15%;
+    }
+    .header-searchBar-desktop input{
+        font-size: 2vw;
+        background-color: #F8E0D8;
+        border-radius: 5px;
+    }
+    .header-principal-desktop-columna2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-principal-desktop-columna2 p{
+        padding-bottom: 10%;
+        font-size: 2vw;
+        text-align: right;
+    }
+    .header-principal-desktop-columna3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-principal-desktop-columna3 p{
+        padding-bottom: 8%;
+        font-size: 2vw;
+        text-align: right;
+    }
+    .header-principal-desktop-columna3 em{
+        font-size: 3vw;
+    }
+    .header-searchBar-desktop {
+        text-align: left;
+    }
+    .barra-principal-desktop {
+        display: flex;
+        background-color: #00A997;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        justify-content: space-around;
+        padding-top: 2px;
+        align-items: center;
+    }
+    
+    .barra-principal-desktop a{
+        text-decoration: none;
+        color: white;
+        font-size: 2vw;
+    }
+    
+}
