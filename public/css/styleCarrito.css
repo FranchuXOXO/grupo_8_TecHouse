@@ -29,6 +29,30 @@ body {
     margin: 2px;
 }
 
+.piePagina{
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 2.5vw;
+}
+
+.piePagina a {
+   text-decoration: none;
+   color: #F8E0D8;
+}
+
+.piePagina ul {
+    padding: 0;
+}
+
+.piePagina li {
+    list-style: none;
+}
+
 @media (min-width: 481) {
 
     /* TODO */

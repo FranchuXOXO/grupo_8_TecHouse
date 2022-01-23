@@ -35,6 +35,7 @@ body {
     font-size: 120%;
     color: #F8E0D8;
     margin-top: 5px;
+    text-decoration: none;
 }
 
 .header-botones p{
@@ -194,6 +195,7 @@ body {
         padding-bottom: 10%;
         font-size: 1.5vw;
         text-align: right;
+        text-decoration: none;
     }
     .header-principal-desktop-columna3 {
         display: flex;
