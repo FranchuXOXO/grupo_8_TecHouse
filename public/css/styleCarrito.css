@@ -29,31 +29,56 @@ body {
     margin: 2px;
 }
 
-.piePagina{
+footer.pie-pagina {
+    display: flex;
+    background-color: black;
+}
+
+.menus-pie-pagina{
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
     color: #F8E0D8;
     justify-content: space-between;
-    padding-left: 5%;
+    /* padding-left: 5%; */
     padding-right: 5%;
     font-size: 2.5vw;
 }
 
-.piePagina a {
+.redes-sociales {
+    padding: 0px 0px 0px 100px;
+}
+
+.menus-pie-pagina a {
    text-decoration: none;
    color: #F8E0D8;
 }
 
-.piePagina ul {
-    padding: 0;
-}
-
-.piePagina li {
+.menus-pie-pagina li {
     list-style: none;
 }
 
-@media (min-width: 481) {
+.formulario-contacto {
+    display: none;
+    content-visibility: hidden;
+}
 
-    /* TODO */
+/* @media (min-width: 481px) {
+
+    footer div.formulario-contacto {
+        display: none;
+        content-visibility: hidden;
+    }
+} */
+
+@media (min-width: 481px) {
+    
+    .formulario-contacto {
+        display: flex;
+        content-visibility: visible;
+        background-color: white;
+        flex-grow: 0.2;
+        width: 30vw;
+        padding: 10px 0px;
+    }
 }
