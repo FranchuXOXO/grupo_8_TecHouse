@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleIndex.css">
     <script src="https://kit.fontawesome.com/a245b1184d.js" crossorigin="anonymous"></script>
-    <title>Detalle de producto</title>
+    <title>Home</title>
 </head>
 <body>
     <header>
         <div class="header-principal">
             <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
             <div class="header-botones">
-                <a href="#"> <i class="fas fa-shopping-cart"></i> </a>
+                <a href="/Carrito"><i class="fas fa-shopping-cart"></i>
                 <p>    
                 <i class="fas fa-sign-in-alt"></i>
                 Login
-            </p>
+            </p></a>
             </div>
         </div>
         <div class="header-principal-desktop">
@@ -28,12 +28,12 @@
                 </div>
                 <a href="#"><i class="fas fa-square"></i>Experiencias</a>
             </div>    
-                <a href="#"><i class="fas fa-square"></i>Productos</a>
+                <a href="/Detalle"><i class="fas fa-square"></i>Productos</a>
                 <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
                 <div class="header-principal-desktop-columna2">
                     <p>  
-                        <i class="fas fa-sign-in-alt"></i>
-                        Login
+                        <a href="/Login"><i class="fas fa-sign-in-alt"></i>
+                        Login</a>
                     </p>
                     <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a>
                 </div>
@@ -46,7 +46,7 @@
                 
         </div>
         <div class="barra-principal">
-            <i class="fas fa-bars"></i>
+            <a href="/Detalle"><i class="fas fa-bars"></i></a>
             <a href="#"> Sobre nosotros > </a>
             <a href="#"> Soporte ></a>
         </div>
@@ -102,26 +102,22 @@
         </div>
     </main>
     <footer>
-        <div class="piePagina"> 
-        <div>
-        <h3> Árbol del sitio  </h3>
-            <ul>
+        <nav class="piePagina"> 
+            <ul class="arbol-sitio">
+                <li><h3>Árbol del sitio</h3></li>
                 <li> <a href="#">Tu carrito </a>  </li>
                 <li> <a href="#"> Perfil </a> </li>
                 <li> <a href="#"> Sobre nosotros </a> </li>
                 <li> <a href="#"> Soporte  </a>  </li>
-            </ul>
-        </div>
-        <div> 
-        <h3> Redes sociales </h3>
-            <ul>
+            </ul> 
+            <ul class="redes-sociales">
+                <li><h3>Redes sociales</h3></li>
                 <li> <i class="fab fa-facebook"></i> /TecHouse</li>
                 <li> <i class="fab fa-instagram"></i> @TecHouse</li>
                 <li><i class="fab fa-twitter"></i>  @TecHouse</li>
                 <li> <i class="fab fa-whatsapp"></i> #1144445555</li>
-            </ul>
-        </div>   
-    </div>
+            </ul> 
+        </nav>
     </footer>
 </body>
 </html>
