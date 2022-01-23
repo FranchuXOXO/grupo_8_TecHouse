@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+    display: flex;
+    max-width: 100vw;
     background-color: black;
+}
+
+.logo-TecHouse {
+    width: 30vw;
+    align-self: flex-start;
+}
+
+.main-header-top-bar {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.botones-main-header {
+    display: flex;
+    justify-content: space-around;
+    margin: 2px;
+}
+
+@media (min-width: 481) {
+
+    /* TODO */
 }
