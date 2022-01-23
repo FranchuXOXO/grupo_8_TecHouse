@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techouse.Registro</title>
+    <link href="/public/signup.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a245b1184d.js" crossorigin="anonymous"></script>
+
+
+</head>
+ 
+<body>
+    <header>
+        <div class="header-principal">
+            <img src="/images/Logo-TecHouse-header.jpg" alt="acá iría el logo">
+            <div class="header-botones">
+                <a href="#"> <i class="fas fa-shopping-cart"></i> </a>
+                <p>    
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </p>
+            </div>
+        </div>
+        <div class="header-principal-desktop">
+            <div class="header-principal-desktop-columna1">
+                <div class="header-searchBar-desktop">
+                    <i class="fas fa-search"></i><input type="text" placeholder="Buscar..">
+                </div>
+                <a href="#"><i class="fas fa-square"></i>Experiencias</a>
+            </div>    
+                <a href="#"><i class="fas fa-square"></i>Productos</a>
+                <img src="/images/Logo-TecHouse-header.jpg" alt="acá iría el logo">
+                <div class="header-principal-desktop-columna2">
+                    <p>  
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </p>
+                    <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a>
+                </div>
+                <div class="header-principal-desktop-columna3">
+                    <p>
+                    <a href="#"><em class="fas fa-shopping-cart"></em></a>
+                    </p>
+                    <a href="#"><i class="fas fa-square"></i>Soporte</a>
+                </div>
+                
+        </div>
+        <div class="barra-principal">
+            <i class="fas fa-bars"></i>
+            <a href="#"> Sobre nosotros > </a>
+            <a href="#"> Soporte ></a>
+        </div>
+        <div class="barra-principal-desktop">
+            <a href="#"> Iluminación > </a>
+            <a href="#"> Sonido ></a>
+            <a href="#"> Conectividad ></a>
+            <a href="#"> Visual ></a>
+            <a href="#"> Integración ></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="cuadro"> 
+            <h1>Crear una cuenta</h1>
+            <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
+            <form class="formulario" action="/views/login.html" method="POST">
+                <label for="nombre">Primer Nombre</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="nombre" />
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="apellido" />
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" placeholder="correo@correo.com" name="email" />
+    
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="clave" />
+
+                <label for="confirmaContraseña">Confirma contraseña</label>
+                <input type="password" id="confirmaContraseña" name="clave" />
+                
+                <label id="recuerdame"> <input type="checkbox" > Deseo recibir ofertas por mail</label>
+    
+                <div class="boton-enviar">
+                    <button type="submit">Enviar</button>
+                </div>
+
+                <div class="boton-redes">
+                    <button type="submit">Entrar con google</button>
+                    <button type="submit">Entrar con facebook</button>
+                </div>
+
+                <a href="/views/login.html">¿Ya tienes un usuario? Inicia sesión</a>
+
+            </form>
+        </div>
+        <div class="caja">
+            <div class="caja-envio">
+                <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>
+                <div class="caja-envio-texto">
+                    <h4>Enviamos tu compra</h4>
+                    <p>Entregas en todo el pais</p>
+                </div>
+                
+            </div>
+
+            <div class="caja-pago">
+                <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png"/>
+                <div class="caja-envio-texto">
+                    <h4>Paga como quieras</h4>
+                    <p>Tarjetas de crédito o efectivo</p>
+                </div>
+            </div>
+
+            <div class="caja-seguridad">
+                <img src="https://img.icons8.com/windows/32/000000/security-block.png"/>
+                <div class="caja-envio-texto">
+                    <h4>Compra con seguridad</h4>
+                    <p>Tus datos siempre protegidos</p>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+      
+    <footer>
+        <div class="piePagina"> 
+            <div>
+                <h3> Árbol del sitio  </h3>
+                <ul>
+                    <li>   <a href="#">Tu carrito </a>  </li>
+                    <li> <a href="#"> Perfil </a> </li>
+                    <li> <a href="#"> Sobre nosotros </a> </li>
+                    <li> <a href="#"> Soporte  </a>  </li>
+                </ul>
+            </div>
+            <div> 
+                <h3> Redes sociales </h3>
+                <ul>
+    
+                    <li> <i class="fab fa-facebook"></i> /TecHouse</li>
+                    <li> <i class="fab fa-instagram"></i> @TecHouse</li>
+                    <li><i class="fab fa-twitter"></i>  @TecHouse</li>
+                    <li> <i class="fab fa-whatsapp"></i> #1144445555</li>
+                </ul>
+            </div>   
+        </div>
+    </footer>
+</body>
+</html>
