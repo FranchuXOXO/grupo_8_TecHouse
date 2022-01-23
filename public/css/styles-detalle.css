@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  background-image: url(https://image.freepik.com/vector-gratis/fondo-tecnologia-entramado-brillante_1048-2201.jpg);
+  background-size:cover
+}
+
+main{
+    color: #F8E0D8;
+
+}
+
+.barra{
+    display: flex;
+    justify-content: space-around;
+    /*
+    position: fixed;
+    width: 100vw;
+    top: 125px;
+    */
+}
+
+.caracteristica {
+    text-align: center;
+    /*
+    margin-top: 90px;
+    */
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.descripcion img{
+    width: 100%;
+
+}
+
+.texto-descripcion{
+    text-align: center;
+
+}
+
+.color {
+    text-align: center;
+}
+.imagen-botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+}
+
+.imagen-botones img{
+width: 100%;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+margin-top: 10px;
+
+}
+
+.accesorio{
+    text-align: center;
+}
+
+.ultimo-boton{
+    margin: auto;
+    border: brown solid 4px;
+}
+.accesorio-contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accesorio-contenido button{
+    max-width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.accesorio-contenido img{
+    width: 100%;
+
+}
+
+.barra button{
+ margin-top: 26px;
+ margin-bottom: 26px;
+}
+
+/* acá empieza el header y el footer */
+.header-principal{
+    display: flex;
+    max-width: 100vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.header-principal img {
+    width: 50%;
+}
+
+.header-botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+
+}
+
+.header-botones a{
+    text-align: right;
+    font-size: 150%;
+    color: #F8E0D8;
+    margin-top: 5px;
+}
+
+.header-botones p{
+    color: #F8E0D8;
+    margin: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.barra-principal{
+    display: flex;
+    background-color: #00A997;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    justify-content: space-around;
+    padding-top: 2px;
+    align-items: center;
+}
+
+.barra-principal a{
+    text-decoration: none;
+    color: white;
+}
+
+.barra-principal i {
+    font-size: 150%;
+
+}
+
+.piePagina{
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-around;
+}
+
+.piePagina a {
+   text-decoration: none;
+   color: #F8E0D8;
+}
+
+.piePagina ul {
+    padding: 0;
+}
+
+.piePagina li{
+    list-style: none;
+}
+
+.accesorio-contenido-desktop{
+
+    display: none;
+}
+.descripcion-desktop{
+    display: none;
+}
+.botones-desktop{
+display: none;
+
+}
+
+@media(min-width:450px){
+.barra button{
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.descripcion{
+    display: none;
+
+}
+.descripcion-desktop{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.descripcion-desktop img{
+    width: 90%;
+}
+.descripcion-mitad{
+    margin: auto;
+    margin-top: 0px;
+}
+
+.descripcion-mitad h3{
+    text-align: center;
+}
+.descripcion-mitad p{
+    margin-left: 30px;
+
+}
+.imagen-botones{
+   
+    flex-direction: row;
+    margin-top: 30px;
+}
+.botones-desktop{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+}
+.azul{
+    padding: 30px;
+font-size: 20px;
+margin-right: 100px;
+margin-left: 78px;
+}
+.rojo{
+    padding: 30px;
+    font-size: 20px;
+    margin-right: 100px;
+}
+.negro{
+    padding: 30px;
+    font-size: 20px;
+}
+
+
+.color{
+    display: none;
+}
+.botones{
+    display: none;
+
+}
+
+.imagen-botones img{
+
+    width: 50%;
+}
+
+
+.accesorio-contenido{
+    display: none;
+
+}
+.accesorio-contenido-desktop{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.accesorio-contenido-desktop img{
+    width: 48.5%;
+}
+.mitad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.mitad p{
+    margin-left: 30px;
+
+}
+.mitad button{
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+}
