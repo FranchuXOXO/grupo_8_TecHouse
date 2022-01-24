@@ -12,6 +12,7 @@ body {
 }
 
 .header-principal{
+    margin-top: 0;
     display: flex;
     max-width: 100vw;
     justify-content: space-between;
@@ -135,8 +136,16 @@ body {
 
 /* acá comienza el estilo del header desktop*/
 @media (min-width: 450px){
+    .header-global-desktop {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 130px;
+    }
     .header-principal-desktop{
         display: flex;
+        top: 0;
+        width: 100vw;
         justify-content: space-between;
         box-sizing: border-box;
         background-color: black;
@@ -145,6 +154,7 @@ body {
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
+        height: 85%;
     }
     .header-principal{
         display: none;
@@ -155,22 +165,22 @@ body {
         color: #F8E0D8;
         text-decoration: none;
         padding-bottom: 10px;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         padding-left: 2px;
         padding-right: 2px;
     }
     .header-principal-desktop i {
         padding-right: 5px;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     .header-principal-desktop img {
-        width: 25%;
+        width: 170px;
     }
     .header-searchBar-desktop {
         font-size: 1.5vw;
         align-items: top;
         position:absolute;
-        padding-bottom: 12%;
+        padding-bottom: 9%;
     }
     .barra-principal{
         display:none;
@@ -192,7 +202,7 @@ body {
         justify-content: space-around;
     }
     .header-principal-desktop-columna2 p{
-        padding-bottom: 10%;
+        padding-bottom: 5%;
         font-size: 1.5vw;
         text-align: right;
         text-decoration: none;
@@ -203,7 +213,7 @@ body {
         justify-content: space-around;
     }
     .header-principal-desktop-columna3 p{
-        padding-bottom: 8%;
+        padding-bottom: 1%;
         font-size: 1.5vw;
         text-align: right;
     }
@@ -215,18 +225,20 @@ body {
     }
     .barra-principal-desktop {
         display: flex;
+        width: 100vw;
         background-color: #00A997;
         font-family: 'Roboto', sans-serif;
         color: white;
         justify-content: space-around;
         padding-top: 2px;
         align-items: center;
+        height: 15%;
     }
     
     .barra-principal-desktop a{
         text-decoration: none;
         color: white;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
     
 }
