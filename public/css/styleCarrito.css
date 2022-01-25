@@ -6,6 +6,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*======================================================= */
+/* Acá arrancan los estilos del "header"================= */
+/*======================================================= */
+
 .main-header {
     display: flex;
     max-width: 100vw;
@@ -20,7 +24,7 @@ body {
 }
 
 .logo-TecHouse {
-    width: 30vw;
+    width: 170px;
 }
 
 .botones-main-header {
@@ -31,7 +35,6 @@ body {
     align-items: center;
     padding-top: 10px;
     position: relative;
-    /* border: solid yellow 2px; */
 }
 
 .soporte-Carrito {
@@ -45,23 +48,42 @@ body {
 }
 
 .boton-cerrar {
-    margin: 5px;
+    margin: 1px;
     font-size: 28px;
     position: absolute;
-    right: 2%;
+    right: 1%;
 }
+
+/*======================================================= */
+/* Acá arrancan los estilos del "main"=================== */
+/*======================================================= */
 
 .carrito-guardados {
     display: flex;
-    height: 8vh;
+    height: 6vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00A997;
+    border: solid red 2px;
 }
 
 .listado-carrito,
 .listado-guardados {
-    border: solid black 2px;
+    border: solid #F8E0D8 1px;
+    background-color: #F8E0D8;
     border-radius: 5px;
-    height: 40%;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
 }
+
+section.ventana-productos {
+    padding: 5px;
+}
+
+/*======================================================= */
+/* Acá arrancan los estilos del "footer"================= */
+/*======================================================= */
 
 footer.pie-pagina {
     display: flex;
@@ -74,7 +96,6 @@ footer.pie-pagina {
     font-family: 'Roboto', sans-serif;
     color: #F8E0D8;
     justify-content: space-between;
-    /* padding-left: 5%; */
     padding-right: 5%;
     font-size: 2.5vw;
 }
@@ -96,14 +117,6 @@ footer.pie-pagina {
     display: none;
     content-visibility: hidden;
 }
-
-/* @media (min-width: 481px) {
-
-    footer div.formulario-contacto {
-        display: none;
-        content-visibility: hidden;
-    }
-} */
 
 @media (min-width: 481px) {
     
