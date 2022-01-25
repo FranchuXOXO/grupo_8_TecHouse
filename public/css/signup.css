@@ -76,6 +76,25 @@ p {
     justify-content: center;
     margin-bottom: 16px;
 }
+
+.botonFacebook {
+    background-color: #3b5998;
+    color: white;
+    width: 180px
+}
+.botonFacebook i {
+    font-size: 20px;
+}
+
+.botonGoogle i{
+    color: #4285F4;
+    font-size: 20px;
+}
+
+.botonGoogle {
+    width: 180px
+}
+
 a {
     text-align: end;
     font-size: 12px;
