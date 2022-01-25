@@ -10,23 +10,57 @@ body {
     display: flex;
     max-width: 100vw;
     background-color: black;
+    color: #F8E0D8;
+    padding: 5px;
+}
+
+.botones-main-header a {
+    text-decoration: none;
+    color: #F8E0D8;
 }
 
 .logo-TecHouse {
     width: 30vw;
-    align-self: flex-start;
-}
-
-.main-header-top-bar {
-    display: flex;
-    color: white;
-    justify-content: space-between;
 }
 
 .botones-main-header {
     display: flex;
     justify-content: space-around;
-    margin: 2px;
+    flex-grow: 1;
+    height: 30px;
+    align-items: center;
+    padding-top: 10px;
+    position: relative;
+    /* border: solid yellow 2px; */
+}
+
+.soporte-Carrito {
+    border: solid #F8E0D8 1px;
+    background-color: #00A997;
+    border-radius: 5px;
+    width: 135px;
+    padding: 5px;  
+    position: absolute;
+    right: 20%;
+}
+
+.boton-cerrar {
+    margin: 5px;
+    font-size: 28px;
+    position: absolute;
+    right: 2%;
+}
+
+.carrito-guardados {
+    display: flex;
+    height: 8vh;
+}
+
+.listado-carrito,
+.listado-guardados {
+    border: solid black 2px;
+    border-radius: 5px;
+    height: 40%;
 }
 
 footer.pie-pagina {
