@@ -243,7 +243,7 @@ footer.pie-pagina {
     color: #F8E0D8;
     justify-content: space-between;
     padding-right: 5%;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
 }
 
 .redes-sociales {
@@ -259,7 +259,7 @@ footer.pie-pagina {
     list-style: none;
 }
 
-form.contact-form {
+.formulario {
     display: none;
     content-visibility: hidden;
 }
@@ -335,20 +335,6 @@ form.contact-form {
         background-color: black;
         justify-content: space-around;
     }
-    
-    /* form.contact-form {
-        display: flex;
-        content-visibility: visible;
-        flex-direction: column;
-        background-color: #F8E0D8;
-        width: 35vw;
-        padding: 10px 5px;
-        margin: 5px 0px;
-    }
-
-    form.contact-form label {
-        margin: 5px 0px;
-    } */
 
     .formulario {
         display: block;
@@ -375,11 +361,5 @@ form.contact-form {
     }
     .tituloForm {
         font-size: 2rem;
-    }
-
-    div.form-title {
-        font-weight: bold;
-        font-size: medium;
-        margin-bottom: 10px;
     }
 }
