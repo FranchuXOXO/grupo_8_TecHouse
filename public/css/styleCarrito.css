@@ -65,6 +65,12 @@ body {
     padding: 5px;  
     position: absolute;
     right: 20%;
+    text-align: center;
+}
+
+.soporte-Carrito i {
+    display: none;
+    content-visibility: hidden;
 }
 
 .boton-cerrar {
@@ -237,7 +243,7 @@ footer.pie-pagina {
     color: #F8E0D8;
     justify-content: space-between;
     padding-right: 5%;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
 
 .redes-sociales {
@@ -253,7 +259,7 @@ footer.pie-pagina {
     list-style: none;
 }
 
-.formulario-contacto {
+form.contact-form {
     display: none;
     content-visibility: hidden;
 }
@@ -269,6 +275,27 @@ footer.pie-pagina {
         margin: 0px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+    }
+
+    .soporte-Carrito {
+        border: solid #F8E0D8 1px;
+        background-color: #00A997;
+        border-radius: 5px;
+        width: 200px;
+        padding: 5px;
+        font-size: large;
+        position: absolute;
+        right: 10%;
+    }
+
+    .soporte-Carrito i {
+        display: contents;
+        content-visibility: visible;
+    }
+
+    .boton-cerrar {
+        display: none;
+        content-visibility: hidden;
     }
 
     section.ventana-productos {
@@ -303,12 +330,56 @@ footer.pie-pagina {
         margin: 0px 3px;
     }
 
-    .formulario-contacto {
+    footer.pie-pagina {
+        display: flex;
+        background-color: black;
+        justify-content: space-around;
+    }
+    
+    /* form.contact-form {
         display: flex;
         content-visibility: visible;
-        background-color: white;
-        flex-grow: 0.2;
-        width: 30vw;
-        padding: 10px 0px;
+        flex-direction: column;
+        background-color: #F8E0D8;
+        width: 35vw;
+        padding: 10px 5px;
+        margin: 5px 0px;
+    }
+
+    form.contact-form label {
+        margin: 5px 0px;
+    } */
+
+    .formulario {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #F8E0D8;
+        text-align: left;
+        background-color: black;
+        padding-bottom: 10px;
+        width: 400px;
+    }
+
+    .formNombre {
+        width: 70%;
+    }
+    .formMensaje {
+        width: 70%;
+    }
+    .formEmail {
+        width: 70%;
+    }
+    .tituloForm {
+        font-size: 2rem;
+    }
+
+    div.form-title {
+        font-weight: bold;
+        font-size: medium;
+        margin-bottom: 10px;
     }
 }
