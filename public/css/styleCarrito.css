@@ -218,6 +218,8 @@ div.limpiar-confirmar-carrito-mobile {
     width: 150px;
     text-align: center;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 .limpiar-carrito i,
