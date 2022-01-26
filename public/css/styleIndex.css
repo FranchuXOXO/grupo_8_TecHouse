@@ -135,7 +135,7 @@ body {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 .piePagina a {
@@ -145,7 +145,7 @@ color: #F8E0D8;
 
 .piePagina ul {
     padding: 0;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .piePagina li{
@@ -283,7 +283,7 @@ color: #F8E0D8;
 
     .piePagina ul {
         padding: 0;
-        padding-top: 50px;
+        padding-top: 10px;
     }
 
     .piePagina li{
@@ -321,7 +321,6 @@ color: #F8E0D8;
 /* acá comienza el estilo de los banners con videos desktop*/
 
 @media (min-width: 450px){
-
     .experienciasMain video{
         object-fit: cover;
         width: 23.5vw;
