@@ -89,10 +89,10 @@ body {
 }
 .experienciasMain video{
     object-fit: cover;
-    width: 50vw;
+    width: 49.5vw;
 }
 .experienciasMain a{
-    width: 50vw;
+    width: 49.5vw;
 }
 
 .container {
@@ -323,8 +323,8 @@ color: #F8E0D8;
 @media (min-width: 450px){
     .experienciasMain video{
         object-fit: cover;
-        width: 23.5vw;
-        box-shadow: 10px 5px 5px grey;
+        width: 24vw;
+        box-shadow: 5px 5px 5px grey;
     }
     .container { 
         position:relative;
