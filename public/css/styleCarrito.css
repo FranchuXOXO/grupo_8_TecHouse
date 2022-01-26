@@ -207,6 +207,8 @@ div.limpiar-confirmar-carrito-mobile {
     justify-content: space-around;
     align-items: center;
     background-color: #00A997;
+    text-decoration: none;
+    color: black;
 }
 
 .limpiar-carrito,
@@ -221,6 +223,12 @@ div.limpiar-confirmar-carrito-mobile {
     text-decoration: none;
     color: black;
 }
+
+    .limpiar-carrito,
+    .confirmar-carrito a {
+        text-decoration: none;
+        color: black;
+    }
 
 .limpiar-carrito i,
 .confirmar-carrito i {
@@ -323,6 +331,14 @@ footer.pie-pagina {
         width: 180px;
         text-align: center;
         font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
+
+    .limpiar-carrito,
+    .confirmar-carrito a {
+        text-decoration: none;
+        color: black;
     }
 
     .limpiar-carrito i,
@@ -330,6 +346,8 @@ footer.pie-pagina {
         display: contents;
         content-visibility: visible;
         margin: 0px 3px;
+        text-decoration: none;
+        color: black;
     }
 
     footer.pie-pagina {
