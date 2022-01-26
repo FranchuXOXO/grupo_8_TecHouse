@@ -6,9 +6,29 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/*======================================================= */
-/* Acá arrancan los estilos del "header"================= */
-/*======================================================= */
+/*=========================================================================== */
+/* Acá arrancan los estilos del "header"===================================== */
+/*=========================================================================== */
+
+.header-principal {
+    display: none;
+    content-visibility: hidden;
+}
+
+.header-botones {
+    display: none;
+    content-visibility: hidden;
+}
+
+.barra-principal {
+    display: none;
+    content-visibility: hidden;
+}
+
+.header-global-desktop {
+    display: none;
+    content-visibility: hidden;
+}
 
 .main-header {
     display: flex;
@@ -54,17 +74,17 @@ body {
     right: 1%;
 }
 
-/*======================================================= */
-/* Acá arrancan los estilos del "main"=================== */
-/*======================================================= */
+/*=========================================================================== */
+/* Acá arrancan los estilos del "main"======================================= */
+/*=========================================================================== */
 
-.carrito-guardados {
+.carrito-guardados-mobile {
     display: flex;
+    content-visibility: visible;
     height: 6vh;
     justify-content: space-around;
     align-items: center;
     background-color: #00A997;
-    border: solid red 2px;
 }
 
 .listado-carrito,
@@ -81,9 +101,101 @@ section.ventana-productos {
     padding: 5px;
 }
 
-/*======================================================= */
-/* Acá arrancan los estilos del "footer"================= */
-/*======================================================= */
+div.producto {
+    background-color: #F8E0D8;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: solid yellow 2px;
+}
+
+div.info-producto {
+    display: flex;
+}
+
+div.info-producto img {
+    width: 100px;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px 10px 5px 10px;
+}
+
+div.datos-producto {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+div.datos-producto h3 {
+    margin-bottom: 5px;
+}
+
+div.datos-producto p {
+    margin: 5px 0px;
+    font-size: 14px;
+}
+
+div.datos-producto i {
+    margin: 5px 0px;
+    font-size: 14px;
+    color: goldenrod;
+}
+
+div.seleccion-compra {
+    display: flex;
+}
+
+div.precio-unitario {
+    width: 95px;
+    padding: 2px;
+    margin: 0px 5px 5px 15px;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+div.selector-cantidad {
+    display: flex;
+    margin: 0px 10px 5px 10px
+}
+
+div.selector-cantidad i {
+    font-size: 22px;
+}
+
+div.cantidad-unidades {
+    width: 50px;
+    margin: 0px 5px;
+    background-color: white;
+    border: solid black 1px;
+    text-align: center;
+}
+
+div.total-producto {
+    display: flex;
+    margin: 0px 5px;
+    width: 140px;
+    font-weight:bold;
+}
+
+div.leyenda-total {
+    margin-top: 3px;
+}
+
+div.precio-total {
+    /* width: 95px; */
+    flex-grow: 1;
+    padding: 2px;
+    margin: 0px 5px 5px 5px;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/*=========================================================================== */
+/* Acá arrancan los estilos del "footer"===================================== */
+/*=========================================================================== */
 
 footer.pie-pagina {
     display: flex;
@@ -118,8 +230,184 @@ footer.pie-pagina {
     content-visibility: hidden;
 }
 
-@media (min-width: 481px) {
+/*=========================================================================== */
+/* La media mínima de 450px incluye la visualización Desktop================= */
+/*=========================================================================== */
+
+@media (min-width: 450px) {
     
+    .botones-main-header a {
+        display: none;
+        content-visibility: hidden;
+    }
+    
+    .logo-TecHouse {
+        display: none;
+        content-visibility: hidden;
+    }
+    
+    .botones-main-header {
+        display: none;
+        content-visibility: hidden;
+    }
+    
+    .soporte-Carrito {
+        display: none;
+        content-visibility: hidden;
+    }
+    
+    .boton-cerrar {
+        display: none;
+        content-visibility: hidden;
+    }
+
+    /* .header-principal {
+        content-visibility: visible;
+        margin-top: 0;
+        max-width: 100vw;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: black;
+        border: solid yellow 2px;
+    }
+
+    .header-botones {
+        display: flex;
+        content-visibility: visible;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 20px;
+    } */
+
+    .header-global-desktop {
+        display: flex;
+        content-visibility: visible;
+        position: fixed;
+        top: 0;
+        /* z-index: 2; */
+        height: 130px;
+    }
+
+    .header-principal-desktop a {
+        display: block;
+        justify-content: space-around;
+        color: #F8E0D8;
+        text-decoration: none;
+        padding-bottom: 10px;
+        font-size: 1.2vw;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .header-principal-desktop i {
+        padding-right: 5px;
+        font-size: 1.5vw;
+    }
+
+    .header-principal-desktop img {
+        width: 170px;
+    }
+
+    .header-searchBar-desktop {
+        font-size: 1.5vw;
+        align-items: top;
+        position: absolute;
+        padding-bottom: 9%;
+    }
+
+    .header-principal-desktop-columna1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header-searchBar-desktop input{
+        font-size: 1.5vw;
+        background-color: #F8E0D8;
+        border-radius: 5px;
+    }
+
+    .header-principal-desktop-columna2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header-principal-desktop-columna2 p{
+        padding-bottom: 5%;
+        font-size: 1.5vw;
+        text-align: right;
+        text-decoration: none;
+    }
+
+    .header-principal-desktop-columna3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header-principal-desktop-columna3 p{
+        padding-bottom: 1%;
+        font-size: 1.5vw;
+        text-align: right;
+    }
+
+    .header-principal-desktop-columna3 em{
+        font-size: 2.5vw;
+    }
+
+    .header-searchBar-desktop {
+        text-align: left;
+    }
+
+    /* .barra-principal-desktop {
+        display: flex;
+        content-visibility: visible;
+        width: 100vw;
+        background-color: #00A997;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        justify-content: space-around;
+        padding-top: 2px;
+        align-items: center;
+        height: 15%;
+    }
+    
+    .barra-principal-desktop a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2vw;
+    }
+
+    .barra-principal {
+        display: flex;
+        content-visibility: visible;
+        background-color: #00A997;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        justify-content: space-around;
+        padding-top: 2px;
+        align-items: center;
+    }
+    
+    .barra-principal a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .barra-principal i {
+        font-size: 100%;
+    } */
+
+    .carrito-guardados-mobile {
+        display: none;
+        content-visibility: hidden;
+        height: 6vh;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #00A997;
+    }
+
     .formulario-contacto {
         display: flex;
         content-visibility: visible;

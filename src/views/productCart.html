@@ -11,16 +11,58 @@
     </head>
     <body>
         <header class="main-header">
+            <!-- visualización Mobile -->
             <a href="/"><img class="logo-TecHouse" src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse"></a>
             <div class="botones-main-header">
-                    <div class="soporte-Carrito">¿Necesitas ayuda?</div>
-                    <div class="boton-cerrar">
-                        <a href="/"><i class="far fa-times-circle"></i></a>
+                <div class="soporte-Carrito">¿Necesitas ayuda?</div>
+                <div class="boton-cerrar">
+                    <a href="/"><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
+            <!-- visualización Desktop -->
+            <div class="header-principal">
+                <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
+                <div class="header-botones">
+                    <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/Login">
+                    <p><i class="fas fa-sign-in-alt"></i>
+                    Login
+                    </p></a>
+                </div>
+            </div>
+            <div class="barra-principal">
+                <a href="/Detalle"><i class="fas fa-bars"></i></a>
+                <a href="#"> Sobre nosotros > </a>
+                <a href="#"> Soporte ></a>
+            </div>
+            <div class="header-global-desktop">
+                <div class="header-principal-desktop">
+                    <div class="header-principal-desktop-columna1">
+                        <div class="header-searchBar-desktop">
+                            <i class="fas fa-search"></i><input type="text" placeholder="Buscar..">
+                        </div>
+                        <a href="#"><i class="fas fa-square"></i>Experiencias</a>
+                    </div>    
+                    <a href="/Detalle"><i class="fas fa-square"></i>Productos</a>
+                    <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
+                    <div class="header-principal-desktop-columna2">
+                        <p>  
+                            <a href="/Login"><i class="fas fa-sign-in-alt"></i>
+                            Login</a>
+                        </p>
+                        <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a>
                     </div>
+                    <div class="header-principal-desktop-columna3">
+                        <p>
+                        <a href="/Carrito"><em class="fas fa-shopping-cart"></em></a>
+                        </p>
+                        <a href="#"><i class="fas fa-square"></i>Soporte</a>
+                    </div>    
+                </div>
             </div>
         </header>
         <main>
-            <div class="carrito-guardados">
+            <div class="carrito-guardados-mobile">
                 <div class="listado-carrito">
                     Carrito
                 </div>
@@ -29,7 +71,108 @@
                 </div>
             </div>
             <section class="ventana-productos">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos adipisci ex, quidem explicabo iusto quaerat facilis nisi, porro, inventore eius delectus! Ipsa doloribus ipsum possimus recusandae aliquam natus provident molestiae!
+                <div class="producto">
+                    <div class="info-producto">
+                        <img src="https://m.media-amazon.com/images/I/61V5O0UpgqS._AC_SX425_.jpg" alt="Foto de producto">
+                        <div class="datos-producto">
+                            <h3>Nombre de producto</h3>
+                            <p>
+                                Detalles generales y consideraciones del producto elegido. 
+                            </p>
+                            <p>
+                                Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="seleccion-compra">
+                        <div class="precio-unitario">
+                            $ 4.200,00
+                        </div>
+                        <div class="selector-cantidad">
+                            <i class="far fa-caret-square-left"></i>
+                            <div class="cantidad-unidades">
+                                1
+                            </div>
+                            <i class="far fa-caret-square-right"></i>
+                        </div>
+                        <div class="total-producto">
+                            <div class="leyenda-total">
+                                Total:
+                            </div>
+                            <div class="precio-total">
+                                $ 4.200,00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="info-producto">
+                        <img src="https://i.ebayimg.com/images/g/L28AAOSwFNFf8lpP/s-l300.jpg" alt="Foto de producto">
+                        <div class="datos-producto">
+                            <h3>Nombre de producto</h3>
+                            <p>
+                                Detalles generales y consideraciones del producto elegido. 
+                            </p>
+                            <p>
+                                Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="seleccion-compra">
+                        <div class="precio-unitario">
+                            $ 22.000,00
+                        </div>
+                        <div class="selector-cantidad">
+                            <i class="far fa-caret-square-left"></i>
+                            <div class="cantidad-unidades">
+                                4
+                            </div>
+                            <i class="far fa-caret-square-right"></i>
+                        </div>
+                        <div class="total-producto">
+                            <div class="leyenda-total">
+                                Total:
+                            </div>
+                            <div class="precio-total">
+                                $ 88.000,00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="info-producto">
+                        <img src="https://i.blogs.es/0404b9/sensores/1366_2000.jpg" alt="Foto de producto">
+                        <div class="datos-producto">
+                            <h3>Nombre de producto</h3>
+                            <p>
+                                Detalles generales y consideraciones del producto elegido. 
+                            </p>
+                            <p>
+                                Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="seleccion-compra">
+                        <div class="precio-unitario">
+                            $ 850,00
+                        </div>
+                        <div class="selector-cantidad">
+                            <i class="far fa-caret-square-left"></i>
+                            <div class="cantidad-unidades">
+                                2
+                            </div>
+                            <i class="far fa-caret-square-right"></i>
+                        </div>
+                        <div class="total-producto">
+                            <div class="leyenda-total">
+                                Total:
+                            </div>
+                            <div class="precio-total">
+                                $ 1.700,00
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="pie-pagina">
