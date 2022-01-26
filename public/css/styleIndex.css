@@ -10,6 +10,9 @@ body {
 .barra-principal-desktop{
     display: none;
 }
+.formulario {
+    display: none;
+}
 
 .header-principal{
     margin-top: 0;
@@ -73,6 +76,10 @@ body {
 .imgCarrousel img{
     width: 100%;
 }
+
+
+/* acá comienza el estilo de los banners con videos mobile*/
+
 .experienciasMain {
     display: flex;
     justify-content: space-between;
@@ -82,16 +89,15 @@ body {
 }
 .experienciasMain video{
     object-fit: cover;
-    width: 23.5vw;
-    box-shadow: 10px 5px 5px grey;
+    width: 50vw;
 }
 .experienciasMain a{
-    width: 23.5vw;
+    width: 50vw;
 }
 
-/* acá comienza el estilo de los banners con videos mobile*/
-
-.container { position:relative; }
+.container {
+    position:relative;
+}
 .container video {
     position:relative;
     z-index:0;
@@ -107,10 +113,16 @@ body {
 .overlay p{
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 2vw;
+    font-size: 3vw;
     padding-left: 5%;
     margin-top: 3%;
     margin-bottom: 6%;
+}
+#container3 {
+    display: none;
+}
+#container4 {
+    display: none;
 }
 
 /* acá comienza el estilo del footer mobile*/
@@ -279,6 +291,7 @@ color: #F8E0D8;
     }
 
     .formulario {
+        display: block;
         margin-top: 15px;
         margin-bottom: 20px;
         font-size: 1rem;
@@ -308,7 +321,15 @@ color: #F8E0D8;
 /* acá comienza el estilo de los banners con videos desktop*/
 
 @media (min-width: 450px){
-    .container { position:relative; }
+
+    .experienciasMain video{
+        object-fit: cover;
+        width: 23.5vw;
+        box-shadow: 10px 5px 5px grey;
+    }
+    .container { 
+        position:relative;
+    }
     .container video {
         position:relative;
         z-index:0;
@@ -328,5 +349,11 @@ color: #F8E0D8;
         padding-left: 5%;
         margin-top: 3%;
         margin-bottom: 6%;
+    }
+    #container3 {
+        display: block;
+    }
+    #container4 {
+        display: block;
     }
 }
