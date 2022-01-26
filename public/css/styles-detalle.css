@@ -33,7 +33,7 @@ main{
     align-items: center;
 
 }
-.descripcion img{
+.imagen{
     width: 100%;
 
 }
@@ -41,54 +41,16 @@ main{
 .texto-descripcion{
     text-align: justify;
     font-size: 1rem;
-
-}
-
-.color {
-    text-align: center;
-}
-.imagen-botones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-}
-
-.imagen-botones img{
-width: 100%;
-
+    margin-top: -4px;
 }
 
 .botones{
     display: flex;
     justify-content: space-around;
 margin-top: 10px;
-
+margin-bottom: 10px;
 }
 
-.accesorio{
-    text-align: center;
-    font-size: 20px;
-}
-
-.ultimo-boton{
-    margin: auto;
-    border: brown solid 4px;
-}
-.accesorio-contenido{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.accesorio-contenido p{
-    text-align: justify;
-    font-size: 1rem;
-}
-.accesorio-contenido img{
-    width: 100%;
-
-}
 
 .barra button{
  margin-top: 26px;
@@ -183,24 +145,40 @@ body {
     list-style: none;
 }
 
-.accesorio-contenido-desktop{
-
-    display: none;
-}
 .descripcion-desktop{
     display: none;
 }
-.botones-desktop{
-display: none;
-
-}
 
 @media(min-width:450px){
+
+    body{
+        background-image: url(http://www.solofondos.com/wp-content/uploads/2015/11/Food_web.jpg);
+        background-size:cover
+      }
+
 .barra button{
     padding: 20px;
     font-size: 20px;
 }
+.imagen{
+    display: none;
+}
 
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 10px;
+    margin-left: 30px;
+}
+.cantidad{
+    margin-top: 20px;
+
+}
+.formulario label{
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 .descripcion{
     display: none;
@@ -214,6 +192,7 @@ display: none;
 }
 .descripcion-desktop img{
     width: 50%;
+    padding: 40px;
 }
 .descripcion-mitad{
     margin: auto;
@@ -231,61 +210,14 @@ display: none;
     text-align: justify;
     margin-right: 5px;
 }
-.imagen-botones{
-   
-    flex-direction: row;
-    margin-top: 30px;
-}
-.botones-desktop{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-}
-.azul{
-    padding: 5%;
-    font-size: 20px;
-    margin-bottom: 2%;
-}
-.rojo{
-    padding: 5%;
-    font-size: 20px;
 
-}
-.negro{
-    padding: 5% 4%;
-    font-size: 20px;
-    margin-top: 2%;
-}
-
-
-.color{
-    display: none;
-}
 .botones{
     display: none;
 
 }
 
-.imagen-botones img{
-
-    width: 50%;
-}
 
 
-.accesorio-contenido{
-    display: none;
-
-}
-.accesorio-contenido-desktop{
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    width: 100vw;
-}
-.accesorio-contenido-desktop img{
-    width: 50%;
-}
 .mitad{
     display: flex;
     flex-direction: column;
