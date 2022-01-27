@@ -10,44 +10,19 @@ body {
 /* Acá arrancan los estilos del "header"===================================== */
 /*=========================================================================== */
 
-.header-principal {
-    display: none;
-    content-visibility: hidden;
-}
-
-.header-botones {
-    display: none;
-    content-visibility: hidden;
-}
-
-.barra-principal {
-    display: none;
-    content-visibility: hidden;
-}
-
-.header-global-desktop {
-    display: none;
-    content-visibility: hidden;
-}
-
-.main-header {
+.top-header {
+    position: relative;
+    /* z-index: 4; */
+    top: 0px;
     display: flex;
-    max-width: 100vw;
+    width: 100vw;
+    height: 130px;
     background-color: black;
     color: #F8E0D8;
     padding: 5px;
 }
 
-.botones-main-header a {
-    text-decoration: none;
-    color: #F8E0D8;
-}
-
-.logo-TecHouse {
-    width: 170px;
-}
-
-.botones-main-header {
+.top-header-buttons {
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
@@ -57,7 +32,16 @@ body {
     position: relative;
 }
 
-.soporte-Carrito {
+.top-header-buttons a {
+    text-decoration: none;
+    color: #F8E0D8;
+}
+
+.TecHouse-logo {
+    width: 170px;
+}
+
+.productCart-support {
     border: solid #F8E0D8 1px;
     background-color: #00A997;
     border-radius: 5px;
@@ -68,12 +52,12 @@ body {
     text-align: center;
 }
 
-.soporte-Carrito i {
+.productCart-support i {
     display: none;
     content-visibility: hidden;
 }
 
-.boton-cerrar {
+.productCart-close {
     margin: 1px;
     font-size: 28px;
     position: absolute;
@@ -85,6 +69,9 @@ body {
 /*=========================================================================== */
 
 .carrito-guardados-mobile {
+    position: relative;
+    /* z-index: 3; */
+    width: 100vw;
     display: flex;
     content-visibility: visible;
     height: 6vh;
@@ -106,7 +93,7 @@ body {
 
 section.ventana-productos {
     padding: 5px;
-    background-color:#fff7e3;
+    background-color:white;
 }
 
 div.producto {
@@ -281,13 +268,13 @@ footer.pie-pagina {
 @media (min-width: 450px) {
     
     body {
-        background-color: #fff7e3;
+        background-color: white;
         margin: 0px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
     }
 
-    .soporte-Carrito {
+    .productCart-support {
         border: solid #F8E0D8 1px;
         background-color: #00A997;
         border-radius: 5px;
@@ -298,12 +285,12 @@ footer.pie-pagina {
         right: 10%;
     }
 
-    .soporte-Carrito i {
+    .productCart-support i {
         display: contents;
         content-visibility: visible;
     }
 
-    .boton-cerrar {
+    .productCart-close {
         display: none;
         content-visibility: hidden;
     }
