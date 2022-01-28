@@ -68,7 +68,7 @@ body {
 /* Acá arrancan los estilos del "main"======================================= */
 /*=========================================================================== */
 
-.carrito-guardados-mobile {
+.cart-wishlist-bar {
     position: relative;
     /* z-index: 3; */
     width: 100vw;
@@ -80,8 +80,8 @@ body {
     background-color: #00A997;
 }
 
-.listado-carrito,
-.listado-guardados {
+.cart-list,
+.wish-list {
     border: solid #F8E0D8 1px;
     background-color: #F8E0D8;
     border-radius: 5px;
@@ -91,51 +91,51 @@ body {
     font-weight: bold;
 }
 
-section.ventana-productos {
+section.products-viewer {
     padding: 5px;
     background-color:white;
 }
 
-div.producto {
+div.product {
     background-color: #F8E0D8;
     margin: 5px 0px;
     border-radius: 5px;
     border: solid silver 1px;
 }
 
-div.info-producto {
+div.product-info {
     display: flex;
 }
 
-div.info-producto img {
+div.product-info img {
     width: 100px;
     border-radius: 7px;
     padding: 5px;
     margin: 10px 10px 5px 10px;
 }
 
-div.datos-producto {
+div.product-details {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-div.datos-producto h3 {
+div.product-details h3 {
     margin-bottom: 5px;
 }
 
-div.datos-producto p {
+div.product-details p {
     margin: 5px 0px;
     font-size: 14px;
 }
 
-div.datos-producto i {
+div.product-details i {
     margin: 5px 0px;
     font-size: 14px;
     color: goldenrod;
 }
 
-div.seleccion-compra {
+div.product-pricing {
     display: flex;
 }
 
@@ -149,12 +149,12 @@ div.precio-unitario {
     text-align: center;
 }
 
-div.selector-cantidad {
+div.product-amount {
     display: flex;
     margin: 0px 10px 5px 10px
 }
 
-div.selector-cantidad i {
+div.product-amount i {
     font-size: 22px;
 }
 
@@ -166,18 +166,18 @@ div.cantidad-unidades {
     text-align: center;
 }
 
-div.total-producto {
+div.product-subtotal {
     display: flex;
     margin: 0px 5px;
     width: 140px;
     font-weight:bold;
 }
 
-div.leyenda-total {
+div.subtotal-label {
     margin-top: 3px;
 }
 
-div.precio-total {
+div.subtotal-price {
     flex-grow: 1;
     padding: 2px;
     margin: 0px 5px 5px 5px;
@@ -187,7 +187,7 @@ div.precio-total {
     text-align: center;
 }
 
-div.limpiar-confirmar-carrito-mobile {
+div.full-cart-options-bar {
     display: flex;
     content-visibility: visible;
     height: 12vh;
@@ -198,8 +198,8 @@ div.limpiar-confirmar-carrito-mobile {
     color: black;
 }
 
-.limpiar-carrito,
-.confirmar-carrito {
+.empty-cart,
+.confirm-cart {
     border: solid #F8E0D8 1px;
     background-color: #F8E0D8;
     border-radius: 5px;
@@ -211,14 +211,14 @@ div.limpiar-confirmar-carrito-mobile {
     color: black;
 }
 
-    .limpiar-carrito,
-    .confirmar-carrito a {
-        text-decoration: none;
-        color: black;
-    }
+.empty-cart,
+.confirm-cart a {
+    text-decoration: none;
+    color: black;
+}
 
-.limpiar-carrito i,
-.confirmar-carrito i {
+.empty-cart i,
+.confirm-cart i {
     display: none;
     content-visibility: hidden;
     margin: 0px 3px;
@@ -228,12 +228,12 @@ div.limpiar-confirmar-carrito-mobile {
 /* Acá arrancan los estilos del "footer"===================================== */
 /*=========================================================================== */
 
-footer.pie-pagina {
+footer {
     display: flex;
     background-color: black;
 }
 
-.menus-pie-pagina{
+.footer-menus{
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -243,20 +243,20 @@ footer.pie-pagina {
     font-size: 3.5vw;
 }
 
-.redes-sociales {
+.social-networks-links {
     padding: 0px 0px 0px 90px;
 }
 
-.menus-pie-pagina a {
+.footer-menus a {
    text-decoration: none;
    color: #F8E0D8;
 }
 
-.menus-pie-pagina li {
+.footer-menus li {
     list-style: none;
 }
 
-.formulario {
+.page-form {
     display: none;
     content-visibility: hidden;
 }
@@ -295,12 +295,12 @@ footer.pie-pagina {
         content-visibility: hidden;
     }
 
-    section.ventana-productos {
+    section.products-viewer {
         width: 80vw;
         margin: auto;
     }
 
-    div.limpiar-confirmar-carrito-mobile {
+    div.full-cart-options-bar {
         display: flex;
         content-visibility: visible;
         height: 15vh;
@@ -309,8 +309,8 @@ footer.pie-pagina {
         background-color: #00A997;
     }
     
-    .limpiar-carrito,
-    .confirmar-carrito {
+    .empty-cart,
+    .confirm-cart {
         border: solid #F8E0D8 1px;
         background-color: #F8E0D8;
         border-radius: 5px;
@@ -322,14 +322,14 @@ footer.pie-pagina {
         color: black;
     }
 
-    .limpiar-carrito,
-    .confirmar-carrito a {
+    .empty-cart,
+    .confirm-cart a {
         text-decoration: none;
         color: black;
     }
 
-    .limpiar-carrito i,
-    .confirmar-carrito i {
+    .empty-cart i,
+    .confirm-cart i {
         display: contents;
         content-visibility: visible;
         margin: 0px 3px;
@@ -337,13 +337,13 @@ footer.pie-pagina {
         color: black;
     }
 
-    footer.pie-pagina {
+    footer {
         display: flex;
         background-color: black;
         justify-content: space-around;
     }
 
-    .formulario {
+    .page-form {
         display: block;
         margin-top: 15px;
         margin-bottom: 20px;
@@ -357,16 +357,19 @@ footer.pie-pagina {
         width: 400px;
     }
 
-    .formNombre {
+    .form-name {
         width: 70%;
     }
-    .formMensaje {
+
+    .form-email {
         width: 70%;
     }
-    .formEmail {
+
+    .form-message {
         width: 70%;
     }
-    .tituloForm {
+
+    .form-title {
         font-size: 2rem;
     }
 }
