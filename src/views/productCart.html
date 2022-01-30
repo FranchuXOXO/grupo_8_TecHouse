@@ -10,27 +10,31 @@
 		<title>Carrito</title>
     </head>
     <body>
-        <header class="top-header">
-            <!-- visualización Mobile -->
-            <a href="/"><img class="TecHouse-logo" src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse"></a>
-            <div class="top-header-buttons">
-                <div class="productCart-support">¿Necesitas ayuda? <i class="fas fa-question-circle"></i></div>
-                <div class="productCart-close">
-                    <a href="/"><i class="far fa-times-circle"></i></a>
+        <header>
+            <div class="top-header">
+                <div class="header-first-line">
+                    <a href="/"><img class="TecHouse-logo" src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse"></a>
+                    <div class="first-line-buttons">
+                        <div class="productCart-support">
+                            ¿Necesitas ayuda? <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="productCart-close">
+                            <a href="/"><i class="far fa-times-circle"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- visualización Desktop -->
-            
-        </header>
-        <main>
             <div class="cart-wishlist-bar">
                 <div class="cart-list">
                     Tú Carrito
                 </div>
                 <div class="wish-list">
-                    Guardados
+                    Tú Wishlist
                 </div>
             </div>
+            <!-- visualización Desktop -->
+        </header>
+        <main>
             <section class="products-viewer">
                 <div class="product">
                     <div class="product-info">
@@ -51,7 +55,7 @@
                         </div>
                         <div class="product-amount">
                             <i class="far fa-caret-square-left"></i>
-                            <div class="cantidad-unidades">
+                            <div class="unit-amount">
                                 1
                             </div>
                             <i class="far fa-caret-square-right"></i>
@@ -85,7 +89,7 @@
                         </div>
                         <div class="product-amount">
                             <i class="far fa-caret-square-left"></i>
-                            <div class="cantidad-unidades">
+                            <div class="unit-amount">
                                 4
                             </div>
                             <i class="far fa-caret-square-right"></i>
@@ -119,7 +123,7 @@
                         </div>
                         <div class="product-amount">
                             <i class="far fa-caret-square-left"></i>
-                            <div class="cantidad-unidades">
+                            <div class="unit-amount">
                                 2
                             </div>
                             <i class="far fa-caret-square-right"></i>
@@ -135,14 +139,42 @@
                     </div>
                 </div>
             </section>
-            <div class="full-cart-options-bar">
-                <div class="empty-cart">
-                    Limpiar Carrito <i class="fas fa-trash-alt"></i>
+            <section class="bottom-cart">
+                <div class="full-cart-options-bar">
+                    <div class="empty-cart">
+                        Limpiar Carrito <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="confirm-cart">
+                        <a href="/Login">Confirmar Carrito <i class="fas fa-check"></i></a>
+                    </div>
                 </div>
-                <div class="confirm-cart">
-                    <a href="/Login">Confirmar Carrito <i class="fas fa-check"></i></a>
+                <div class="safety-mentions">
+                    <div class="caja-envio">
+                        <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>
+                        <div class="caja-envio-texto">
+                            <h4>Enviamos tu compra</h4>
+                            <p>Entregas en todo el pais</p>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="caja-pago">
+                        <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png"/>
+                        <div class="caja-envio-texto">
+                            <h4>Paga como quieras</h4>
+                            <p>Tarjetas de crédito o efectivo</p>
+                        </div>
+                    </div>
+        
+                    <div class="caja-seguridad">
+                        <img src="https://img.icons8.com/windows/32/000000/security-block.png"/>
+                        <div class="caja-envio-texto">
+                            <h4>Compra con seguridad</h4>
+                            <p>Tus datos siempre protegidos</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
         <footer>
             <nav class="footer-menus"> 
