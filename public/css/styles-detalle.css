@@ -159,7 +159,14 @@ body {
 .barra button{
     padding: 20px;
     font-size: 20px;
+    border-radius: 7px;
+    background-color: lightgreen;
+    transition: all .3s;
 }
+.barra button:hover{
+    background-color: green;
+}
+
 .imagen{
     display: none;
 }
@@ -167,7 +174,7 @@ body {
 .formulario{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 44%;
     margin: 10px;
     margin-left: 30px;
 }
