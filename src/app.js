@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 const rutasIndex=require("./routes/indexRoutes")
+const rutasProduct= require("./routes/productRoutes") 
+const rutasUser=require("./routes/userRoutes")
 
 app.set("view engine", "ejs")
 
@@ -15,18 +17,6 @@ app.listen(3000, () => {
 
 app.use('/', rutasIndex);
 
-app.get('/Carrito', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productCart.html'));
-});
+app.use('/', rutasProduct);
 
-app.get('/Detalle', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/Detalle.html'));
-});
-
-app.get('/Login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
-});
-
-app.get('/Signup', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/signup.html'));
-});
+app.use("/", rutasUser)
