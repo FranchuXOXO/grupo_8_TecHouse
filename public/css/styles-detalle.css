@@ -44,17 +44,34 @@ main{
     margin-top: -4px;
 }
 
-.botones{
+.buttons{
     display: flex;
     justify-content: space-around;
 margin-top: 10px;
 margin-bottom: 10px;
 }
-
-
+.blue{
+    width: 5%;
+height: 2vh;
+border-radius: 50%;
+background-color: blue;
+}
+.red{
+    width: 5%;
+height: 2vh;
+border-radius: 50%;
+background-color: red;
+}
+.black{
+    width: 5%;
+height: 2vh;
+border-radius: 50%;
+background-color: black;
+}
 .barra button{
  margin-top: 26px;
  margin-bottom: 26px;
+ background-color: lightgreen;
 }
 
 /* acá empieza el header y el footer */
@@ -148,9 +165,45 @@ body {
 .descripcion-desktop{
     display: none;
 }
-
+.colorTitle{
+    text-align: center;
+}
+.article-related{
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 10px;
+}
+.article-related-half{
+    width: 98%;
+    margin: auto;
+}
+.article-related-half img{
+    width: 100%;
+}
+.price{
+    margin-bottom: 10px;
+}
+.quantity-mobile{
+    margin-right: 15px;
+}
+.form-mobile{
+    margin-top: 20px;
+}
+.form-mobile div{
+    display: flex;
+    justify-content: space-evenly;
+}
 @media(min-width:450px){
+.form-mobile{
+    display: none;
+}
+.article-related-half{
+    width: 40%;
+}
 
+.colorTitle{
+    display: none;
+}
     body{
         background-image: url(http://www.solofondos.com/wp-content/uploads/2015/11/Food_web.jpg);
         background-size:cover
@@ -218,7 +271,7 @@ body {
     margin-right: 5px;
 }
 
-.botones{
+.buttons{
     display: none;
 
 }
