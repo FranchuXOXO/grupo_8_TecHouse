@@ -21,7 +21,6 @@ main {
     box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
     -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
     -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-
 }
 .formulario {
     display: flex;

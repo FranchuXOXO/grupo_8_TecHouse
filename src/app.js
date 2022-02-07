@@ -3,9 +3,11 @@ const path = require('path');
 
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
-const rutasIndex=require("./routes/indexRoutes")
-const rutasProduct= require("./routes/productRoutes") 
-const rutasUser=require("./routes/userRoutes")
+const rutasIndex = require("./routes/indexRoutes")
+const rutasProduct = require("./routes/productRoutes") 
+const rutasUser = require("./routes/userRoutes")
+
+app.set('views', path.join(__dirname, 'views'));
 
 app.set("view engine", "ejs")
 
