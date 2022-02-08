@@ -3,4 +3,5 @@ const indexCont = {
         res.render("index");
     }
 }
-module.exports=indexCont
+
+module.exports = indexCont;
