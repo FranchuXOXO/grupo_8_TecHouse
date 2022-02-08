@@ -7,7 +7,6 @@ const rutasIndex = require("./routes/indexRoutes")
 const rutasProduct = require("./routes/productRoutes") 
 const rutasUser = require("./routes/userRoutes")
 
-app.set('views', path.join(__dirname, 'views'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
