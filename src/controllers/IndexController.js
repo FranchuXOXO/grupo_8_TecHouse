@@ -1,6 +1,8 @@
 const indexCont = {
     indexMethod: (req, res) => {
-        res.render("index");
+        res.render("index", {
+            siteTitle: "Home - Bienvenidos a TecHouse",
+        });
     }
 }
 
