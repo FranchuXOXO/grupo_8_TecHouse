@@ -177,50 +177,6 @@
                 </div>
             </section>
         </main>
-        <footer>
-            <nav class="footer-menus"> 
-                <ul class="site-map">
-                    <li><h3>Árbol del sitio</h3></li>
-                    <li> <a href="#">Tu carrito </a>  </li>
-                    <li> <a href="#"> Perfil </a> </li>
-                    <li> <a href="#"> Sobre nosotros </a> </li>
-                    <li> <a href="#"> Soporte  </a>  </li>
-                </ul> 
-                <ul class="social-networks-links">
-                    <li><h3>Redes sociales</h3></li>
-                    <li> <i class="fab fa-facebook"></i> /TecHouse</li>
-                    <li> <i class="fab fa-instagram"></i> @TecHouse</li>
-                    <li><i class="fab fa-twitter"></i>  @TecHouse</li>
-                    <li> <i class="fab fa-whatsapp"></i> #1144445555</li>
-                </ul>
-            </nav>
-            <div class="page-form">
-                <div id="page-form">
-                    <h3 class="form-title">Formulario de contacto</h3>
-                <form id="formID" class="formClass" method="post" action=""> 
-                    <div class="form-name-global">
-                        <label for="formName" class="title-name">Nombre completo</label>
-                        <div class="form-name">
-                            <input type="text" id="formName" name="formName" class="form-name" required>
-                        </div>
-                    </div>
-                    <div class="form-email-global">
-                        <label for="formEmail" class="title-email">Dirección de email</label>
-                        <div class="form-email">
-                            <input type="email" id="formEmail" name="formEmail" class="form-email" required>
-                        </div>
-                    </div>
-                    <div class="form-input-global">
-                        <label for="formMessage" class="title-message">Escriba su mensaje</label>
-                        <div class="form-message">
-                            <textarea id="formMessage" name="formMessage" class="form-message" rows="5" maxlength="2000" required></textarea>
-                        </div>
-                    </div>
-                    <div class="form-sent">
-                        <button type="submit" id="formSent" class="form-sent">Enviar mensaje</button>
-                    </div>
-                </form>
-            </div>
-        </footer>
+        <%- include("../partials/footer.ejs") %>
     </body>
 </html>

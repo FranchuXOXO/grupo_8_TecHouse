@@ -5,60 +5,12 @@
     <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
-    <header>
-        <div class="header-principal">
-            <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
-            <div class="header-botones">
-                <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                <a href="/Login">
-                <p><i class="fas fa-sign-in-alt"></i>
-                Login
-                </p></a>
-            </div>
-        </div>
-        <div class="header-principal-desktop">
-            <div class="header-principal-desktop-columna1">
-                <div class="header-searchBar-desktop">
-                    <i class="fas fa-search"></i><input type="text" placeholder="Buscar..">
-                </div>
-                <a href="#"><i class="fas fa-square"></i>Experiencias</a>
-            </div>    
-                <a href="/Detalle"><i class="fas fa-square"></i>Productos</a>
-                <img src="./images/Logo-TecHouse-header.png" alt="acá iría el logo">
-                <div class="header-principal-desktop-columna2">
-                    <p>  
-                        <a href="/Login"><i class="fas fa-sign-in-alt"></i>
-                        Login</a>
-                    </p>
-                    <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a>
-                </div>
-                <div class="header-principal-desktop-columna3">
-                    <p>
-                    <a href="/Carrito"><em class="fas fa-shopping-cart"></em></a>
-                    </p>
-                    <a href="#"><i class="fas fa-square"></i>Soporte</a>
-                </div>
-                
-        </div>
-        <div class="barra-principal">
-            <a href="/Detalle"><i class="fas fa-bars"></i></a>
-            <a href="#"> Sobre nosotros > </a>
-            <a href="#"> Soporte ></a>
-        </div>
-        <div class="barra-principal-desktop">
-            <a href="#"> Iluminación > </a>
-            <a href="#"> Sonido ></a>
-            <a href="#"> Conectividad ></a>
-            <a href="#"> Visual ></a>
-            <a href="#"> Integración ></a>
-        </div>
-    </header>
-
+    <%- include ("../partials/header.ejs") %>
     <main>
         <div class="cuadro"> 
             <h1>Crear una cuenta</h1>
             <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
-            <form class="formulario" action="/views/login.html" method="POST">
+            <form class="formSignup" action="/views/login.html" method="POST">
                 <label for="nombre">Primer Nombre</label>
                 <input type="text" id="nombre" placeholder="Escribe tu nombre" name="nombre" />
 
@@ -115,23 +67,6 @@
             </div>
         </div>
     </main> 
-    <footer>
-        <nav class="piePagina"> 
-            <ul class="arbol-sitio">
-                <li><h3>Árbol del sitio</h3></li>
-                <li> <a href="#">Tu carrito </a>  </li>
-                <li> <a href="#"> Perfil </a> </li>
-                <li> <a href="#"> Sobre nosotros </a> </li>
-                <li> <a href="#"> Soporte  </a>  </li>
-            </ul> 
-            <ul class="redes-sociales">
-                <li><h3>Redes sociales</h3></li>
-                <li> <i class="fab fa-facebook"></i> /TecHouse</li>
-                <li> <i class="fab fa-instagram"></i> @TecHouse</li>
-                <li><i class="fab fa-twitter"></i>  @TecHouse</li>
-                <li> <i class="fab fa-whatsapp"></i> #1144445555</li>
-            </ul> 
-        </nav>
-    </footer>
+    <%- include("../partials/footer.ejs") %>
 </body>
 </html>

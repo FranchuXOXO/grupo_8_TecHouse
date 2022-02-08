@@ -22,7 +22,7 @@ main {
     -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
     -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
 }
-.formulario {
+.formSignup {
     display: flex;
     flex-direction: column;
 }
@@ -94,7 +94,7 @@ p {
     width: 180px
 }
 
-a {
+.formSignup a {
     text-align: end;
     font-size: 12px;
 }
@@ -274,26 +274,40 @@ a {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 .piePagina a {
-   text-decoration: none;
-   color: #F8E0D8;
+text-decoration: none;
+color: #F8E0D8;
 }
 
 .piePagina ul {
     padding: 0;
+    padding-top: 10px;
 }
 
 .piePagina li{
     list-style: none;
 }
-
-/* acá comienza el estilo del header desktop*/
+.formulario{
+    display: none;
+}
+/* acá comienza el estilo del header y footer desktop*/
 @media (min-width: 450px){
+    .cuadro{
+        margin-top: 110px;
+    }
+    .header-global-desktop {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 130px;
+    }
     .header-principal-desktop{
         display: flex;
+        top: 0;
+        width: 100vw;
         justify-content: space-between;
         box-sizing: border-box;
         background-color: black;
@@ -302,6 +316,7 @@ a {
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
+        height: 85%;
     }
     .header-principal{
         display: none;
@@ -312,22 +327,22 @@ a {
         color: #F8E0D8;
         text-decoration: none;
         padding-bottom: 10px;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         padding-left: 2px;
         padding-right: 2px;
     }
     .header-principal-desktop i {
         padding-right: 5px;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     .header-principal-desktop img {
-        width: 25%;
+        width: 170px;
     }
     .header-searchBar-desktop {
         font-size: 1.5vw;
         align-items: top;
         position:absolute;
-        padding-bottom: 12%;
+        padding-bottom: 9%;
     }
     .barra-principal{
         display:none;
@@ -349,9 +364,10 @@ a {
         justify-content: space-around;
     }
     .header-principal-desktop-columna2 p{
-        padding-bottom: 10%;
+        padding-bottom: 5%;
         font-size: 1.5vw;
         text-align: right;
+        text-decoration: none;
     }
     .header-principal-desktop-columna3 {
         display: flex;
@@ -359,7 +375,7 @@ a {
         justify-content: space-around;
     }
     .header-principal-desktop-columna3 p{
-        padding-bottom: 8%;
+        padding-bottom: 1%;
         font-size: 1.5vw;
         text-align: right;
     }
@@ -371,19 +387,72 @@ a {
     }
     .barra-principal-desktop {
         display: flex;
+        width: 100vw;
         background-color: #00A997;
         font-family: 'Roboto', sans-serif;
         color: white;
         justify-content: space-around;
         padding-top: 2px;
         align-items: center;
+        height: 15%;
     }
     
     .barra-principal-desktop a{
         text-decoration: none;
         color: white;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
+    }    
+    /* Footer */
+    .piePagina{
+        display: flex;
+        background-color: black;
+        font-family: 'Roboto', sans-serif;
+        color: #F8E0D8;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2vw;
     }
-    
-    
+
+    .piePagina a {
+    text-decoration: none;
+    color: #F8E0D8;
+    }
+
+    .piePagina ul {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .piePagina li{
+        list-style: none;
+    }
+
+    .formulario {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #F8E0D8;
+        text-align: left;
+        background-color: black;
+        padding-bottom: 10px;
+        width: 400px;
+    }
+
+    .formNombre {
+        width: 70%;
+    }
+    .formMensaje {
+        width: 70%;
+    }
+    .formEmail {
+        width: 70%;
+    }
+    .tituloForm {
+        font-size: 2rem;
+    }
+
 }

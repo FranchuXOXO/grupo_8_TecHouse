@@ -284,37 +284,32 @@ div.full-cart-options-bar {
 /* Acá arrancan los estilos del "footer"===================================== */
 /*=========================================================================== */
 
-footer {
-    display: flex;
-    background-color: black;
-}
-
-.footer-menus{
+.piePagina{
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
     color: #F8E0D8;
     justify-content: space-between;
+    padding-left: 5%;
     padding-right: 5%;
-    font-size: 3.5vw;
+    font-size: 3vw;
 }
 
-.social-networks-links {
-    padding: 0px 0px 0px 90px;
+.piePagina a {
+text-decoration: none;
+color: #F8E0D8;
 }
 
-.footer-menus a {
-   text-decoration: none;
-   color: #F8E0D8;
+.piePagina ul {
+    padding: 0;
+    padding-top: 10px;
 }
 
-.footer-menus li {
+.piePagina li{
     list-style: none;
 }
-
-.page-form {
+.formulario{
     display: none;
-    content-visibility: hidden;
 }
 
 /*=========================================================================== */
@@ -405,13 +400,32 @@ footer {
         flex-direction: row;
     }
 
-    footer {
+    .piePagina{
         display: flex;
         background-color: black;
-        justify-content: space-around;
+        font-family: 'Roboto', sans-serif;
+        color: #F8E0D8;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2vw;
     }
 
-    .page-form {
+    .piePagina a {
+    text-decoration: none;
+    color: #F8E0D8;
+    }
+
+    .piePagina ul {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .piePagina li{
+        list-style: none;
+    }
+
+    .formulario {
         display: block;
         margin-top: 15px;
         margin-bottom: 20px;
@@ -425,19 +439,16 @@ footer {
         width: 400px;
     }
 
-    .form-name {
+    .formNombre {
         width: 70%;
     }
-
-    .form-email {
+    .formMensaje {
         width: 70%;
     }
-
-    .form-message {
+    .formEmail {
         width: 70%;
     }
-
-    .form-title {
+    .tituloForm {
         font-size: 2rem;
     }
 }
