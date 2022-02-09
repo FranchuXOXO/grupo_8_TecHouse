@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head.ejs") %>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styleStock.css">
+</head>
+    <body>
+        <header>
+            <div class="top-header">
+                <div class="header-first-line">
+                    <a href="/"><img class="TecHouse-logo" src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="top-main">
+                <div class="stock-manager-title">
+                    <h3>Manejo del stock de productos</h3>
+                </div>
+                <form action="#" method="POST">
+                    <div class="stock-search-bar">
+                        <input type="text" id="search-field" name="search-field" placeholder="Busque el producto en el stock" maxlength="120" tabindex="1">
+                    </div>
+                </form>
+                </div>
+            </div>
+        </main>
+        <%- include("../partials/footer.ejs") %>
+    </body>
+</html>

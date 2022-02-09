@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* ========================================================
+    Reset (from browser factory design)
+======================================================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* ========================================================
+    Set up the body
+======================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* ========================================================
+    Header
+======================================================== */
+
+header {
+    background-color: black;
+}
+
+div.top-header {
+    width: 100vw;
+    height: 100px;  
+}
+
+div.header-first-line {
+    display: flex;
+    width: 100%;
+    height: 130px;
+    color: #F8E0D8;
+}
+
+.TecHouse-logo {
+    width: 110px;
+    margin: 5px;
+}
+
+/* ========================================================
+    Main
+======================================================== */
+
+div.top-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ========================================================
+    Footer
+======================================================== */
+
+.piePagina {
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3vw;
+}
+
+.piePagina a {
+    text-decoration: none;
+    color: #F8E0D8;
+}
+
+.piePagina ul {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.piePagina li {
+    list-style: none;
+}
+.formulario {
+    display: none;
+}
+
+
+/* ========================================================
+    Responsive - Tablet & Desktop viewport
+======================================================== */
+
+@media (min-width: 450px) {
+    
+    body {
+        background-color: white;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    div.top-header {
+        height: 130px;
+    }
+
+    .TecHouse-logo {
+        width: 170px;
+    }
+
+    .piePagina {
+        display: flex;
+        background-color: black;
+        font-family: 'Roboto', sans-serif;
+        color: #F8E0D8;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2vw;
+    }
+
+    .piePagina a {
+    text-decoration: none;
+    color: #F8E0D8;
+    }
+
+    .piePagina ul {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .piePagina li {
+        list-style: none;
+    }
+
+    .formulario {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #F8E0D8;
+        text-align: left;
+        background-color: black;
+        padding-bottom: 10px;
+        width: 400px;
+    }
+
+    .formNombre {
+        width: 70%;
+    }
+    .formMensaje {
+        width: 70%;
+    }
+    .formEmail {
+        width: 70%;
+    }
+    .tituloForm {
+        font-size: 2rem;
+    }
+}

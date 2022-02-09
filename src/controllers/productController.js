@@ -10,6 +10,12 @@ const productCont={
         res.render("products/productCart", {
             siteTitle: "Carrito",
         });
+    },
+
+    stockMethod: (req, res) => {
+        res.render("products/stock", {
+            siteTitle: "Manejo de Stock"
+        });
     }
 }
 module.exports=productCont
