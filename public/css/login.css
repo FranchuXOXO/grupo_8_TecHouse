@@ -141,17 +141,27 @@ h1 {
 .barra-principal-desktop{
     display: none;
 }
+.formulario {
+    display: none;
+}
 
 .header-principal{
+    margin-top: 0;
     display: flex;
-    max-width: 100vw;
+    width: 100vw;
     justify-content: space-between;
     box-sizing: border-box;
     background-color: black;
+    height: 50px;
+    font-size: 10px;
+    position: fixed;
+    top: 0;
 }
 
 .header-principal img {
     width: 50%;
+    height: 33px;
+    margin-top: 10px;
 }
 
 .header-botones{
@@ -166,6 +176,7 @@ h1 {
     font-size: 120%;
     color: #F8E0D8;
     margin-top: 5px;
+    text-decoration: none;
 }
 
 .header-botones p{
@@ -183,6 +194,10 @@ h1 {
     justify-content: space-around;
     padding-top: 2px;
     align-items: center;
+    position: fixed;
+    font-size: 12px;
+    width: 100vw;
+    top: 50px;
 }
 
 .barra-principal a{
