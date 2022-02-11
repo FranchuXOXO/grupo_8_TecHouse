@@ -152,7 +152,7 @@ main form {
     Footer
 ======================================================== */
 
-.piePagina {
+.footer-top {
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -163,17 +163,17 @@ main form {
     font-size: 3vw;
 }
 
-.piePagina a {
+.footer-top a {
     text-decoration: none;
     color: #F8E0D8;
 }
 
-.piePagina ul {
+.footer-top ul {
     padding: 0;
     padding-top: 10px;
 }
 
-.piePagina li {
+.footer-top li {
     list-style: none;
 }
 .formulario {
@@ -217,7 +217,7 @@ main form {
         flex-direction: column;
     }
 
-    .piePagina {
+    .footer-top {
         display: flex;
         background-color: black;
         font-family: 'Roboto', sans-serif;
@@ -228,17 +228,17 @@ main form {
         font-size: 2vw;
     }
 
-    .piePagina a {
+    .footer-top a {
     text-decoration: none;
     color: #F8E0D8;
     }
 
-    .piePagina ul {
+    .footer-top ul {
         padding: 0;
         padding-top: 10px;
     }
 
-    .piePagina li {
+    .footer-top li {
         list-style: none;
     }
 

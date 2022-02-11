@@ -135,23 +135,33 @@ h1 {
  body {
     margin: 0px;
 }
-.header-principal-desktop{
+.header-top-desktop{
     display: none;
 }
-.barra-principal-desktop{
+.navBar-top-desktop{
+    display: none;
+}
+.formulario {
     display: none;
 }
 
-.header-principal{
+.header-top{
+    margin-top: 0;
     display: flex;
-    max-width: 100vw;
+    width: 100vw;
     justify-content: space-between;
     box-sizing: border-box;
     background-color: black;
+    height: 50px;
+    font-size: 10px;
+    position: fixed;
+    top: 0;
 }
 
-.header-principal img {
-    width: 50%;
+.header-top img {
+    width: 100%;
+    height: 33px;
+    margin-top: 10px;
 }
 
 .header-botones{
@@ -166,6 +176,7 @@ h1 {
     font-size: 120%;
     color: #F8E0D8;
     margin-top: 5px;
+    text-decoration: none;
 }
 
 .header-botones p{
@@ -175,7 +186,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.barra-principal{
+.navBar-top{
     display: flex;
     background-color: #00A997;
     font-family: 'Roboto', sans-serif;
@@ -183,14 +194,18 @@ h1 {
     justify-content: space-around;
     padding-top: 2px;
     align-items: center;
+    position: fixed;
+    font-size: 12px;
+    width: 100vw;
+    top: 50px;
 }
 
-.barra-principal a{
+.navBar-top a{
     text-decoration: none;
     color: white;
 }
 
-.barra-principal i {
+.navBar-top i {
     font-size: 100%;
 
 }
@@ -202,19 +217,19 @@ h1 {
 .imgCarrousel img{
     width: 100%;
 }
-.experienciasMain {
+.experiencesMain {
     display: flex;
     justify-content: space-between;
     width: 100vw;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.experienciasMain video{
+.experiencesMain video{
     object-fit: cover;
     width: 23.5vw;
     box-shadow: 10px 5px 5px grey;
 }
-.experienciasMain a{
+.experiencesMain a{
     width: 23.5vw;
 }
 .container { position:relative; }
@@ -239,7 +254,7 @@ h1 {
     margin-bottom: 6%;
 }
 /* acá comienza el estilo del footer mobile*/
-.piePagina{
+.footer-top{
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -250,17 +265,17 @@ h1 {
     font-size: 3vw;
 }
 
-.piePagina a {
+.footer-top a {
 text-decoration: none;
 color: #F8E0D8;
 }
 
-.piePagina ul {
+.footer-top ul {
     padding: 0;
     padding-top: 10px;
 }
 
-.piePagina li{
+.footer-top li{
     list-style: none;
 }
 .formulario{
@@ -274,7 +289,7 @@ color: #F8E0D8;
         z-index: 2;
         height: 130px;
     }
-    .header-principal-desktop{
+    .header-top-desktop{
         display: flex;
         top: 0;
         width: 100vw;
@@ -288,10 +303,10 @@ color: #F8E0D8;
         padding-right: 5%;
         height: 85%;
     }
-    .header-principal{
+    .header-top{
         display: none;
     }
-    .header-principal-desktop a {
+    .header-top-desktop a {
         display: block;
         justify-content: space-around;
         color: #F8E0D8;
@@ -301,11 +316,11 @@ color: #F8E0D8;
         padding-left: 2px;
         padding-right: 2px;
     }
-    .header-principal-desktop i {
+    .header-top-desktop i {
         padding-right: 5px;
         font-size: 1.5vw;
     }
-    .header-principal-desktop img {
+    .header-top-desktop img {
         width: 170px;
     }
     .header-searchBar-desktop {
@@ -314,10 +329,10 @@ color: #F8E0D8;
         position:absolute;
         padding-bottom: 9%;
     }
-    .barra-principal{
+    .navBar-top{
         display:none;
     }
-    .header-principal-desktop-columna1 {
+    .header-top-desktop-column1 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -328,34 +343,34 @@ color: #F8E0D8;
         background-color: #F8E0D8;
         border-radius: 5px;
     }
-    .header-principal-desktop-columna2 {
+    .header-top-desktop-column2 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .header-principal-desktop-columna2 p{
+    .header-top-desktop-column2 p{
         padding-bottom: 5%;
         font-size: 1.5vw;
         text-align: right;
         text-decoration: none;
     }
-    .header-principal-desktop-columna3 {
+    .header-top-desktop-column3 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .header-principal-desktop-columna3 p{
+    .header-top-desktop-column3 p{
         padding-bottom: 1%;
         font-size: 1.5vw;
         text-align: right;
     }
-    .header-principal-desktop-columna3 em{
+    .header-top-desktop-column3 em{
         font-size: 2.5vw;
     }
     .header-searchBar-desktop {
         text-align: left;
     }
-    .barra-principal-desktop {
+    .navBar-top-desktop {
         display: flex;
         width: 100vw;
         background-color: #00A997;
@@ -367,13 +382,13 @@ color: #F8E0D8;
         height: 15%;
     }
     
-    .barra-principal-desktop a{
+    .navBar-top-desktop a{
         text-decoration: none;
         color: white;
         font-size: 1.2vw;
     }
     /* Footer */
-    .piePagina{
+    .footer-top{
         display: flex;
         background-color: black;
         font-family: 'Roboto', sans-serif;
@@ -384,17 +399,17 @@ color: #F8E0D8;
         font-size: 2vw;
     }
 
-    .piePagina a {
+    .footer-top a {
     text-decoration: none;
     color: #F8E0D8;
     }
 
-    .piePagina ul {
+    .footer-top ul {
         padding: 0;
         padding-top: 10px;
     }
 
-    .piePagina li{
+    .footer-top li{
         list-style: none;
     }
 

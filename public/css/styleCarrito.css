@@ -280,7 +280,7 @@ div.full-cart-options-bar {
 /* Acá arrancan los estilos del "footer"===================================== */
 /*=========================================================================== */
 
-.piePagina{
+.footer-top{
     display: flex;
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -291,17 +291,17 @@ div.full-cart-options-bar {
     font-size: 3vw;
 }
 
-.piePagina a {
+.footer-top a {
 text-decoration: none;
 color: #F8E0D8;
 }
 
-.piePagina ul {
+.footer-top ul {
     padding: 0;
     padding-top: 10px;
 }
 
-.piePagina li{
+.footer-top li{
     list-style: none;
 }
 .formulario{
@@ -396,7 +396,7 @@ color: #F8E0D8;
         flex-direction: row;
     }
 
-    .piePagina{
+    .footer-top{
         display: flex;
         background-color: black;
         font-family: 'Roboto', sans-serif;
@@ -407,17 +407,17 @@ color: #F8E0D8;
         font-size: 2vw;
     }
 
-    .piePagina a {
+    .footer-top a {
     text-decoration: none;
     color: #F8E0D8;
     }
 
-    .piePagina ul {
+    .footer-top ul {
         padding: 0;
         padding-top: 10px;
     }
 
-    .piePagina li{
+    .footer-top li{
         list-style: none;
     }
 
