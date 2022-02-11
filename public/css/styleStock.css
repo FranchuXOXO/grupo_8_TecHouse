@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 /* ========================================================
     Reset (from browser factory design)
 ======================================================== */
@@ -25,6 +24,34 @@ picture {
     margin: 0;
 }
 
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+text,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* ========================================================
     Set up the body
 ======================================================== */
@@ -33,6 +60,10 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     min-height: 100vh;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 /* ========================================================
@@ -56,7 +87,7 @@ div.header-first-line {
 }
 
 .TecHouse-logo {
-    width: 110px;
+    width: 100px;
     margin: 5px;
 }
 
@@ -64,9 +95,57 @@ div.header-first-line {
     Main
 ======================================================== */
 
-div.top-main {
-    display: flex;
-    justify-content: space-between;
+main {
+    margin: auto;
+    width: 90vw;
+}
+
+main form {
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#block-2 {
+    padding: 5px 25px;
+}
+
+.top-main {
+    display: inline-block;
+}
+
+#search-box {
+    width: 100%
+}
+
+.stock-manager-form {
+    display: inline-block;
+}
+
+.form-container {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px 13px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px 13px;
+    border-radius: 5px;
+    background-color: #00A997;
+}
+
+.product-image {
+    margin: 10px 20px;
+    width: 90%;
+    height: 380px;
+    border-radius: 5px;
 }
 
 /* ========================================================
@@ -115,12 +194,27 @@ div.top-main {
         font-family: 'Roboto', sans-serif;
     }
 
-    div.top-header {
+    .top-header {
         height: 130px;
     }
 
     .TecHouse-logo {
-        width: 170px;
+        width: 140px;
+    }
+
+    .top-main {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .stock-manager-form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .stock-manager-form form {
+        display: flex;
+        flex-direction: column;
     }
 
     .piePagina {

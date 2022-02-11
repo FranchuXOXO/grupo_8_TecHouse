@@ -16,14 +16,57 @@
         <main>
             <div class="top-main">
                 <div class="stock-manager-title">
-                    <h3>Manejo del stock de productos</h3>
+                    <h2>Manejo del stock de productos</h2>
                 </div>
-                <form action="#" method="POST">
-                    <div class="stock-search-bar">
-                        <input type="text" id="search-field" name="search-field" placeholder="Busque el producto en el stock" maxlength="120" tabindex="1">
+                <form id="search-box" action="#" method="GET">
+                    <div class="search-container">
+                        <input type="text" id="search-field" name="search-field" placeholder="Buscar productos, marcas" maxlength="120" tabindex="1">
+                        <button type="submit" name="search-button" id="search-button">
+                            <div role="img" class="fa fa-search"></div>
+                        </button>
                     </div>
                 </form>
                 </div>
+            </div>
+            <div class="stock-manager-form">
+                <form id="block-1" action="#" method="POST">
+                    <div class="form-container">
+                        <input type="text" id="product-name" name="product-name" placeholder="Nombre del producto">
+                    </div>
+                    <div class="form-container">
+                        <input type="textarea" id="product-description" name="product-description" placeholder="Descripción del producto">
+                    </div>
+                    <div class="form-container">
+                        <input type="text" id="product-price" name="product-price" placeholder="Precio del producto">
+                    </div>
+                    <div class="form-container">
+                        <input type="file" accept=".jpg, .png" id="product-image-upload" name="product-image-upload">
+                    </div>
+                    <div class="form-container">
+                        <button name="reset-form" type="reset">Vaciar campos</button>
+                    </div>
+                    <div class="form-container">
+                        <button name="edit-prod-info" type="submit">Editar info de producto</button>
+                    </div>
+                    <div class="form-container">
+                        <button name="create-new-prod" type="submit">Crear nuevo producto</button>
+                    </div>
+                </form>
+                <form id="block-2" action="#" method="POST">
+                    <div class="form-container">
+                        <img class="product-image" src="./images/Home-vertical-mujer-click-tablet.png" alt="Foto de producto">
+                    </div>
+                    <div class="form-container">
+                        <input type="text" id="product-category" name="product-category" placeholder="Categoría">
+                    </div>
+                    <div class="form-container">
+                        <select form="block-2">
+                            <option value="red">Rojo</option>
+                            <option value="green">Verde</option>
+                            <option value="blue">Azul</option>
+                        </select>
+                    </div>
+                </form>
             </div>
         </main>
         <%- include("../partials/footer.ejs") %>
