@@ -13,7 +13,7 @@ const productCont={
     },
 
     stockMethod: (req, res) => {
-        res.render("products/stock", {
+        res.render("products/productCreate", {
             siteTitle: "Manejo de Stock"
         });
     }
