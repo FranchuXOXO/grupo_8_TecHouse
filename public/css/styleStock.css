@@ -123,6 +123,10 @@ main form {
     width: 100%;
 }
 
+.form-container-descripcion {
+    width: 100%;
+}
+
 .form-container input, textarea {
     width: 100%;
     border-radius: 5px;
