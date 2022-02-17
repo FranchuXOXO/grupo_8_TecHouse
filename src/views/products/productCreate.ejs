@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="stock-manager-form">
-                <form method="POST" action="/products/create">
+                <form method="POST" action="/products">
                     <div class="form-container">
                         <label for="nombre">Nombre del producto</label>
                         <input type="text" name="nombre">
@@ -29,7 +29,7 @@
                         <label for="foto">Imagen del producto</label>
                         <input type="file" name="foto" accept=".jpg, .png">
                     </div>    
-                    <div class="form-container-descripcion">
+                    <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
                         <textarea name="descripcion" rows="3"></textarea>
                     </div>              
@@ -54,6 +54,10 @@
                     <div class="form-container">
                         <label>Precio del producto</label>
                         <input type="text" name="precio">
+                    </div>
+                    <div class="form-container-buttons">
+                        <input class="form-button" type="reset" value="Limpiar datos">
+                        <input class="form-button" type="submit" value="Crear producto">
                     </div>
                 </form>
             </div>

@@ -113,17 +113,13 @@ main form {
     width: 100%
 }
 
-.stock-manager-form form{
+.stock-manager-form form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.form-container {
-    width: 100%;
-}
-
-.form-container-descripcion {
+.form-container, .form-container-description, .form-container-buttons  {
     width: 100%;
 }
 
@@ -131,13 +127,6 @@ main form {
     width: 100%;
     border-radius: 5px;
     border: 1px solid #666;
-}
-
-.form-container button {
-    width: 100%;
-    padding: 12px 13px;
-    border-radius: 5px;
-    background-color: #00A997;
 }
 
 /* ========================================================
@@ -199,8 +188,13 @@ main form {
         justify-content: space-between;
     }
 
-    .form-container {
+    .form-container, .form-button {
         width: 45%;
+    }
+
+    .form-button {
+        padding: 5px 15px;
+        margin: 10px 23px;
     }
 
     .footer-top {
