@@ -6,7 +6,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-
 const productCont={
     detailMethod: (req, res) => {
         res.render("products/Detalle", {
@@ -36,10 +35,8 @@ const productCont={
         }
 
         return res.send(producto);
-    }
-}
-
-module.exports = productCont;
+    },
+    
     listMethod: (req, res) => {
         res.render("products/productList", {
             siteTitle: "Lista de Productos",
