@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head.ejs") %>
+    <link rel="stylesheet" href="./css/styles-productList.css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <% products.forEach(product => { %>
+        <article>
+            <h2><%#= product.name %></h2>
+            <a href="/products/<%#= product.id %>">
+                <img src="/images/<%#= product.image %>" alt="<%#= product.name %>" class="product_img">
+             </a>              
+                <div class="main-article">
+                    <i class="fas fa-truck"></i>
+                    <p class="precio">$ <%#= product.price %>
+                    </p>
+                    <p class="colours">
+                        <%#= product.colours %>
+                    </p>
+                    <h4 class="descripcion">
+                        <%#= product.description %>
+                    </h4>
+                    <p class="compatibilidad">
+                        <%#= product.compatibility %>
+                    </p>
+                </div>
+        </article>
+        <% }) %>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
+
+
+"name": "Amazon Echo Dot 2",
+    "description": "El Echo Dot 2 es la 2da generación de los parlantes de Amazon compatibles con Alexa",
+    "image": "Echo2.jpg",
+    "compatibility": "Alexa",
+    "colours": "Negro, Gris, Blanco",
+    "price": 12000
