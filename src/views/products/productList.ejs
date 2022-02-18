@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include ("../partials/head.ejs") %>
-    <link rel="stylesheet" href="./css/styleIndex.css">
+    <link rel="stylesheet" href="./css/styleList.css">
 </head>
 <body>
     <%- include("../partials/header.ejs") %>
@@ -14,17 +14,13 @@
                 <img src="/images/Products/<%= product.image %>" alt="<%= product.name %>" class="product_img">
              </a>              
                 <div class="main-article">
-                    <i class="fas fa-truck"></i>
-                    <p class="precio">$ <%= product.price %>
+                    <p class="price">Precio: $ <%= product.price %>
                     </p>
-                    <p class="colours">
-                        <%= product.colours %>
-                    </p>
-                    <h4 class="descripcion">
-                        <%= product.description %>
+                    <h4 class="description"> <%= product.description %>
                     </h4>
-                    <p class="compatibilidad">
-                        <%= product.compatibility %>
+                    <p class="colours">Colores: <%= product.colours %>
+                    </p>
+                    <p class="compatiblity">Compatible con: <%= product.compatibility %>
                     </p>
                 </div>
         </article>

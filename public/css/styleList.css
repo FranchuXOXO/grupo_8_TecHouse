@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main {
+    margin-top: 65px;
+    background-color: black;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+}
+main article {
+    margin: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    text-align: center;
+    border: 1px solid #000000;
+    background-color: #FFF;
+    border-radius: 2%;
+    height: 400px;
+    padding: 10px;
+}
+
+main article img {
+    width: 60%;
+}
+
+main article img {
+    width: 60%;
+}
+
+.main-article .price {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #00A997;
+    border-radius: 2%;
+}
+.main-article .description {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.main-article .colours {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* acá comienza el estilo desktop*/
+
+@media (min-width: 450px){
+    main {
+        margin-top: 130px;
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    main article {
+        margin-top: 40px;
+    }
+}
