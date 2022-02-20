@@ -8,12 +8,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productCont={
     detailMethod: (req, res) => {
-        const product = products.find(req.params.id);
-        console.log(product)
-        res.render("products/Detalle", {
-            siteTitle: "Detalle",
-            product
-        });
+       
+        const productIdToFind = req.params.id;
+		const product = products.find((p) => p.id == productIdToFind);
+
+		return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto' })
     },
 
     cartMethod: (req, res) => {
@@ -54,7 +53,7 @@ const productCont={
           return res.send("ESTE PRODUCTO NO EXISTE")  
         }
         
-        return res.render("productEdit", {productToEdit})
+        return res.render("products/productEdit", {productToEdit, siteTitle: "Edición del producto"})
 
     },
 
@@ -63,9 +62,13 @@ const productCont={
         const indiceDelProducto=products.findIndex((product) => product.id == idProducto);
 
         products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body}
+        productCont.guardarProductos()
 
-        return res.send(products)
-    }
+       return  res.send(products)
+    },
+    guardarProductos() {
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+	}
 
 }
 
