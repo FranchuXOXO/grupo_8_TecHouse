@@ -42,7 +42,19 @@ const productCont={
             siteTitle: "Lista de Productos",
             products: products
         });
+    },
+
+    edit: (req, res) => {
+        const idProducto=req.params.id;
+        const productToEdit = products.find((product) => product.id == idProducto);
+        if (!productToEdit) {
+          return res.send("ESTE PRODUCTO NO EXISTE")  
+        }
+        
+        return res.render("productEdit", {productToEdit})
+
     }
+
 }
 
 module.exports = productCont;
