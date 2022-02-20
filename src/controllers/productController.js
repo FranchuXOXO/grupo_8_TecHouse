@@ -8,8 +8,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productCont={
     detailMethod: (req, res) => {
+        const product = products.find(req.params.id);
+        console.log(product)
         res.render("products/Detalle", {
             siteTitle: "Detalle",
+            product
         });
     },
 
