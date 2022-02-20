@@ -8,4 +8,7 @@ router.get("/productos", productController.stockMethod);
 router.post("/productos", productController.createProduct)
 router.get("/list", productController.listMethod);
 
+router.get("/:id/edit", productController.edit);
+router.put("/:id", upload.single('image'), productcontroller.update);
+
 module.exports = router;
