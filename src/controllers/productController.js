@@ -53,6 +53,15 @@ const productCont={
         
         return res.render("productEdit", {productToEdit})
 
+    },
+
+    update: (req,res) => {
+        const idProducto=req.params.id;
+        const indiceDelProducto=products.findIndex((product) => product.id == idProducto);
+
+        products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body}
+
+        return res.send(products)
     }
 
 }
