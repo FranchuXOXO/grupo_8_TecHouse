@@ -66,7 +66,6 @@ const productCont={
 
        return  res.send(products)
     }
-
 }
 
 module.exports = productCont;

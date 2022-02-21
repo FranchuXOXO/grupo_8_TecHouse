@@ -1,0 +1,20 @@
+[
+    {
+    "id": 1,
+    "name": "Marcelo",
+    "lastname": "Sturmann",
+    "email": "marcelosturmann@gmail.com",
+    "password": "dhcurso",
+    "category": "admin",
+    "image": "marcelo1.jpg"
+    },
+    {
+    "id": 2,
+    "name": "Matias",
+    "lastname": "Madrussan",
+    "email": "matiasmadrussan@gmail.com",
+    "password": "dhcurso2",
+    "category": "admin",
+    "image": "matias1.jpg"
+    }
+]
