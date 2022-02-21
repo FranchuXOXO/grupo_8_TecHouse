@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <%- include ("../partials/head.ejs") %>
-  <link rel="stylesheet" href="/css/styles-detalle.css"> 
+    <link rel="stylesheet" href="../css/styles-detalle.css">
 </head>
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
         <div class="barra">
-            <h2> Amazon <br> echo dot </h2>
+            <h2> <%= product.name %> </h2>
             <a href="/Carrito"> <button type="button"> Comprar </button> </a>
 
         </div>
