@@ -62,13 +62,10 @@ const productCont={
         const indiceDelProducto=products.findIndex((product) => product.id == idProducto);
 
         products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body}
-        productCont.guardarProductos()
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
 
        return  res.send(products)
-    },
-    guardarProductos() {
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-	}
+    }
 
 }
 

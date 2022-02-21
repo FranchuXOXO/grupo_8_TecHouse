@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "name": "Amazon Echo Dot 2",
     "description": "El Echo Dot 2 es la 2da generación de los parlantes de Amazon compatibles con Alexa",
@@ -7,8 +7,8 @@
     "compatibility": "Alexa",
     "colours": "Negro, Gris, Blanco",
     "price": 12000
-    },
-    {
+  },
+  {
     "id": 2,
     "name": "Amazon Echo Dot 3",
     "description": "El Echo Dot 3 es la 3ra generación de los parlantes de Amazon compatibles con Alexa",
@@ -16,9 +16,8 @@
     "compatibility": "Alexa",
     "colours": "Negro, Gris, Blanco",
     "price": 14000
-    },
-
-    {
+  },
+  {
     "id": 3,
     "name": "Amazon Echo Dot 4",
     "description": "El Echo Dot 4 es la 4ta generación de los parlantes de Amazon compatibles con Alexa",
@@ -26,9 +25,8 @@
     "compatibility": "Alexa",
     "colours": "Negro, Gris, Blanco",
     "price": 18000
-    },
-
-    {
+  },
+  {
     "id": 4,
     "name": "Amazon Echo Show 5",
     "description": "El Echo Show 5 es la 5ta generación de los displays de Amazon compatibles con Alexa",
@@ -36,5 +34,5 @@
     "compatibility": "Alexa",
     "colours": "Negro",
     "price": 35000
-    }
+  }
 ]
