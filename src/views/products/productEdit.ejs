@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%- include ("../partials/head.ejs") %>
-    <link rel="stylesheet" href="./css/styleEdit.css">
+    <link rel="stylesheet" href="../css/styleEdit.css">
 </head>
-
 <body>
     <%- include("../partials/header.ejs") %>
-        <main>
-            <div class="containerProducts">
-                <div class="row">
-                    <div class="column">
-                        <h2 class="productEditTitle">Edicion de Producto: <i>
+        <div>
+
+        <div class="box">
+            
+            <h2 class="editTitle">Edicion de Producto: <i>
                                 <%= productToEdit.name %>
                             </i></h2>
 
-                    </div>
-
-                    <div class="column">
+                    <div class="column1">
                         <form action="/<%= productToEdit.id %>?_method=PUT" method="POST">
-                            <div class="row product-detail">
-                                <div class="column1">
+                            <div class="nombreProducto">
                                     <label for="name" class="form-label">Nombre del producto:</label>
                                     <input type="text" value="<%= productToEdit.name %>" id="name" name="name"
                                         placeholder="Ej: Amazon Echo Dot" class="form-input">
-                                </div>
+                            </div>
+                        </form>
+                    </div>
 
-                                <div class="column">
+                                <div class="column2">
                                     <label for="description" class="form-label">Descipción:</label>
                                     <textarea name="description" id="description" class="form-input"></textarea>
                                 </div>
@@ -41,28 +38,28 @@
                                     </div>
                                 </div>
 
-                                <div>
+                                <div class="colores">
                                     <label for="colores">Colores</label>
                                     <select name="colores" id="colores" required>
                                         <option value="<%= productToEdit.colores %>">
                                             <%= productToEdit.colores %>
                                         </option>
-                                        <option value="Rojo">Rojo</option>
-                                        <option value="Verde">Verde</option>
-                                        <option value="Azul">Azul</option>
+                                        <option value="Negro">Negro</option>
+                                        <option value="Gris">Gris</option>
+                                        <option value="Blanco">Blanco</option>
                                     </select>
                                 </div>
 
-                                <div class="column1">
+                                <div class="column3">
                                     <label for="price" class="form-label">Precio del producto:</label>
                                     <input type="text" value="<%= productToEdit.price %>" id="price" name="price"
                                         placeholder="Ej: 5678.00" class="form-input">
                                 </div>
 
-                                <div class="column">
+                                <div class="column4">
                                     <button type="submit" class="buy-now-button">Guardar producto</button>
                                 </div>
-                            </form>                       
+            </div>                          
         </main>
         <%- include("../partials/footer.ejs") %>
 </body>

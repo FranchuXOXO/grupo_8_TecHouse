@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main {
+    background-color: #F8E0D8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin: 64px 0;
+}
+
+.box {
+    background-color: #F8E0D8;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    font-family: Roboto;
+    margin: 150px 0;
+    width: 1000px;
+    padding: 50px;
+    
+}
+
+ .column1 {
+    background-color: white;
+    size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+}
+
+.column1 .form-label {
+    font-size: 1rem;
+}
+
+.column2 {
+    background-color: white;
+    size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+}
+
+.column2 .form-label {
+    font-size: 1rem;
+}
+
+.column2 .form-input {
+   font-size: 1rem;
+}
+
+.imagen1 {
+    background-color: white;
+    size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+  
+}
+
+.colores {
+    background-color: white;
+    size: 20px;
+    padding: 10px;
+
+}
+
+.column3 {
+    background-color: white;
+    size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.column4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    background-color: #00A997;
+    padding: 20px;
+    size: 20px;
+
+}
