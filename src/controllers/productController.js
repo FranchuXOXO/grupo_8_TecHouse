@@ -52,7 +52,6 @@ const productCont={
         if (!productToEdit) {
           return res.send("ESTE PRODUCTO NO EXISTE")  
         }
-        
         return res.render("products/productEdit", {productToEdit, siteTitle: "Edición del producto"})
 
     },
