@@ -23,4 +23,6 @@ router.get("/list", productController.listMethod);
 router.get("/:id/edit", productController.edit);
 router.put("/:id", upload.single('imagen'), productController.update);
 
+router.delete("/:id", productController.delete);
+
 module.exports = router;

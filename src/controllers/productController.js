@@ -64,6 +64,15 @@ const productController={
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
        return  res.send(products)
+    },
+
+    delete: (req,res) => {
+        const idProducto=req.params.id;
+        const productToDelete = products.find((product) => product.id == idProducto);
+        if (!productToDelete) {
+          return res.send("ESTE PRODUCTO NO EXISTE")  
+        }
+        console.log (productToDelete);
     }
 }
 

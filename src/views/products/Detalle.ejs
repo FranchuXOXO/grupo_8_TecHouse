@@ -29,9 +29,11 @@
                     </div>
             </article>
       <div class="Edition-Delete">
-      <a href="/<%= product.id %>/edit">   <button type="button"> Editar producto  </button> </a>
-       <a href="">  <button type="button"> Eliminar producto   </button> </a>
-      </div> 
+            <a href="/<%= product.id %>/edit">   <button type="button"> Editar producto  </button> </a>
+            <form action="/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar producto</button> 
+            </form>
+         </div> 
       
     </main>
     <%- include("../partials/footer.ejs") %>
