@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Amazon Echo Dot 2",
-    "description": "El Echo Dot 2 es la 2da generación de los parlantes de Amazon compatibles con Alexa",
-    "image": "Echo2.jpg",
-    "compatibility": "Alexa",
-    "colours": "Negro, Gris, Blanco",
-    "price": "12000",
-    "imagen": "",
-    "oldImagen": "",
-    "colores": "Negro, Gris, Blanco"
-  },
-  {
     "id": 2,
     "name": "Amazon Echo Dot 3",
     "description": "El Echo Dot 3 es la 3ra generación de los parlantes de Amazon compatibles con Alexa",

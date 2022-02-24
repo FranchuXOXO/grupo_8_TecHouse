@@ -63,16 +63,16 @@ const productController={
         console.log (req.body);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
-       return  res.send(products)
+        return res.send(products)
     },
 
     delete: (req,res) => {
         const idProducto=req.params.id;
         const productToDelete = products.find((product) => product.id == idProducto);
-        if (!productToDelete) {
-          return res.send("ESTE PRODUCTO NO EXISTE")  
-        }
-        console.log (productToDelete);
+        const productoEncontrado = products.findIndex((product) => product.id == productToDelete.id);
+        products.splice (productoEncontrado, 1);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.send (products);
     }
 }
 
