@@ -6,7 +6,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const productCont={
+const productController={
     detailMethod: (req, res) => {
        
         const productIdToFind = req.params.id;
@@ -57,14 +57,14 @@ const productCont={
     },
 
     update: (req,res) => {
-        const idProducto=req.params.id;
-        const indiceDelProducto=products.findIndex((product) => product.id == idProducto);
-
-        products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body}
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+        const idProducto = req.params.id;
+        const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
+        products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body};
+        console.log (req.body);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
        return  res.send(products)
     }
 }
 
-module.exports = productCont;
+module.exports = productController;

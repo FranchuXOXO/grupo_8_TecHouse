@@ -6,7 +6,10 @@
     "image": "Echo2.jpg",
     "compatibility": "Alexa",
     "colours": "Negro, Gris, Blanco",
-    "price": 12000
+    "price": "12000",
+    "imagen": "",
+    "oldImagen": "",
+    "colores": "Negro, Gris, Blanco"
   },
   {
     "id": 2,
