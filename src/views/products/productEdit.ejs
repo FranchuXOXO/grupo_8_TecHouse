@@ -9,7 +9,7 @@
     <main>
         <div class="box">
             <h2 class="editTitle">Edicion de Producto: <i><%= productToEdit.name %></i></h2>
-            <form action="/<%= productToEdit.id %>?_method=PUT" method="POST">   
+            <form action="/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >   
                 <div class="column1">
                     <div class="nombreProducto">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -23,13 +23,12 @@
                 <div class="imagen1">
                     <label for="imagen">Imagen</label>
                     <div class="imagen2">
-                        <input type="file" name="imagen" id="imagen">
-                        <input type="hidden" name="oldImagen" value="<%= productToEdit.imagen %>">
+                        <input type="file" name="image" id="imagen">
                     </div>
                 </div>
                 <div class="colores">
                     <label for="colores">Colores</label>
-                    <select name="colores" id="colores" required>
+                    <select name="colours" id="colores" required>
                         <option value="<%= productToEdit.colours %>"><%= productToEdit.colours %></option>
                         <option value="Negro">Negro</option>
                         <option value="Gris">Gris</option>

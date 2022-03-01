@@ -21,7 +21,7 @@ router.post("/productos", upload.single("image"), productController.createProduc
 router.get("/list", productController.listMethod);
 
 router.get("/:id/edit", productController.edit);
-router.put("/:id", upload.single('imagen'), productController.update);
+router.put("/:id", upload.single('image'), productController.update);
 
 router.delete("/:id", productController.delete);
 

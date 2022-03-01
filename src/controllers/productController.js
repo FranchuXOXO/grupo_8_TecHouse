@@ -60,10 +60,10 @@ const productController = {
         const idProducto = req.params.id;
         const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
         products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
-        console.log(req.body);
+        products[indiceDelProducto].image=req.file.filename
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-
-        return res.send(products)
+        res.redirect("/list")
+        
     },
 
     delete: (req, res) => {

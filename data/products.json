@@ -28,11 +28,11 @@
   },
   {
     "name": "articulo nuevo",
-    "description": "bugatti chiron",
+    "description": "jordan",
     "colours": "rojo",
     "compatibility": "Alexa",
-    "price": 4000000,
+    "price": "400",
     "id": 5,
-    "image": "image-1646160414040.jpg"
+    "image": "image-1646165607541.jpg"
   }
 ]
