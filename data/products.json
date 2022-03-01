@@ -25,5 +25,14 @@
     "compatibility": "Alexa",
     "colours": "Negro",
     "price": 35000
+  },
+  {
+    "name": "articulo nuevo",
+    "description": "bugatti chiron",
+    "colours": "rojo",
+    "compatibility": "Alexa",
+    "price": 4000000,
+    "id": 5,
+    "image": "image-1646160414040.jpg"
   }
 ]

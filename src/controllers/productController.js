@@ -6,13 +6,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const productController={
+const productController = {
     detailMethod: (req, res) => {
-       
-        const productIdToFind = req.params.id;
-		const product = products.find((p) => p.id == productIdToFind);
 
-		return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto' })
+        const productIdToFind = req.params.id;
+        const product = products.find((p) => p.id == productIdToFind);
+
+        return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto' })
     },
 
     cartMethod: (req, res) => {
@@ -28,17 +28,17 @@ const productController={
     },
 
     createProduct: (req, res) => {
-        let producto = {
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            color: req.body.color,
-            categoria: req.body.categoria,
-            precio: req.body.precio
-        }
-
-        return res.send(producto);
+        const created = req.body
+        lastId = products[products.length - 1].id + 1;
+        created.id = lastId
+        products.push(created)
+        created.price = Number(created.price)
+        created.image = req.file.filename
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+ 
+        res.redirect("/list")
     },
-    
+
     listMethod: (req, res) => {
         res.render("products/productList", {
             siteTitle: "Lista de Productos",
@@ -47,32 +47,32 @@ const productController={
     },
 
     edit: (req, res) => {
-        const idProducto=req.params.id;
+        const idProducto = req.params.id;
         const productToEdit = products.find((product) => product.id == idProducto);
         if (!productToEdit) {
-          return res.send("ESTE PRODUCTO NO EXISTE")  
+            return res.send("ESTE PRODUCTO NO EXISTE")
         }
-        return res.render("products/productEdit", {productToEdit, siteTitle: "Edición del producto"})
+        return res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto" })
 
     },
 
-    update: (req,res) => {
+    update: (req, res) => {
         const idProducto = req.params.id;
         const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
-        products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body};
-        console.log (req.body);
+        products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
+        console.log(req.body);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
         return res.send(products)
     },
 
-    delete: (req,res) => {
-        const idProducto=req.params.id;
+    delete: (req, res) => {
+        const idProducto = req.params.id;
         const productToDelete = products.find((product) => product.id == idProducto);
         const productoEncontrado = products.findIndex((product) => product.id == productToDelete.id);
-        products.splice (productoEncontrado, 1);
+        products.splice(productoEncontrado, 1);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.send (products);
+        res.redirect("/list")
     }
 }
 

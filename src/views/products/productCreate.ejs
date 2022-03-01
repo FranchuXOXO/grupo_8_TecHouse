@@ -20,23 +20,25 @@
                 </div>
             </div>
             <div class="stock-manager-form">
-                <form method="POST" action="/products">
+                <form method="POST" action="/productos" enctype="multipart/form-data">
                     <div class="form-container">
                         <label for="nombre">Nombre del producto</label>
-                        <input type="text" name="nombre">
+                        <input type="text" name="name">
                     </div>
+                     
                     <div class="form-container">
                         <label for="foto">Imagen del producto</label>
-                        <input type="file" name="foto" accept=".jpg, .png">
-                    </div>    
+                        <input type="file" name="image" accept=".jpg, .png">
+                    </div>   
+
                     <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
-                        <textarea name="descripcion" rows="3"></textarea>
+                        <textarea name="description" rows="3"></textarea>
                     </div>              
                     <div class="form-container">
                         <label for="color">Color del producto</label>
                         <br />
-                        <select name="color">
+                        <select name="colours">
                             <option value="rojo">Rojo</option>
                             <option value="verde">Verde</option>
                             <option value="azul">Azul</option>
@@ -45,15 +47,14 @@
                     <div class="form-container">
                         <label for="categoria">Categoría del producto</label>
                         <br />
-                        <select name="categoria">
-                            <option value="cat1">Categoria1</option>
-                            <option value="cat2">Categoria2</option>
-                            <option value="cat3">Categoria3</option>
+                        <select name="compatibility">
+                            <option value="Alexa">Alexa</option>
+                            <option value="Siri">Siri</option>
                         </select>
                     </div>
                     <div class="form-container">
                         <label>Precio del producto</label>
-                        <input type="text" name="precio">
+                        <input type="text" name="price">
                     </div>
                     <div class="form-container-buttons">
                         <input class="form-button" type="reset" value="Limpiar datos">
