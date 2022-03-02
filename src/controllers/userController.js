@@ -1,3 +1,5 @@
+const bcryptjs = require('bcryptjs');
+
 const logReg = {
     logMethod: (req, res) => {
         res.render("users/login", {
