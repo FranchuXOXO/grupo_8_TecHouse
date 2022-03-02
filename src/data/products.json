@@ -27,12 +27,12 @@
     "price": 35000
   },
   {
-    "name": "articulo nuevo",
-    "description": "jordan",
-    "colours": "rojo",
+    "name": "Echo Dot 4",
+    "description": "Es el nuevo Alexa Echo Dot 4, listo para utilizar en tu casa. Con reloj incorporado.",
+    "colours": "verde",
     "compatibility": "Alexa",
-    "price": "400",
+    "price": 24000,
     "id": 5,
-    "image": "image-1646165607541.jpg"
+    "image": "image-1646259923354.png"
   }
 ]

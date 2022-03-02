@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "name": "Marcelo",
     "lastname": "Sturmann",
@@ -7,8 +7,8 @@
     "password": "dhcurso",
     "category": "admin",
     "image": "marcelo1.jpg"
-    },
-    {
+  },
+  {
     "id": 2,
     "name": "Matias",
     "lastname": "Madrussan",
@@ -16,5 +16,17 @@
     "password": "dhcurso2",
     "category": "admin",
     "image": "matias1.jpg"
-    }
+  },
+  {
+    "name": "Javier",
+    "lastname": "Gonzalez",
+    "email": "jgonzalez@gmail.com",
+    "category": "admin",
+    "password": [
+      "123456",
+      "123456"
+    ],
+    "id": 3,
+    "image": "image-1646261410905.png"
+  }
 ]
