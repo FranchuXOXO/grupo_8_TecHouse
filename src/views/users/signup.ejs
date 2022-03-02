@@ -10,23 +10,36 @@
         <div class="cuadro"> 
             <h1>Crear una cuenta</h1>
             <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
-            <form class="formSignup" action="/views/login.html" method="POST">
+            <form class="formSignup" action="/Signup" method="POST" enctype="multipart/form-data">
+                
                 <label for="nombre">Primer Nombre</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="nombre" />
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="name" />
 
                 <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="apellido" />
+                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="lastname" />
 
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" placeholder="correo@correo.com" name="email" />
+
+                <label>Categoría del usuario</label>
+                        <br />
+                        <select name="category">
+                            <option value="admin">Administrador</option>
+                            <option value="user">Usuario</option>
+                        </select>
+
+                <div class="form-container">
+                    <label for="foto">Imagen del usuario</label>
+                    <input type="file" name="image" accept=".jpg, .png">
+                </div> 
     
                 <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="clave" />
+                <input type="password" id="contraseña" name="password" />
 
-                <label for="confirmaContraseña">Confirma contraseña</label>
-                <input type="password" id="confirmaContraseña" name="clave" />
+                <!-- <label for="confirmaContraseña">Confirma contraseña</label>
+                <input type="password" id="confirmaContraseña" name="password" />
                 
-                <label id="recuerdame"> <input type="checkbox" > Deseo recibir ofertas por mail</label>
+                <label id="recuerdame"> <input type="checkbox" > Deseo recibir ofertas por mail</label>-->
     
                 <div class="boton-enviar">
                     <button type="submit">Enviar</button>
