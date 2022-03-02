@@ -25,6 +25,7 @@ const logReg = {
         users.push(created)
         created.image = req.file.filename
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+        created.password = bcryptjs.hashSync(req.body.password, 10);
         
         res.send (users)
     }
