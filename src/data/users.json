@@ -1,38 +1,47 @@
 [
-    {
-        "id": 1,
-        "name": "Marcelo",
-        "lastname": "Sturmann",
-        "email": "marcelosturmann@gmail.com",
-        "password": "dhcurso",
-        "category": "admin",
-        "image": "marcelo1.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Matias",
-        "lastname": "Madrussan",
-        "email": "matiasmadrussan@gmail.com",
-        "password": "dhcurso2",
-        "category": "admin",
-        "image": "matias1.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Ana",
-        "lastname": "Salcedo",
-        "email": "anasalcedo@gmail.com",
-        "password": "dhcurso",
-        "category": "admin",
-        "image": "anasalcedo1.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Francisco",
-        "lastname": "Salanova",
-        "email": "franciscosalanova@gmail.com",
-        "password": "dhcurso2",
-        "category": "admin",
-        "image": "francisco1.jpg"
-    }
+  {
+    "id": 1,
+    "name": "Marcelo",
+    "lastname": "Sturmann",
+    "email": "marcelosturmann@gmail.com",
+    "password": "dhcurso",
+    "category": "admin",
+    "image": "marcelo1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Matias",
+    "lastname": "Madrussan",
+    "email": "matiasmadrussan@gmail.com",
+    "password": "dhcurso2",
+    "category": "admin",
+    "image": "matias1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ana",
+    "lastname": "Salcedo",
+    "email": "anasalcedo@gmail.com",
+    "password": "dhcurso",
+    "category": "admin",
+    "image": "anasalcedo1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Francisco",
+    "lastname": "Salanova",
+    "email": "franciscosalanova@gmail.com",
+    "password": "dhcurso2",
+    "category": "admin",
+    "image": "francisco1.jpg"
+  },
+  {
+    "name": "jeangaeng",
+    "lastname": "ijgoieajgoei",
+    "email": "haguear@gmail.com",
+    "category": "admin",
+    "password": "password",
+    "id": 5,
+    "image": "image-1646263209254.png"
+  }
 ]
