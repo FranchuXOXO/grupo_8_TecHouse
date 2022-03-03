@@ -13,11 +13,13 @@ const storage = multer.diskStorage({
  }
 })
 const upload = multer({ storage: storage })
+const { check } = require('express-validator');
 
 
 router.get("/Login", userCont.logMethod)
 router.get('/Signup', userCont.regMethod)
 router.post('/Signup', upload.single("image"), userCont.createMethod)
+router.post("/Login", validateRegister, userCont.loginMethod)
 
 
 module.exports=router
