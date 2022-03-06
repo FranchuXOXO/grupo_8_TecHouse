@@ -6,8 +6,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
 
-
-
 const logReg = {
     logMethod: (req, res) => {
         res.render("users/login", {
@@ -27,10 +25,10 @@ const logReg = {
         created.id = lastId
         users.push(created)
         created.image = req.file.filename
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
         created.password = bcryptjs.hashSync(req.body.password, 10);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
         
-        res.send (users)
+        res.send (users) //Para arreglar
     },
 
     loginMethod: (req, res) => {
@@ -43,6 +41,8 @@ const logReg = {
     
             }
     }
+
+
 }
 
 module.exports=logReg

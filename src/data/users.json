@@ -9,39 +9,12 @@
     "image": "marcelo1.jpg"
   },
   {
-    "id": 2,
-    "name": "Matias",
-    "lastname": "Madrussan",
-    "email": "matiasmadrussan@gmail.com",
-    "password": "dhcurso2",
+    "name": "Pedro",
+    "lastname": "Gomez",
+    "email": "pedrogomez@gmail.com",
     "category": "admin",
-    "image": "matias1.jpg"
-  },
-  {
+    "password": "$2a$10$34zE4wlBz5AeCASOgGwxz.YXQ/tjOPCFZOfJZxm0qEDFlkmPWdKRO",
     "id": 3,
-    "name": "Ana",
-    "lastname": "Salcedo",
-    "email": "anasalcedo@gmail.com",
-    "password": "dhcurso",
-    "category": "admin",
-    "image": "anasalcedo1.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Francisco",
-    "lastname": "Salanova",
-    "email": "franciscosalanova@gmail.com",
-    "password": "dhcurso2",
-    "category": "admin",
-    "image": "francisco1.jpg"
-  },
-  {
-    "name": "jeangaeng",
-    "lastname": "ijgoieajgoei",
-    "email": "haguear@gmail.com",
-    "category": "admin",
-    "password": "password",
-    "id": 5,
-    "image": "image-1646263209254.png"
+    "image": "image-1646597341265.jpeg"
   }
 ]

@@ -8,4 +8,3 @@ module.exports = [
     .notEmpty().withMessage('Debes completar la contraseña').bail()
     .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
 ]
-
