@@ -37,6 +37,7 @@ const productController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
  
         res.redirect("/list")
+
     },
 
     listMethod: (req, res) => {

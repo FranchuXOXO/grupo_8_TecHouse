@@ -1,5 +1,4 @@
-const path = require('path');
-const { body } = require('express-validator');
+const { check } = require('express-validator');
 
 module.exports = [
     check('email')
@@ -8,6 +7,5 @@ module.exports = [
     check('password')
     .notEmpty().withMessage('Debes completar la contraseña').bail()
     .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
-    
 ]
 
