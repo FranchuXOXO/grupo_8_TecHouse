@@ -9,15 +9,6 @@
     "price": 14000
   },
   {
-    "id": 3,
-    "name": "Amazon Echo Dot 4",
-    "description": "El Echo Dot 4 es la 4ta generación de los parlantes de Amazon compatibles con Alexa",
-    "image": "EchoDot4.jpg",
-    "compatibility": "Alexa",
-    "colours": "Negro, Gris, Blanco",
-    "price": 18000
-  },
-  {
     "id": 4,
     "name": "Amazon Echo Show 5",
     "description": "El Echo Show 5 es la 5ta generación de los displays de Amazon compatibles con Alexa",

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const userCont = require("../controllers/userController")
 const validation = require("../middlewares/validator")
-const loginProcess = require("../middlewares/loginProcess")
 
 const multer = require('multer');
 const path = require("path")
@@ -20,6 +19,6 @@ const upload = multer({ storage: storage })
 router.get("/Login", userCont.logMethod)
 router.get('/Signup', userCont.regMethod)
 router.post('/Signup', upload.single("image"), userCont.createMethod)
-router.post("/Login", validation, loginProcess, userCont.loginMethod)
+router.post("/Login", validation, userCont.loginMethod)
 
 module.exports=router
