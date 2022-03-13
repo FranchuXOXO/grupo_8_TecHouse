@@ -42,7 +42,17 @@ const logReg = {
             if (userLogCheck) {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userLogCheck.password);
                 if (isOkThePassword) {
-                    return res.render('users/profile', { userLogCheck, siteTitle: "Perfil" });
+                    // Probamos session y cookies
+                    req.session.userLogged = userLogCheck;
+
+                    if (req.body.remember_user) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                    }
+
+
+                    // Hasta acá es la prueba
+                    //return res.render('users/profile', { user: req.session.userLogged, siteTitle: "Perfil" });
+                    logReg.profile(req, res)
                 }
                 return res.render('users/login', {
                     errors: {
@@ -64,8 +74,16 @@ const logReg = {
         } else {
             res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login" });
         }
+    },
+    profile: (req, res) => {
+        
+	 res.render('users/profile', {
+			user: req.session.userLogged,
+            siteTitle: "Perfil"
+		});
+	
     }
-    
+
 }
 
-module.exports=logReg
+module.exports = logReg
