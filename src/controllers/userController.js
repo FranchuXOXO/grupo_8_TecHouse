@@ -37,19 +37,18 @@ const logReg = {
             console.log("Valide si errores");
 
             const userLogCheck = users.find((user) => user.email == req.body.email);
-            console.log(userLogCheck);
-
+            
             if (userLogCheck) {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userLogCheck.password);
                 if (isOkThePassword) {
+                    delete userLogCheck.password;
                     // Probamos session y cookies
                     req.session.userLogged = userLogCheck;
+                    console.log(userLogCheck);
 
                     if (req.body.remember_user) {
                         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                     }
-
-
                     // Hasta acá es la prueba
                     //return res.render('users/profile', { user: req.session.userLogged, siteTitle: "Perfil" });
                     logReg.profile(req, res)
