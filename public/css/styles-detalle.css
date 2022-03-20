@@ -10,6 +10,14 @@ main{
 
 }
 
+.Edition-Delete{
+    display: none;
+}
+
+.Show{
+    display: block;
+}
+
 .barra{
     display: flex;
     justify-content: space-around;

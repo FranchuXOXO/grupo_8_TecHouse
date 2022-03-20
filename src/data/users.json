@@ -5,7 +5,7 @@
     "lastname": "Sturmann",
     "email": "marcelosturmann@gmail.com",
     "password": "dhcurso",
-    "category": "admin",
+    "category": "user",
     "image": "marcelo1.jpg"
   },
   {
@@ -16,5 +16,23 @@
     "password": "$2a$10$34zE4wlBz5AeCASOgGwxz.YXQ/tjOPCFZOfJZxm0qEDFlkmPWdKRO",
     "id": 3,
     "image": "image-1646597341265.jpeg"
+  },
+  {
+    "name": "Matias",
+    "lastname": "Madrussan",
+    "email": "matiasj@email.com",
+    "category": "user",
+    "password": "$2a$10$XQnqel4lTm7lza4afMIPpOBsrN0VpcmVy03USr9BE4cuYTkGvOsFq",
+    "id": 4,
+    "image": "image-1647808400846.jpg"
+  },
+  {
+    "name": "Martin",
+    "lastname": "rodriguez",
+    "email": "martinr@email.com",
+    "category": "user",
+    "password": "$2a$10$Uq6XFB7wxDYAcZcS/2dK1OZh8LNBMtdj/T1qdd1PkRUJWgRsVZOma",
+    "id": 5,
+    "image": "image-1647808480797.jpg"
   }
 ]
