@@ -35,9 +35,7 @@ const logReg = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             console.log("Valide si errores");
-
             const userLogCheck = users.find((user) => user.email == req.body.email);
-            
             if (userLogCheck) {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userLogCheck.password);
                 if (isOkThePassword) {

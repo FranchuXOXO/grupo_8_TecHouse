@@ -20,7 +20,7 @@ router.get("/productos", productController.stockMethod);
 router.post("/productos", upload.single("image"), productController.createProduct)
 router.get("/list", productController.listMethod);
 
-router.get("/:id/edit", productController.edit);
+router.get("/:id/edit", loginCheck, productController.edit);
 router.put("/:id", upload.single('image'), productController.update);
 
 router.delete("/:id", productController.delete);
