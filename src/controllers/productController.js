@@ -11,8 +11,9 @@ const productController = {
 
         const productIdToFind = req.params.id;
         const product = products.find((p) => p.id == productIdToFind);
-
-        return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto' })
+       
+        return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto', user: req.session.userLogged })
+        
     },
 
     cartMethod: (req, res) => {
