@@ -10,12 +10,14 @@ const logReg = {
     logMethod: (req, res) => {
         res.render("users/login", {
             siteTitle: "Login",
+            user: req.session.userLogged
         });
     },
 
     regMethod: (req, res) => {
         res.render("users/signup", {
             siteTitle: "Signup",
+            user: req.session.userLogged
         });
     },
 
@@ -56,7 +58,8 @@ const logReg = {
                         email: {
                             msg: 'La contraseña es invalida'
                         }
-                    }, siteTitle: "Login"
+                    }, siteTitle: "Login",
+                    user: req.session.userLogged
                 }
                 );
             }
@@ -65,18 +68,20 @@ const logReg = {
                     email: {
                         msg: 'El usuario es inválido'
                     }
-                }, siteTitle: "Login"
+                }, siteTitle: "Login",
+                user: req.session.userLogged
             }
             )
         } else {
-            res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login" });
+            res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login", user: req.session.userLogged });
         }
     },
     profile: (req, res) => {
-        
+       const user = req.session.userLogged;
 	 res.render('users/profile', {
-			user: req.session.userLogged,
-            siteTitle: "Perfil"
+			user,
+            siteTitle: "Perfil",
+            user: req.session.userLogged
 		});
 	
     }

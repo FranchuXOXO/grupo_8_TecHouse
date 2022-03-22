@@ -34,5 +34,14 @@
     "password": "$2a$10$Uq6XFB7wxDYAcZcS/2dK1OZh8LNBMtdj/T1qdd1PkRUJWgRsVZOma",
     "id": 5,
     "image": "image-1647808480797.jpg"
+  },
+  {
+    "name": "Roberto",
+    "lastname": "Gonzalez",
+    "email": "rgonzalez@gmail.com",
+    "category": "user",
+    "password": "$2a$10$p/DgW1kfablJUp3P3CBxw.01KG1WvWpPl67O0PzuQYeAni1Csfo2q",
+    "id": 6,
+    "image": "image-1647901681736.png"
   }
 ]

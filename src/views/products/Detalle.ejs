@@ -33,9 +33,7 @@
                 class="Show"
                <% } else  {  %>
                    class="Edition-Delete"  
-            <%  } %>
-      
-      >
+            <%  } %>>
             <a href="/<%= product.id %>/edit">   <button type="button"> Editar producto  </button> </a>
             <form action="/<%= product.id %>?_method=DELETE" method="POST">
                 <button type="submit">Eliminar producto</button> 

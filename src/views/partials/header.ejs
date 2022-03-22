@@ -2,11 +2,19 @@
 <header>
     <div class="header-top">
         <a href="/"><img src="../images/Logo-TecHouse-header-cut.png" alt="Logo TecHouse"></a>
+        <% if (locals.user && user) {   %>
         <div class="header-botones">
             <a href="/Login">
             <p><i class="fas fa-sign-in-alt"></i>
-            Login
+            Hola
             </p></a>
+           <% } else  {  %>
+            <div class="header-botones">
+            <a href="/Login">
+            <p><i class="fas fa-sign-in-alt"></i>
+            Login
+            </p></a> 
+        <%  } %>> 
         </div>
     </div>
     <div class="navBar-top">
