@@ -117,7 +117,7 @@ CREATE TABLE `products` (
   `product_description` varchar(200) NOT NULL,
   `product_image` varchar(150) NOT NULL,
   `id_compatibility` int(15) NOT NULL,
-  `product_color` varchar(50) NOT NULL,
+  `id_color` varchar(50) NOT NULL,
   `product_price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
