@@ -24,5 +24,19 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const Product = sequelize.define(alias, columns, config);
+
+    Product.associate = function(allModels){
+        Product.hasMany(allModels.Color, {
+            as: "product_colors",
+            foreignKey: "id_color"
+       });
+        Product.hasMany(allModels.Compatibility, {
+            as: "product_compatibilities",
+            foreignKey: "id_compatibility"
+       });
+       }
+
+
+
     return Product;
 };

@@ -19,5 +19,14 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const Compatibility = sequelize.define(alias, columns, config);
+
+    Compatibility.associate = function(allModels){
+       Compatibility.belongsTo(allModels.Product, {
+            as: "compatibility_product",
+            foreignKey: "id_compatibility"
+       });
+       }
+
+
     return Compatibility
 };
