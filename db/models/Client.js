@@ -1,4 +1,5 @@
 const sequelize = require('sequelize');
+// const db = require ("../models")
 
 module.exports = (sequelize, DataTypes) => {
     const alias = 'Client';
@@ -24,5 +25,13 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const Client = sequelize.define(alias, columns, config);
+
+    Client.associate = function(allModels){
+        Client.belongsTo(allModels.Category, {
+            as: "client_category",
+            foreignKey: "id_category"
+       });
+       }
+
     return Client
 };
