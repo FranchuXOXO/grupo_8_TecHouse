@@ -23,38 +23,38 @@
                 <form method="POST" action="/productos" enctype="multipart/form-data">
                     <div class="form-container">
                         <label for="nombre">Nombre del producto</label>
-                        <input type="text" name="name">
+                        <input type="text" name="product_name">
                     </div>
                      
                     <div class="form-container">
                         <label for="foto">Imagen del producto</label>
-                        <input type="file" name="image" accept=".jpg, .png">
+                        <input type="file" name="product_image" accept=".jpg, .png">
                     </div>   
 
                     <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
-                        <textarea name="description" rows="3"></textarea>
+                        <textarea name="product_description" rows="3"></textarea>
                     </div>              
                     <div class="form-container">
                         <label for="color">Color del producto</label>
                         <br />
-                        <select name="colours">
-                            <option value="rojo">Rojo</option>
-                            <option value="verde">Verde</option>
-                            <option value="azul">Azul</option>
+                        <select name="id_color">
+                            <option value="1">Rojo</option>
+                            <option value="2">Verde</option>
+                            <option value="3">Azul</option>
                         </select>
                     </div>
                     <div class="form-container">
                         <label for="categoria">Categoría del producto</label>
                         <br />
-                        <select name="compatibility">
-                            <option value="Alexa">Alexa</option>
-                            <option value="Siri">Siri</option>
+                        <select name="id_compatibility">
+                            <option value="1">Alexa</option>
+                            <option value="2">Siri</option>
                         </select>
                     </div>
                     <div class="form-container">
                         <label>Precio del producto</label>
-                        <input type="text" name="price">
+                        <input type="text" name="product_price">
                     </div>
                     <div class="form-container-buttons">
                         <input class="form-button" type="reset" value="Limpiar datos">

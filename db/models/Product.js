@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrements: true,
+            autoIncrement: true,
         },
-        produc_name: DataTypes.STRING,
+        product_name: DataTypes.STRING,
         product_description: DataTypes.STRING,
         product_image: DataTypes.STRING,
         id_compatibility: DataTypes.INTEGER,
@@ -34,10 +34,10 @@ module.exports = (sequelize, DataTypes) => {
             as: "product_compatibilities",
             foreignKey: "id_compatibility"
        });
-       Product.belongsTo(allModels.Cart, {
+      /* Product.belongsTo(allModels.Cart, {
         as: "product_cart",
         foreignKey: "id_product"
-   });
+   });*/
   }
 
 

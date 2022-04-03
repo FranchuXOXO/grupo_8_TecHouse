@@ -5,15 +5,16 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require("../../db/models")
 
 const productController = {
     detailMethod: (req, res) => {
 
         const productIdToFind = req.params.id;
         const product = products.find((p) => p.id == productIdToFind);
-       
+
         return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto', user: req.session.userLogged })
-        
+
     },
 
     cartMethod: (req, res) => {
@@ -30,23 +31,34 @@ const productController = {
 
     createProduct: (req, res) => {
         const created = req.body
-        lastId = products[products.length - 1].id + 1;
-        created.id = lastId
-        products.push(created)
-        created.price = Number(created.price)
-        created.image = req.file.filename
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
- 
-        res.redirect("/list")
-
+        created.product_price = Number(created.product_price)
+        created.product_image = req.file.filename
+        created.id_color=Number(created.id_color)
+        created.id_compatibility=Number(created.id_compatibility)
+        db.Product.create(created).then(() => {
+            return res.redirect('/list')
+        })
+            .catch(error => res.send(error))
     },
 
     listMethod: (req, res) => {
+        db.Product.findAll()
+            .then(article => {
+                res.render("products/productList", {article, siteTitle: "Lista de Productos"})
+                console.log(article)
+            })
+            
+    },
+    
+    /*(req, res) => {
+        const products=db.Product.findAll().then( results =>
+                 results
+            )
         res.render("products/productList", {
             siteTitle: "Lista de Productos",
-            products: products
+            products
         });
-    },
+    }, */
 
     edit: (req, res) => {
         const idProducto = req.params.id;
@@ -62,10 +74,10 @@ const productController = {
         const idProducto = req.params.id;
         const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
         products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
-        products[indiceDelProducto].image=req.file.filename
+        products[indiceDelProducto].image = req.file.filename
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect("/list")
-        
+
     },
 
     delete: (req, res) => {
