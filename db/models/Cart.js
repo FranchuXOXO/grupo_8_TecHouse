@@ -23,12 +23,17 @@ module.exports = (sequelize, DataTypes) => {
 
     const Cart = sequelize.define(alias, columns, config);
 
-    Cart.associate = function(allModels){
+    Cart.associate = function (allModels) {
         Cart.belongsTo(allModels.Client, {
             as: "cart_client",
             foreignKey: "id_client"
-       });
-       }
+        });
+
+        Cart.hasMany(allModels.Product, {
+            as: "cart_products",
+            foreignKey: "id_product"
+        });
+    }
 
     return Cart
 };

@@ -34,7 +34,11 @@ module.exports = (sequelize, DataTypes) => {
             as: "product_compatibilities",
             foreignKey: "id_compatibility"
        });
-       }
+       Product.belongsTo(allModels.Cart, {
+        as: "product_cart",
+        foreignKey: "id_product"
+   });
+  }
 
 
 
