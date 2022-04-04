@@ -8,23 +8,23 @@
     <%- include("../partials/header.ejs") %>
     <main>
         <div class="barra">
-            <h2> <%= product.name %> </h2>
+            <h2> <%= article.product_name %> </h2>
             <a href="/Carrito"> <button type="button"> Comprar </button> </a>
 
         </div>
              <article>
-                <h2><%= product.name %></h2>
-                <a href="/Detalle/<%= product.id %>">
-                    <img src="/images/Products/<%= product.image %>" alt="<%= product.name %>" class="product_img">
+                <h2><%= article.product_name %></h2>
+                <a href="/Detalle/<%= article.id %>">
+                    <img src="/images/Products/<%= article.product_image %>" alt="<%= article.product_name %>" class="product_img">
                  </a>              
                     <div class="main-article">
-                        <p class="price">Precio: $ <%= product.price %>
+                        <p class="price">Precio: $ <%= article.product_price %>
                         </p>
-                        <h4 class="description"> <%= product.description %>
+                        <h4 class="description"> <%= article.product_description %>
                         </h4>
-                        <p class="colours">Colores: <%= product.colours %>
+                        <p class="colours">Colores: <%= article.product_colors.color %>
                         </p>
-                        <p class="compatiblity">Compatible con: <%= product.compatibility %>
+                        <p class="compatiblity">Compatible con: <%= article.product_compatibilities.device_name %>
                         </p>
                     </div>
             </article>
@@ -34,8 +34,8 @@
                <% } else  {  %>
                    class="Edition-Delete"  
             <%  } %>>
-            <a href="/<%= product.id %>/edit">   <button type="button"> Editar producto  </button> </a>
-            <form action="/<%= product.id %>?_method=DELETE" method="POST">
+            <a href="/<%= article.id %>/edit">   <button type="button"> Editar producto  </button> </a>
+            <form action="/<%= article.id %>?_method=DELETE" method="POST">
                 <button type="submit">Eliminar producto</button> 
             </form>
          </div> 

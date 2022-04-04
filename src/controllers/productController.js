@@ -11,10 +11,14 @@ const productController = {
     detailMethod: (req, res) => {
 
         const productIdToFind = req.params.id;
-        const product = products.find((p) => p.id == productIdToFind);
-
-        return res.render('products/Detalle', { product, siteTitle: 'Detalle del producto', user: req.session.userLogged })
-
+        db.Product.findByPk(productIdToFind,
+            {
+                include: [
+                    "product_colors", "product_compatibilities"
+                ]
+            }).then(article =>
+            res.render('products/Detalle', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
+        )
     },
 
     cartMethod: (req, res) => {
@@ -33,8 +37,8 @@ const productController = {
         const created = req.body
         created.product_price = Number(created.product_price)
         created.product_image = req.file.filename
-        created.id_color=Number(created.id_color)
-        created.id_compatibility=Number(created.id_compatibility)
+        created.id_color = Number(created.id_color)
+        created.id_compatibility = Number(created.id_compatibility)
         db.Product.create(created).then(() => {
             return res.redirect('/list')
         })
@@ -42,18 +46,18 @@ const productController = {
     },
 
     listMethod: (req, res) => {
-        db.Product.findAll({ 
-            include: [ 
+        db.Product.findAll({
+            include: [
                 "product_colors", "product_compatibilities"
-             ]
-         })
+            ]
+        })
             .then(article => {
-                res.render("products/productList", {article, siteTitle: "Lista de Productos"})
+                res.render("products/productList", { article, siteTitle: "Lista de Productos" })
                 console.log(article)
             })
-            
+
     },
-    
+
     /*(req, res) => {
         const products=db.Product.findAll().then( results =>
                  results
