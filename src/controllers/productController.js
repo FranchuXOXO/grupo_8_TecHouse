@@ -42,7 +42,11 @@ const productController = {
     },
 
     listMethod: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({ 
+            include: [ 
+                "product_colors", "product_compatibilities"
+             ]
+         })
             .then(article => {
                 res.render("products/productList", {article, siteTitle: "Lista de Productos"})
                 console.log(article)

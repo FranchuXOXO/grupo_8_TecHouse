@@ -26,11 +26,11 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias, columns, config);
 
     Product.associate = function(allModels){
-        Product.hasMany(allModels.Color, {
+        Product.belongsTo(allModels.Color, {
             as: "product_colors",
             foreignKey: "id_color"
        });
-        Product.hasMany(allModels.Compatibility, {
+        Product.belongsTo(allModels.Compatibility, {
             as: "product_compatibilities",
             foreignKey: "id_compatibility"
        });
