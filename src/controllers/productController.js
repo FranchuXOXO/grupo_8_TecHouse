@@ -53,7 +53,6 @@ const productController = {
         })
             .then(article => {
                 res.render("products/productList", { article, siteTitle: "Lista de Productos" })
-                console.log(article)
             })
 
     },
