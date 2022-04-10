@@ -17,8 +17,8 @@ const productController = {
                     "product_colors", "product_compatibilities"
                 ]
             }).then(article =>
-            res.render('products/Detalle', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
-        )
+                res.render('products/Detalle', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
+            )
     },
 
     cartMethod: (req, res) => {
@@ -68,24 +68,37 @@ const productController = {
     }, */
 
     edit: (req, res) => {
-        const idProducto = req.params.id;
-        const productToEdit = products.find((product) => product.id == idProducto);
-        if (!productToEdit) {
-            return res.send("ESTE PRODUCTO NO EXISTE")
-        }
-        return res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto" })
-
+        let idProducto = req.params.id;
+        const result = db.Product.findByPk(idProducto, { 
+            include: [
+                "product_colors", "product_compatibilities"
+            ] })
+        .then(productToEdit => {    
+        if(productToEdit!=null)
+            res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto" })
+        else
+            res.send("Este producto no existe en la base de datos")
+        }).catch(error => res.send(error))
     },
 
-    update: (req, res) => {
-        const idProducto = req.params.id;
-        const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
-        products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
-        products[indiceDelProducto].image = req.file.filename
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect("/list")
-
+update: (req, res) => {
+    const idProducto = req.params.id;
+ db.Product.update( {  
+        product_name: req.body.product_name,
+        product_description: req.body.product_description,
+        product_image: req.file ? req.file.filename : req.body.oldImagen,
+        id_compatibility: req.body.id_compatibility,
+        id_color: req.body.id_color,
+        product_price: req.body.product_price 
     },
+       {  where: 
+       {  id:idProducto  }
+         }
+    )
+    .then(()=> {
+        return res.redirect('/list')})            
+    .catch(error => res.send(error)) 
+},
 
     delete: (req, res) => {
         const idProducto = req.params.id;

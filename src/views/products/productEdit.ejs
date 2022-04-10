@@ -13,31 +13,41 @@
                 <div class="column1">
                     <div class="nombreProducto">
                         <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" value="<%= productToEdit.name %>" id="name" name="name" placeholder="Ej: Amazon Echo Dot" class="form-input">
+                        <input type="text" value="<%= productToEdit.product_name %>" id="name" name="product_name" placeholder="Ej: Amazon Echo Dot" class="form-input">
                     </div>
                 </div>
                 <div class="column2">
                     <label for="description" class="form-label">Descripción:</label>
-                    <textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
+                    <textarea name="product_description" id="description" class="form-input"><%= productToEdit.product_description %></textarea>
                 </div>
                 <div class="imagen1">
                     <label for="imagen">Imagen</label>
                     <div class="imagen2">
-                        <input type="file" name="image" id="imagen">
+                        <input type="file" name="product_image" id="imagen">
+                        <input type="hidden" name="oldImagen" value="<%= productToEdit.product_image %>">
                     </div>
                 </div>
                 <div class="colores">
                     <label for="colores">Colores</label>
-                    <select name="colours" id="colores" required>
-                        <option value="<%= productToEdit.colours %>"><%= productToEdit.colours %></option>
-                        <option value="Negro">Negro</option>
-                        <option value="Gris">Gris</option>
-                        <option value="Blanco">Blanco</option>
+                    <select name="id_color" id="colores" required>
+                        <option value="<%= productToEdit.id_color %>"><%= productToEdit.product_colors.color %></option>
+                        <option value="1">Rojo</option>
+                        <option value="2">Verde</option>
+                        <option value="3">Azul</option>
+                    </select>
+                </div>
+                <div class="form-container">
+                    <label for="categoria">Categoría del producto</label>
+                    <br />
+                    <select name="id_compatibility">
+                        <option value="<%= productToEdit.id_compatibility %>"><%= productToEdit.product_compatibilities.device_name %></option>
+                        <option value="1">Alexa</option>
+                        <option value="2">Siri</option>
                     </select>
                 </div>
                 <div class="column3">
                     <label for="price" class="form-label">Precio del producto:</label>
-                    <input type="text" value="<%= productToEdit.price %>" id="price" name="price"
+                    <input type="text" value="<%= productToEdit.product_price %>" id="price" name="product_price"
                         placeholder="Ej: 5678.00" class="form-input">
                 </div>
                 <div class="column4">
