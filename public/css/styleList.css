@@ -14,14 +14,17 @@ main article {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: start;
     text-align: center;
     border: 1px solid #000000;
     background-color: #FFF;
     border-radius: 2%;
-    height: 400px;
+    height: 60%;
+    width: auto;
     padding: 10px;
+}
+main article a {
+    height: 50%;
 }
 
 main article img {
@@ -49,9 +52,7 @@ main article img {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.product_img{
-    height: 188px;
-}
+
 /* acá comienza el estilo desktop*/
 
 @media (min-width: 450px){
@@ -64,15 +65,19 @@ main article img {
     }
     main article {
         margin-top: 40px;
+        height: 400px;
+        width: 300px;
     }
     .product_img{
-        height: 144px;
+        height: 90%;
+        width: auto;
 
     }
 }
 @media(min-width: 900px)
 {
     .product_img{
-        height: 209px;
+        height: 90%;
+        width: auto;
     }
 }

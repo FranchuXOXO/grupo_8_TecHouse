@@ -4,10 +4,9 @@
         <a href="/"><img src="../images/Logo-TecHouse-header-cut.png" alt="Logo TecHouse"></a>
         <% if (locals.user && user) {   %>
         <div class="header-botones">
-            <a href="/Login">
-            <p><i class="fas fa-sign-in-alt"></i>
+            <p>
             Hola
-            </p></a>
+            </p>
            <% } else  {  %>
             <div class="header-botones">
             <a href="/Login">
@@ -34,19 +33,28 @@
             </div>    
                 <a href="/List"><i class="fas fa-square"></i>Productos</a>
                 <a href="/"><img src="/images/Logo-TecHouse-header.png" alt="acá iría el logo"></a>
-                <div class="header-top-desktop-column2">
-                    <p>  
-                        <a href="/Login"><i class="fas fa-sign-in-alt"></i>
-                        Login</a>
-                    </p>
-                    <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a>
-                </div>
-                <div class="header-top-desktop-column3">
-                    <p>
-                    <a href="/Carrito"><em class="fas fa-shopping-cart"></em></a>
-                    </p>
-                    <a href="#"><i class="fas fa-square"></i>Soporte</a>
-                </div>
+                    <div class="header-top-desktop-column2">
+                        <% if (locals.user && user) {   %>
+                            <div class = "userContainer">
+                                <!-- <img class = "userImage" src="/images/users/<%= user.image %> "> -->
+                                <div class="userName">
+                                    <p> Hola <%= user.name %> </p>
+                                </div>
+                            </div>
+                       <% } else  {  %>
+                        <a href="/Login">
+                        <p><i class="fas fa-sign-in-alt"></i>
+                        Login
+                        </p></a> 
+                        <%  } %> 
+                        <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a> 
+                    </div>
+                    <div class="header-top-desktop-column3">
+                        <p>
+                        <a href="/Carrito"><em class="fas fa-shopping-cart"></em></a>
+                        </p>
+                        <a href="#"><i class="fas fa-square"></i>Soporte</a>
+                    </div>
                 
         </div>
         <div class="navBar-top-desktop">
