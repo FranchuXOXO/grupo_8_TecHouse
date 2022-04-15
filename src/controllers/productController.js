@@ -1,11 +1,16 @@
 const fs = require('fs');
 const path = require('path');
+const { sequelize } = require('../../db/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require("../../db/models")
+const Op = db.Sequelize.Op
+const operatorsAliases = {
+    $like: Op.like
+  }
 
 const productController = {
     detailMethod: (req, res) => {
@@ -110,14 +115,16 @@ const productController = {
     },
 
     search: (req, res) => {
-        const productToFind = req.body;
-        db.Product.findOne({where: { product_name: productToFind.word },
+        const productToFind = req.query.word;
+        
+        db.Product.findAll({where: { product_name: {  [Op.like]:  `%${productToFind}%`  }},
                 include: [
                     "product_colors", "product_compatibilities"
                 ]
-            }).then(article =>
+            }).then(article => { 
+                
                 res.render('products/productList', { article, siteTitle: 'Resultado de la búsqueda', user: req.session.userLogged })
-            )
+             })
     }
 }
 

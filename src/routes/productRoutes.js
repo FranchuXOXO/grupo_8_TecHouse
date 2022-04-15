@@ -30,8 +30,7 @@ router.get("/list", productController.listMethod);
 router.get("/:id/edit", authLog, administrator, productController.edit);
 router.put("/:id", upload.single('product_image'), productController.update);
 
-router.get("/list", productController.search);
-router.put("/list", productController.search);
+router.get("/search", productController.search);
 
 router.delete("/:id", authLog, administrator, productController.delete);
 
