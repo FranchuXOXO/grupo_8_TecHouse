@@ -57,7 +57,7 @@ const productController = {
             ]
         })
             .then(article => {
-                res.render("products/productList", { article, siteTitle: "Lista de Productos" })
+                res.render("products/productList", { article, siteTitle: "Lista de Productos", user: req.session.userLogged })
             })
 
     },
@@ -80,7 +80,7 @@ const productController = {
             ] })
         .then(productToEdit => {    
         if(productToEdit!=null)
-            res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto" })
+            res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto", user: req.session.userLogged })
         else
             res.send("Este producto no existe en la base de datos")
         }).catch(error => res.send(error))
