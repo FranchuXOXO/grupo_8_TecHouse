@@ -2,9 +2,10 @@ const bcryptjs = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usersFilePath = path.join(__dirname, '../data/users.json');
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
+const db = require("../../db/models")
 
 const logReg = {
     logMethod: (req, res) => {
@@ -23,6 +24,21 @@ const logReg = {
 
     createMethod: (req, res) => {
         const created = req.body
+        
+        created.profile_image = req.file.filename
+        created.id_category = Number(created.id_category)
+        created.password = bcryptjs.hashSync(req.body.password, 10)
+        db.Client.create(created).then(() => {
+            return res.send('usuario creado')
+        })
+            .catch(error => res.send(error))
+        
+        
+        
+        
+        
+        /*
+        const created = req.body
         lastId = users[users.length - 1].id + 1;
         created.id = lastId
         users.push(created)
@@ -30,7 +46,7 @@ const logReg = {
         created.password = bcryptjs.hashSync(req.body.password, 10);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
 
-        res.send(users) //Para arreglar
+        res.send(users) //Para arreglar */
     },
 
     loginMethod: (req, res) => {

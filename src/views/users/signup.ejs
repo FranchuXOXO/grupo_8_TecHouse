@@ -13,24 +13,24 @@
             <form class="formSignup" action="/Signup" method="POST" enctype="multipart/form-data">
                 
                 <label for="nombre">Primer Nombre</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="name" />
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="first_name" />
 
                 <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="lastname" />
+                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="last_name" />
 
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" placeholder="correo@correo.com" name="email" />
 
                 <label>Categoría del usuario</label>
                         <br />
-                        <select name="category">
-                            <option value="admin">Administrador</option>
-                            <option value="user">Usuario</option>
+                        <select name="id_category">
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
                         </select>
 
                 <div class="form-container">
                     <label for="foto">Imagen del usuario</label>
-                    <input type="file" name="image" accept=".jpg, .png">
+                    <input type="file" name="profile_image" accept=".jpg, .png">
                 </div> 
     
                 <label for="contraseña">Contraseña</label>

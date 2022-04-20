@@ -12,7 +12,7 @@ const userCont = require("../controllers/userController");
 
 router.get("/Login", logged, userCont.logMethod);
 router.get('/Signup', userCont.regMethod);
-router.post('/Signup', upload.single("image"), userCont.createMethod);
+router.post('/Signup', upload.single("profile_image"), userCont.createMethod);
 router.post("/Login", validation, userCont.loginMethod);
 router.get("/profile", auth, userCont.profile);
 
