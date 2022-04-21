@@ -35,11 +35,11 @@ const logReg = {
    
     },
 
-    loginMethod: (req, res) => {
+    loginMethod: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             console.log("Valide si errores");
-            db.Client.findOne({ where: { email: req.body.email } }).then((userLogCheck) => {
+         const userLogCheck = await  db.Client.findOne({ where: { email: req.body.email } }) 
 
                 if (userLogCheck) {
                     let isOkThePassword = bcryptjs.compareSync(req.body.password, userLogCheck.password);
@@ -53,7 +53,7 @@ const logReg = {
                         }
                         // Hasta acá es la prueba
                         //return res.render('users/profile', { user: req.session.userLogged, siteTitle: "Perfil" });
-                        logReg.profile(req, res)
+                      return  logReg.profile(req, res)
                         }
                     return res.render('users/login', {
                         errors: {
@@ -74,8 +74,7 @@ const logReg = {
                     user: req.session.userLogged
                     }
                 )
-             })
-             .catch(error => res.send(error));  
+              
         } else {
             res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login", user: req.session.userLogged });
         }
