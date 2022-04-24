@@ -5,7 +5,7 @@ const path = require("path");
 
 const upload = require('../middlewares/multerMiddleware');
 const validation = require("../middlewares/validator");
-const auth=require("../middlewares/Authenticator");
+const auth = require("../middlewares/Authenticator");
 const logged = require("../middlewares/Logged");
 
 const userCont = require("../controllers/userController");
@@ -15,6 +15,7 @@ router.get('/Signup', userCont.regMethod);
 router.post('/Signup', upload.single("profile_image"), userCont.createMethod);
 router.post("/Login", validation, userCont.loginMethod);
 router.get("/profile", auth, userCont.profile);
-
+router.get("/user/:id/useredit", auth, userCont.edit);
+router.put("/user/:id", upload.single('profile_image'), userCont.update);
 
 module.exports = router;

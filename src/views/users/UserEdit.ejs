@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("../partials/head.ejs") %>
+         <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+    <%- include ("../partials/header.ejs") %>
+        <main>
+            <div class="cuadro">
+                <h1>Crear una cuenta</h1>
+                <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
+                <form class="formSignup" action="/user/<%= UserToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                    <label for="nombre">Primer Nombre</label>
+                    <input type="text" value="<%= UserToEdit.first_name  %> " id="nombre"
+                        placeholder="Escribe tu nombre" name="first_name" />
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" value="<%= UserToEdit.last_name %> " id="apellido"
+                        placeholder="Escribe tu apellido" name="last_name" />
+
+
+                    <div class="form-container">
+                        <label for="foto">Imagen del usuario</label>
+                        <input type="file" name="profile_image" accept=".jpg, .png">
+                        <input type="hidden" name="oldImagen" value="<%= UserToEdit.profile_image %>">
+                    </div>
+
+                    <div class="boton-enviar">
+                        <button type="submit">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="caja">
+                <div class="caja-envio">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png" />
+                    <div class="caja-envio-texto">
+                        <h4>Enviamos tu compra</h4>
+                        <p>Entregas en todo el pais</p>
+                    </div>
+
+                </div>
+
+                <div class="caja-pago">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png" />
+                    <div class="caja-envio-texto">
+                        <h4>Paga como quieras</h4>
+                        <p>Tarjetas de crédito o efectivo</p>
+                    </div>
+                </div>
+
+                <div class="caja-seguridad">
+                    <img src="https://img.icons8.com/windows/32/000000/security-block.png" />
+                    <div class="caja-envio-texto">
+                        <h4>Compra con seguridad</h4>
+                        <p>Tus datos siempre protegidos</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
