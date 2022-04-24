@@ -27,11 +27,11 @@ module.exports = (sequelize, DataTypes) => {
             as: "cart_client",
             foreignKey: "id_client"
         });
-
+/*
         Cart.hasMany(allModels.Product, {
             as: "cart_products",
             foreignKey: "id_product"
-        });
+        }); */
     }
 
     return Cart;
