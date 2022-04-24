@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include ("../partials/head.ejs") %>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styleCarrito.css">
-</head>
+    <head>
+        <%- include ("../partials/head.ejs") %>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/styleCarrito.css">
+    </head>
     <body>
         <header>
             <div class="top-header">
@@ -32,114 +32,7 @@
         </header>
         <main>
             <section class="products-viewer">
-                <div class="product">
-                    <div class="product-info">
-                        <div class="product-info-header">
-                            <img src="https://m.media-amazon.com/images/I/61V5O0UpgqS._AC_SX425_.jpg" alt="Foto de producto">
-                            <div class="product-details">
-                                <h3>Nombre de producto</h3>
-                                    <p>
-                                        Detalles generales y consideraciones del producto elegido. 
-                                    </p>
-                                    <p>
-                                        Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                    </p>
-                            </div>
-                            <div class="product-trash-can">
-                                <i class="fas fa-trash-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-pricing">
-                        <div class="unit-price">
-                            $ 4.200,00
-                        </div>
-                        <div class="product-amount">
-                            <i class="far fa-caret-square-left"></i>
-                            <div class="unit-amount">
-                                1
-                            </div>
-                            <i class="far fa-caret-square-right"></i>
-                        </div>
-                        <div class="product-subtotal">
-                            <div class="subtotal-label">
-                                Sub-total:
-                            </div>
-                            <div class="subtotal-price">
-                                $ 4.200,00
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-info">
-                        <img src="https://i.ebayimg.com/images/g/L28AAOSwFNFf8lpP/s-l300.jpg" alt="Foto de producto">
-                        <div class="product-details">
-                            <h3>Nombre de producto</h3>
-                            <p>
-                                Detalles generales y consideraciones del producto elegido. 
-                            </p>
-                            <p>
-                                Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="product-pricing">
-                        <div class="unit-price">
-                            $ 22.000,00
-                        </div>
-                        <div class="product-amount">
-                            <i class="far fa-caret-square-left"></i>
-                            <div class="unit-amount">
-                                4
-                            </div>
-                            <i class="far fa-caret-square-right"></i>
-                        </div>
-                        <div class="product-subtotal">
-                            <div class="subtotal-label">
-                                Sub-total:
-                            </div>
-                            <div class="subtotal-price">
-                                $ 88.000,00
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-info">
-                        <img src="https://i.blogs.es/0404b9/sensores/1366_2000.jpg" alt="Foto de producto">
-                        <div class="product-details">
-                            <h3>Nombre de producto</h3>
-                            <p>
-                                Detalles generales y consideraciones del producto elegido. 
-                            </p>
-                            <p>
-                                Ranking <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="product-pricing">
-                        <div class="unit-price">
-                            $ 850,00
-                        </div>
-                        <div class="product-amount">
-                            <i class="far fa-caret-square-left"></i>
-                            <div class="unit-amount">
-                                2
-                            </div>
-                            <i class="far fa-caret-square-right"></i>
-                        </div>
-                        <div class="product-subtotal">
-                            <div class="subtotal-label">
-                                Sub-total:
-                            </div>
-                            <div class="subtotal-price">
-                                $ 1.700,00
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <%- include('cartItem.ejs') %> 
             <section class="bottom-cart">
                 <div class="full-cart-options-bar">
                     <div class="empty-cart">
