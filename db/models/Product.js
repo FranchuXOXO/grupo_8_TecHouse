@@ -29,18 +29,18 @@ module.exports = (sequelize, DataTypes) => {
         Product.belongsTo(allModels.Color, {
             as: "product_colors",
             foreignKey: "id_color"
-       });
+        });
+        
         Product.belongsTo(allModels.Compatibility, {
             as: "product_compatibilities",
             foreignKey: "id_compatibility"
-       });
-      /* Product.belongsTo(allModels.Cart, {
-        as: "product_cart",
-        foreignKey: "id_product"
-   });*/
-  }
-
-
+        });
+        
+        Product.belongsToMany(allModels.Cart, {
+            as: "product_cart",
+            foreignKey: "id_product"
+        });
+    }
 
     return Product;
 };

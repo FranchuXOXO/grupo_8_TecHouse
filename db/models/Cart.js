@@ -3,7 +3,6 @@ const sequelize = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     const alias = 'Cart';
 
-
     const config = {
         timestamps: false,
         tableName: 'carts'
@@ -29,11 +28,11 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_client"
         });
 
-     /*   Cart.hasMany(allModels.Product, {
+        Cart.hasMany(allModels.Product, {
             as: "cart_products",
             foreignKey: "id_product"
-        });*/
+        });
     }
 
-    return Cart
+    return Cart;
 };
