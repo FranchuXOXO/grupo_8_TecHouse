@@ -91,19 +91,17 @@ const logReg = {
     },
     edit: (req, res) => {
         let idUser = req.params.id;
-        console.log(req.session.userLogged)
-        if (idUser == req.session.userLogged.id ) {
-            db.Client.findByPk(idUser)
-                .then(UserToEdit => {
-
-                    if (UserToEdit != null)
+        db.Client.findByPk(idUser)
+            .then(UserToEdit => {
+                if (UserToEdit != null) {
+                    if (idUser == req.session.userLogged.id)
                         res.render("users/UserEdit", { UserToEdit, siteTitle: "Edición del usuario", user: req.session.userLogged })
                     else
-                        res.send("Este usuario no existe en la base de datos")
-                }).catch(error => res.send(error))
-        }
-        else
-            res.send("No pude editar este usuario")
+                        res.send("No pude editar este usuario")
+                }
+                else
+                    res.send("Este usuario no existe en la base de datos")
+            }).catch(error => res.send(error))
     },
 
 
