@@ -23,16 +23,21 @@ const logReg = {
     },
 
     createMethod: (req, res) => {
-        const created = req.body
-
+        const created = req.body;
         created.profile_image = req.file.filename
         created.id_category = Number(created.id_category)
         created.password = bcryptjs.hashSync(req.body.password, 10)
-        db.Client.create(created).then(() => {
-            return res.send('usuario creado')
-        })
-            .catch(error => res.send(error))
-
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            console.log("Valide si errores durante el signup");
+            db.Client.create(created).then(() => {
+                return res.send('usuario creado')
+            })
+            .catch(error => res.send(error))  
+        } else {
+            console.log(errors);
+            res.render('users/signup', { errors: errors.mapped(), old: req.body, siteTitle: "Signup" });
+        }
     },
 
     loginMethod: (req, res) => {
@@ -77,6 +82,7 @@ const logReg = {
             })
                 .catch(error => res.send(error));
         } else {
+            console.log(errors);
             res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login", user: req.session.userLogged });
         }
     },

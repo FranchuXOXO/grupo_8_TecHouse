@@ -1,4 +1,4 @@
-const sequelize = require('sequelize');
+/*const sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
     const alias = 'Cart';
@@ -25,14 +25,21 @@ module.exports = (sequelize, DataTypes) => {
     Cart.associate = function (allModels) {
         Cart.belongsTo(allModels.Client, {
             as: "cart_client",
-            foreignKey: "id_client"
+            foreignKey: "id_client",
         });
-/*
-        Cart.hasMany(allModels.Product, {
+
+    Cart.associate = function (allModels) {
+        Cart.belongsToMany(allModels.Product, {
             as: "cart_products",
-            foreignKey: "id_product"
-        }); */
-    }
+            through: "carts",
+            foreignKey: "id_product",
+            otherKey: "id_client",
+            timestamps: false
+        });
+        
+         
+        }
 
     return Cart;
-};
+    };
+}*/

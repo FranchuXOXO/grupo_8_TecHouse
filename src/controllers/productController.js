@@ -27,6 +27,20 @@ const productController = {
     },
 
     cartMethod: (req, res) => {
+        /* Necesito el ID del usuario*/
+
+        /* Necesito el ID del producto a comprar */
+
+        /* Necesito consultar el carrito del usuario guardado en la base de datos*/
+
+        /* Necesito agregar el producto a comprar al carrito actual */
+
+        /* Hay que sumar los valores de los productos del carrito + el nuevo producto */
+
+        /* Hay que colocar un contador de producto, cuando el usuario quiere mas de uno */
+
+        /* Hay que colocar un botón de guardar carrito */
+      
         res.render("products/productCart", {
             siteTitle: "Carrito",
         });

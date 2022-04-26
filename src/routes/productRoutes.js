@@ -22,7 +22,7 @@ const administrator = require("../middlewares/LoginCheck");
 const authLog = require("../middlewares/Authenticator");
 
 router.get("/Detalle/:id", productController.detailMethod);
-router.get("/carrito", productController.cartMethod);
+router.get("/carrito", authLog, productController.cartMethod);
 router.get("/productos", productController.stockMethod);
 router.post("/productos", upload.single("product_image"), productController.createProduct)
 router.get("/list", productController.listMethod);

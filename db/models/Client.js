@@ -32,12 +32,13 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_category"
        });
 
-        Client.hasMany(allModels.Cart, {
-            as: "client_carts",
-            foreignKey: "id_client"
-        });
-       }
-
-
+       Client.belongsToMany(allModels.Product, {
+        as: "client_product",
+        through: "carts",
+        foreignKey: "id_client",
+        otherKey: "id_product",
+        timestamps: false
+        })
+    }
     return Client
 };
