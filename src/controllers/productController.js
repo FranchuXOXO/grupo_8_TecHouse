@@ -4,6 +4,7 @@ const { sequelize } = require('../../db/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { validationResult } = require('express-validator');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require("../../db/models")
@@ -58,10 +59,17 @@ const productController = {
         created.product_image = req.file.filename
         created.id_color = Number(created.id_color)
         created.id_compatibility = Number(created.id_compatibility)
-        db.Product.create(created).then(() => {
-            return res.redirect('/list')
-        })
-            .catch(error => res.send(error))
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            console.log("Validé si hay errores durante la creación del producto");
+            db.Product.create(created).then(() => {
+                return res.redirect('/list')
+            })
+            .catch(error => res.send(error))  
+        } else {
+            console.log(errors);
+            res.render('products/productCreate', { errors: errors.mapped(), old: req.body, siteTitle: "Formulario de creación de productos" });
+        }
     },
 
     listMethod: (req, res) => {

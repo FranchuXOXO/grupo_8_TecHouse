@@ -20,11 +20,14 @@ const storage = multer.diskStorage({
 
 const administrator = require("../middlewares/LoginCheck");
 const authLog = require("../middlewares/Authenticator");
+const createValidator = require("../middlewares/createProductValidator");
 
 router.get("/Detalle/:id", productController.detailMethod);
 router.get("/carrito", authLog, productController.cartMethod);
-router.get("/productos", productController.stockMethod);
-router.post("/productos", upload.single("product_image"), productController.createProduct)
+
+router.get("/productos", authLog, administrator, productController.stockMethod);
+router.post("/productos", upload.single("product_image"), createValidator, productController.createProduct)
+
 router.get("/list", productController.listMethod);
 
 router.get("/:id/edit", authLog, administrator, productController.edit);

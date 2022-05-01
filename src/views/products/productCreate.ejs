@@ -23,17 +23,29 @@
                 <form method="POST" action="/productos" enctype="multipart/form-data">
                     <div class="form-container">
                         <label for="nombre">Nombre del producto</label>
-                        <input type="text" name="product_name">
+                        <input type="text" name="product_name"
+                        value="<%= locals.old && old.product_name %>" />
+                        <% if (locals.errors && errors.product_name) { %>
+                            <p><%= errors.product_name.msg %></p>
+                            <% } %>
                     </div>
                      
                     <div class="form-container">
                         <label for="foto">Imagen del producto</label>
-                        <input type="file" name="product_image" accept=".jpg, .png">
+                        <input type="file" name="product_image" accept=".jpg, .png"
+                        value="<%= locals.old && old.product_image %>" />
+                        <% if (locals.errors && errors.product_image) { %>
+                            <p><%= errors.product_image.msg %></p>
+                            <% } %>
                     </div>   
 
                     <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
-                        <textarea name="product_description" rows="3"></textarea>
+                        <textarea name="product_description" rows="3" 
+                        value="<%= locals.old && old.product_description %>" ></textarea>
+                            <% if (locals.errors && errors.product_description) { %>
+                                <p><%= errors.product_description.msg %></p>
+                                <% } %>
                     </div>              
                     <div class="form-container">
                         <label for="color">Color del producto</label>
@@ -54,7 +66,11 @@
                     </div>
                     <div class="form-container">
                         <label>Precio del producto</label>
-                        <input type="text" name="product_price">
+                        <input type="text" name="product_price"
+                        value="<%= locals.old && old.product_price %>" />
+                        <% if (locals.errors && errors.product_price) { %>
+                            <p><%= errors.product_price.msg %></p>
+                            <% } %>
                     </div>
                     <div class="form-container-buttons">
                         <input class="form-button" type="reset" value="Limpiar datos">
