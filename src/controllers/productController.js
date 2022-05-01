@@ -56,12 +56,11 @@ const productController = {
     createProduct: (req, res) => {
         const created = req.body
         created.product_price = Number(created.product_price)
-        created.product_image = req.file.filename
         created.id_color = Number(created.id_color)
         created.id_compatibility = Number(created.id_compatibility)
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            console.log("Validé si hay errores durante la creación del producto");
+            created.product_image = req.file.filename
             db.Product.create(created).then(() => {
                 return res.redirect('/list')
             })
