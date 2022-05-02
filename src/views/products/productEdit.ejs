@@ -17,9 +17,9 @@
                     <div class="column1">
                         <div class="nombreProducto">
                             <label for="name" class="form-label">Nombre del producto:</label>
-                            <input type="text" value="<%= productToEdit.product_name %>" id="name" name="product_name"
+                            <input type="text"  id="name" name="product_name"
                                 placeholder="Ej: Amazon Echo Dot" class="form-input"
-                                value="<%= locals.old && old.product_name %>" />
+                                value="<%= locals.old ? old.product_name: productToEdit.product_name %>" />
                             <% if (locals.errors && errors.product_name) { %>
                                 <p>
                                     <%= errors.product_name.msg %>
@@ -30,9 +30,7 @@
                     </div>
                     <div class="column2">
                         <label for="description" class="form-label">Descripción:</label>
-                        <textarea name="product_description" id="description" class="form-input"
-                        
-                            value="<%= locals.old && old.product_description %>"><%= productToEdit.product_description %></textarea>
+                        <textarea name="product_description" id="description" class="form-input"><%= locals.old ? old.product_description : productToEdit.product_description %></textarea>
                         <% if (locals.errors && errors.product_description) { %>
                             <p>
                                 <%= errors.product_description.msg %>
@@ -74,9 +72,9 @@
                     </div>
                     <div class="column3">
                         <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="text" value="<%= productToEdit.product_price %>" id="price" name="product_price"
+                        <input type="text"  id="price" name="product_price"
                              class="form-input"
-                            value="<%= locals.old && old.product_price %>" />
+                            value="<%= locals.old ? old.product_price : productToEdit.product_price %>" />
                         <% if (locals.errors && errors.product_price) { %>
                             <p>
                                 <%= errors.product_price.msg %>
