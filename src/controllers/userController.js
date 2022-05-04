@@ -24,12 +24,11 @@ const logReg = {
 
     createMethod: (req, res) => {
         const created = req.body;
-        created.profile_image = req.file.filename
         created.id_category = Number(created.id_category)
         created.password = bcryptjs.hashSync(req.body.password, 10)
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            console.log("Valide si errores durante el signup");
+            created.profile_image = req.file.filename
             db.Client.create(created).then(() => {
                 return res.send('usuario creado')
             })

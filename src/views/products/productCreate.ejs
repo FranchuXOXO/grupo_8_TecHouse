@@ -41,8 +41,7 @@
 
                     <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
-                        <textarea name="product_description" rows="3" 
-                        value="<%= locals.old && old.product_description %>" ></textarea>
+                        <textarea name="product_description" rows="3"><%= locals.old && old.product_description %></textarea>
                             <% if (locals.errors && errors.product_description) { %>
                                 <p><%= errors.product_description.msg %></p>
                                 <% } %>
