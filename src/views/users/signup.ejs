@@ -46,10 +46,10 @@
                 </div> 
     
                 <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="password" value="<%= locals.old && old.password %>" />
+                <input type="password" id="contraseña" name="password" />
                 <% if (locals.errors && errors.password) { %>
                     <p><%= errors.password.msg %></p>
-                    <% } %>
+                <% } %>
 
                 <!-- <label for="confirmaContraseña">Confirma contraseña</label>
                 <input type="password" id="confirmaContraseña" name="password" />

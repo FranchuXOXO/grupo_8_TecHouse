@@ -1,16 +1,19 @@
 const express = require('express');
-const router = express.Router();
-
 const path = require("path");
 
+const router = express.Router();
+
+// Middlewares
 const upload = require('../middlewares/multerMiddleware');
 const loginValidation = require("../middlewares/loginValidator");
 const auth = require("../middlewares/Authenticator");
 const logged = require("../middlewares/Logged");
 const signupVal = require ("../middlewares/signupValidator");
 
+// Controllers
 const userCont = require("../controllers/userController");
 
+// Routes
 router.get("/Login", logged, userCont.logMethod);
 router.post("/Login", loginValidation, userCont.loginMethod);
 
