@@ -76,10 +76,11 @@ const controller = {
 
                         return res.render('users/login', {
                             errors: {
-                                email: {
+                                password: {
                                     msg: 'La contraseña es invalida'
                                 }
-                            }, siteTitle: "Login",
+                            }, 
+                            siteTitle: "Login",
                             user: req.session.userLogged
                         });
                     }
