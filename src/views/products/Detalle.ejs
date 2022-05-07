@@ -2,23 +2,18 @@
 <html lang="en">
 <head>
     <%- include ("../partials/head.ejs") %>
-    <link rel="stylesheet" href="../css/styles-detalle.css">
+    <link rel="stylesheet" href="../css/styleDetail.css">
 </head>
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
-        <div class="barra">
-            <h2> <%= article.product_name %> </h2>
-            
-            <a href="/Carrito"> <button type="button"> Comprar </button> </a>
-
-        </div>
-             <article>
-                <h2><%= article.product_name %></h2>
-                <a href="/Detalle/<%= article.id %>">
-                    <img src="/images/Products/<%= article.product_image %>" alt="<%= article.product_name %>" class="product_img">
-                 </a>              
-                    <div class="main-article">
+        <article>
+                <div class="titlePic">
+                    <h2> <%= article.product_name %> </h2>
+                    <a href="/Detalle/<%= article.id %>">
+                    <img class="product_img" src="/images/Products/<%= article.product_image %>" alt="<%= article.product_name %>" ></a>  
+                </div>            
+                <div class="main-article">
                         <p class="price">Precio: $ <%= article.product_price %>
                         </p>
                         <h4 class="description"> <%= article.product_description %>
@@ -27,20 +22,20 @@
                         </p>
                         <p class="compatiblity">Compatible con: <%= article.product_compatibilities.device_name %>
                         </p>
-                    </div>
-            </article>
-         <div 
-            <% if (locals.user && user.id_category=="1") {   %>
-                class="Show"
-               <% } else  {  %>
-                   class="Edition-Delete"  
-            <%  } %>>
-            <a href="/<%= article.id %>/edit">   <button type="button"> Editar producto  </button> </a>
-            <form action="/<%= article.id %>?_method=DELETE" method="POST">
-                <button type="submit">Eliminar producto</button> 
-            </form>
-         </div> 
-      
+                        <a href="/Carrito"> <button type="button"> Comprar </button> </a>
+                    <div 
+                            <% if (locals.user && user.id_category=="1") {   %>
+                            class="Show"
+                            <% } else  {  %>
+                            class="Edition-Delete"  
+                            <%  } %>>
+                            <a href="/<%= article.id %>/edit">   <button type="button"> Editar producto  </button> </a>
+                            <form action="/<%= article.id %>?_method=DELETE" method="POST">
+                            <button type="submit">Eliminar producto</button> 
+                            </form>
+                    </div>  
+                </div> 
+        </article>
     </main>
     <%- include("../partials/footer.ejs") %>
 

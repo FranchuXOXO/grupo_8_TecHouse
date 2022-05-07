@@ -62,6 +62,7 @@ main article img {
         align-content: center;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
     main article {
         margin-top: 40px;

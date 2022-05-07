@@ -40,7 +40,7 @@ color: #F8E0D8;
         justify-content: space-between;
         padding-left: 5%;
         padding-right: 5%;
-        font-size: 2vw;
+        font-size: 1.2rem;
     }
 
     .footer-top a {
@@ -50,7 +50,6 @@ color: #F8E0D8;
 
     .footer-top ul {
         padding: 0;
-        padding-top: 10px;
     }
 
     .footer-top li{
@@ -81,6 +80,6 @@ color: #F8E0D8;
         width: 70%;
     }
     .tituloForm {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
