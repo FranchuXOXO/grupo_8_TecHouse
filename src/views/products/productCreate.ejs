@@ -20,16 +20,18 @@
                 </div>
             </div>
             <div class="stock-manager-form">
-                <form method="POST" action="/productos" enctype="multipart/form-data">
+                <form class="formProductCreate" method="POST" action="/productos" enctype="multipart/form-data">
                     <div class="form-container">
                         <label for="nombre">Nombre del producto</label>
-                        <input type="text" name="product_name"
+                        <input type="text" name="product_name" id="productName"
                         value="<%= locals.old && old.product_name %>" />
                         <% if (locals.errors && errors.product_name) { %>
                             <p><%= errors.product_name.msg %></p>
                             <% } %>
                     </div>
-                     
+                    <div class="error-product-name">
+                        <!-- contenido generado por validación en Front (userFrontValidations.js) -->
+                    </div>
                     <div class="form-container">
                         <label for="foto">Imagen del producto</label>
                         <input type="file" name="product_image" accept=".jpg, .png"
@@ -79,5 +81,6 @@
             </div>
         </main>
         <%- include("../partials/footer.ejs") %>
+        <script src="../../../public/js/productCreateFrontValidations.js"></script>
     </body>
 </html>
