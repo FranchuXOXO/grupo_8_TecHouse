@@ -1,40 +1,31 @@
 const express = require('express');
-const router = express.Router();
-
 const path = require("path");
 
-const productController = require("../controllers/productController");
+const router = express.Router();
 
-const multer = require('multer');
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-    cb(null, './public/images/Products')
-    },
-    filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname) )
-    }
-   })
-   const upload = multer({ storage: storage })
-
-
+// Middlewares
+const upload = require('../middlewares/multerMiddlewareProducts');
 const administrator = require("../middlewares/LoginCheck");
-const authLog = require("../middlewares/Authenticator");
+const auth = require("../middlewares/Authenticator");
 const validator = require("../middlewares/productValidator");
 
-router.get("/Detalle/:id", productController.detailMethod);
-router.get("/carrito", authLog, productController.cartMethod);
+// Controllers
+const productController = require("../controllers/productController");
 
-router.get("/productos", authLog, administrator, productController.stockMethod);
+// Routes
+router.get("/Detalle/:id", productController.detailMethod);
+router.get("/carrito", auth, productController.cartMethod);
+
+router.get("/productos", auth, administrator, productController.stockMethod);
 router.post("/productos", upload.single("product_image"), validator, productController.createProduct)
 
 router.get("/list", productController.listMethod);
 
-router.get("/:id/edit", authLog, administrator, productController.edit);
+router.get("/:id/edit", auth, administrator, productController.edit);
 router.put("/:id", upload.single('product_image'), validator, productController.update);
 
 router.get("/search", productController.search);
 
-router.delete("/:id", authLog, administrator, productController.delete);
+router.delete("/:id", auth, administrator, productController.delete);
 
 module.exports = router;

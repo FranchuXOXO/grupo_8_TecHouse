@@ -4,7 +4,7 @@ const path = require("path");
 const router = express.Router();
 
 // Middlewares
-const upload = require('../middlewares/multerMiddleware');
+const upload = require('../middlewares/multerMiddlewareUsers');
 const loginValidation = require("../middlewares/loginValidator");
 const auth = require("../middlewares/Authenticator");
 const logged = require("../middlewares/Logged");
