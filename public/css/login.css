@@ -36,12 +36,12 @@ h1 {
     font-size: 16px;
     width: 300px;    
 }
-#correo {
+#email {
     margin-bottom: 10px;
     font-size: 12px 
      
 }
-#contraseña {
+#password {
     margin-bottom: 4px;
     font-size: 12px 
 }

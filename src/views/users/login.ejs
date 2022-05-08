@@ -12,12 +12,15 @@
                 <h1>Iniciar sesión</h1>
                 <form class="formLogin" action="/Login" method="POST">
                     <label for="correo">Dirección de correo electrónico</label>
-                    <input type="email" id="correo" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
+                    <input type="email" id="email" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
                     <div class="error-message-email">
                         <!-- contenido generado por validación en Front (userFrontValidations.js) -->
                     </div>
                     <label for="contraseña">Contraseña</label>
-                    <input type="password" id="contraseña" name="password" />
+                    <input type="password" id="password" name="password" />
+                    <div class="error-message-password">
+                        <!-- contenido generado por validación en Front (userFrontValidations.js) -->
+                    </div>
                     <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %></p>
                     <% } %>
