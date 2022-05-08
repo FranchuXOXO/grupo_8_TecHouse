@@ -4,12 +4,15 @@
 body {
     margin: 0px;
 }
+
 .header-top-desktop{
     display: none;
 }
+
 .navBar-top-desktop{
     display: none;
 }
+
 .formulario {
     display: none;
 }
@@ -78,15 +81,16 @@ body {
     font-size: 100%;
 
 }
-/* acá comienza el estilo del header desktop*/
 
-@media (min-width: 450px){
+/* acá comienza el estilo del header desktop*/
+@media (min-width: 450px) {
     .header-global-desktop {
         position: fixed;
         top: 0;
         z-index: 2;
         height: 130px;
     }
+
     .header-top-desktop{
         display: flex;
         top: 0;
@@ -101,9 +105,11 @@ body {
         padding-right: 5%;
         height: 85%;
     }
+
     .header-top{
         display: none;
     }
+
     .header-top-desktop a {
         display: block;
         justify-content: space-around;
@@ -114,22 +120,27 @@ body {
         padding-left: 2px;
         padding-right: 2px;
     }
+
     .header-top-desktop i {
         padding-right: 5px;
         font-size: 1.5vw;
     }
+
     .header-top-desktop img {
         width: 170px;
     }
+
     .header-searchBar-desktop {
         font-size: 1.5vw;
         align-items: top;
         position:absolute;
         padding-bottom: 9%;
     }
+
     .navBar-top{
         display:none;
     }
+    
     .header-top-desktop-column1 {
         display: flex;
         flex-direction: column;
@@ -194,7 +205,4 @@ body {
         width: 30%;
         height: auto;
     }
-
-   
-    
 }

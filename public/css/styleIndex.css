@@ -3,18 +3,22 @@
 /* acá comienza el estilo del header mobile*/
 body {
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
-.header-top-desktop{
+
+.header-top-desktop {
     display: none;
 }
-.navBar-top-desktop{
+
+.navBar-top-desktop {
     display: none;
 }
+
 .formulario {
     display: none;
 }
 
-.header-top{
+.header-top {
     margin-top: 0;
     display: flex;
     width: 100vw;
@@ -33,14 +37,14 @@ body {
     margin-top: 10px;
 }
 
-.header-botones{
+.header-botones {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-right: 20px;
 }
 
-.header-botones a{
+.header-botones a {
     text-align: right;
     font-size: 120%;
     color: #F8E0D8;
@@ -48,17 +52,20 @@ body {
     text-decoration: none;
 }
 
-.header-botones p{
-    color: #F8E0D8;
+.header-botones p {
+    color: black;
     margin: none;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    border: #F8E0D8 solid 1px;
+    border-radius: 5%;
+    padding: 3px 12px;
+    background-color: #F8E0D8;
 }
 
-.navBar-top{
+.navBar-top {
     display: flex;
     background-color: #00A997;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color: white;
     justify-content: space-around;
     padding-top: 2px;
@@ -69,7 +76,7 @@ body {
     top: 50px;
 }
 
-.navBar-top a{
+.navBar-top a {
     text-decoration: none;
     color: white;
 }
@@ -78,13 +85,14 @@ body {
     font-size: 100%;
 
 }
-/* acá comienza el estilo del main general*/
 
+/* acá comienza el estilo del main general*/
 .imgCarrousel {
     margin-top: 45px;
     display: flex;
 }
-.imgCarrousel img{
+
+.imgCarrousel img {
     width: 100%;
 }
 
@@ -123,7 +131,7 @@ body {
 }
 .overlay p{
     color: white;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 3vw;
     padding-left: 5%;
     margin-top: 3%;
@@ -141,7 +149,7 @@ body {
 .footer-top{
     display: flex;
     background-color: black;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color: #F8E0D8;
     justify-content: space-between;
     padding-left: 5%;
@@ -180,7 +188,7 @@ color: #F8E0D8;
         box-sizing: border-box;
         background-color: black;
         color: #F8E0D8;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
@@ -257,7 +265,7 @@ color: #F8E0D8;
         display: flex;
         width: 100vw;
         background-color: #00A997;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         color: white;
         justify-content: space-around;
         padding-top: 2px;
@@ -279,7 +287,7 @@ color: #F8E0D8;
     .footer-top{
         display: flex;
         background-color: black;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         color: #F8E0D8;
         justify-content: space-between;
         padding-left: 5%;
@@ -354,7 +362,7 @@ color: #F8E0D8;
     }
     .overlay p{
         color: white;
-        font-family: 'Roboto', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
         font-size: 2vw;
         padding-left: 5%;
         margin-top: 3%;
