@@ -22,17 +22,30 @@ const controller = {
     },
 
     // método (POST) para procesar la creación de un nuevo usuario
-    createMethod: (req, res) => {
+    createMethod: async (req, res) => {
         const created = req.body;
         created.id_category = Number(created.id_category)
         created.password = bcryptjs.hashSync(req.body.password, 10)
         
         let errors = validationResult(req);
-        let registeredUsers = db.Client.findAll()
-        .then((resultados) => {
-            return resultados;
+        
+        let userEmailSearch = await db.Client.findOne({
+            where: {
+                email: req.body.email,
+            }
         });
-        console.log(registeredUsers);
+
+        if (userEmailSearch) {
+			return res.render('users/signup', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body,
+                siteTitle: "Signup"
+			});
+		}
 
         if (errors.isEmpty()) {
             created.profile_image = req.file.filename
@@ -40,8 +53,7 @@ const controller = {
                 .then(() => {
                     return res.render('users/profile', {
                         user: created,
-                        siteTitle: "Perfil",
-                        user: req.session.userLogged
+                        siteTitle: "Perfil"
                     });
                 })
                 .catch((error) => res.send(error))  
