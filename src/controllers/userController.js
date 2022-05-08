@@ -28,7 +28,12 @@ const controller = {
         created.password = bcryptjs.hashSync(req.body.password, 10)
         
         let errors = validationResult(req);
-        
+        let registeredUsers = db.Client.findAll()
+        .then((resultados) => {
+            return resultados;
+        });
+        console.log(registeredUsers);
+
         if (errors.isEmpty()) {
             created.profile_image = req.file.filename
             db.Client.create(created)
