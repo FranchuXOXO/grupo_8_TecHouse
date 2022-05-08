@@ -9,7 +9,15 @@ window.addEventListener('load', () => {
             
             let errorEmail = document.querySelector('.error-message-email');
             errorEmail.innerHTML += 'Debes completar el email';
+
         }
+        else if (!(userEmail.value.includes ("@") && userEmail.value.includes ("."))) {
+            e.preventDefault();
+            
+            let errorEmail = document.querySelector('.error-message-email');
+            errorEmail.innerHTML += 'Tiene que ser un email válido';
+        }
+
         if (userPassword.value == '') {
             e.preventDefault();
             
