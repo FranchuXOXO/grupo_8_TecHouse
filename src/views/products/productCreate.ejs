@@ -30,24 +30,30 @@
                             <% } %>
                     </div>
                     <div class="error-product-name">
-                        <!-- contenido generado por validación en Front (userFrontValidations.js) -->
+                        <!-- contenido generado por validación en Front (productCreateFrontValidation.js) -->
                     </div>
                     <div class="form-container">
                         <label for="foto">Imagen del producto</label>
-                        <input type="file" name="product_image" accept=".jpg, .png"
+                        <input type="file" name="product_image" accept=".jpg, .png" id="productImage" 
                         value="<%= locals.old && old.product_image %>" />
                         <% if (locals.errors && errors.product_image) { %>
                             <p><%= errors.product_image.msg %></p>
                             <% } %>
                     </div>   
+                    <div class="error-product-image">
+                        <!-- contenido generado por validación en Front (productCreateFrontValidation.js) -->
+                    </div>
 
                     <div class="form-container-description">
                         <label for="descripcion">Descripción del producto</label>
-                        <textarea name="product_description" rows="3"><%= locals.old && old.product_description %></textarea>
+                        <textarea id="productDescription" name="product_description" rows="3"><%= locals.old && old.product_description %></textarea>
                             <% if (locals.errors && errors.product_description) { %>
                                 <p><%= errors.product_description.msg %></p>
                                 <% } %>
-                    </div>              
+                    </div>
+                    <div class="error-product-description">
+                        <!-- contenido generado por validación en Front (productCreateFrontValidation.js) -->
+                    </div>            
                     <div class="form-container">
                         <label for="color">Color del producto</label>
                         <br />
@@ -81,6 +87,6 @@
             </div>
         </main>
         <%- include("../partials/footer.ejs") %>
-        <script src="../../../public/js/productCreateFrontValidations.js"></script>
+        <script src="/js/productCreateFrontValidations.js"></script>
     </body>
 </html>

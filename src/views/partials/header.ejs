@@ -1,26 +1,31 @@
-<link rel="stylesheet" href="../css/styleHeader.css">
+<link rel="stylesheet" href="../css/styleIndex.css">
 <header>
+    <!-- Vista MOBILE -->
     <div class="header-top">
         <a href="/"><img src="../images/Logo-TecHouse-header-cut.png" alt="Logo TecHouse"></a>
         <% if (locals.user && user) {   %>
-        <div class="header-botones">
-            <p>
-            Hola
-            </p>
-           <% } else  {  %>
             <div class="header-botones">
-            <a href="/Login">
-            <p><i class="fas fa-sign-in-alt"></i>
-            Login
-            </p></a> 
-        <%  } %>> 
-        </div>
+                <p>
+                    Hola <%= user.first_name %>
+                </p>
+            </div>
+        <% } else  {  %>
+            <div class="header-botones">
+                <a href="/Login">
+                    <p>
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </p>
+                </a>
+            </div>
+        <% } %>
     </div>
     <div class="navBar-top">
         <a href="/Detalle"><i class="fas fa-bars"></i></a>
         <a href="#"> Sobre nosotros > </a>
         <a href="#"> Soporte ></a>
     </div>
+
+    <!-- Vista DESKTOP -->
     <div class="header-global-desktop">
         <div class="header-top-desktop">
             <div class="header-top-desktop-column1">

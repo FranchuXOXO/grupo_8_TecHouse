@@ -22,7 +22,6 @@
                         </p>
                         <p class="compatiblity">Compatible con: <%= article.product_compatibilities.device_name %>
                         </p>
-                        <a href="/Carrito"> <button type="button"> Comprar </button> </a>
                     <div 
                             <% if (locals.user && user.id_category=="1") {   %>
                             class="Show"
@@ -34,7 +33,8 @@
                             <button type="submit">Eliminar producto</button> 
                             </form>
                     </div>  
-                </div> 
+                </div>
+                <a href="/Carrito"> <button type="button" class="button-50"> Comprar</button> </a>
         </article>
     </main>
     <%- include("../partials/footer.ejs") %>
