@@ -26,8 +26,9 @@
             <div class="header-top-desktop-column1">
                 <!-- Barra de busqueda-->
                 <form method = "GET" action = "/search" class="header-searchBar-desktop">
-                    <i class="fas fa-search"></i><input type="text" name = "word" placeholder="Buscar..">
+                    <i class="fas fa-search"></i><input id="headerSearchBar" type="text" name = "word" placeholder="Buscar..">
                 </form>
+                <div class="error-searchBar"></div>
                 <!-- Finaliza Barra de busqueda-->
                 <a href="#"><i class="fas fa-square"></i>Experiencias</a>
             </div>    
@@ -65,4 +66,5 @@
             <a href="#"> Integración ></a>
         </div>
     </div>
+    <script src="/js/headerFrontValidations.js"></script>
 </header>
