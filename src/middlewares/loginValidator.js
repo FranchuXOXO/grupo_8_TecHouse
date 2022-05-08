@@ -9,6 +9,6 @@ module.exports = [
     check('email')
         .isEmail().withMessage('Debes ingresar un email válido'),
     check('password')
-        .notEmpty().withMessage('Debes completar la contraseña').bail()
+        // .notEmpty().withMessage('Debes completar la contraseña').bail()
         .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
 ]
