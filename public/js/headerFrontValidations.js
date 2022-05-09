@@ -6,7 +6,8 @@ window.addEventListener('load', () => {
         if (headerSearchBar.value == '') {
             e.preventDefault();
             let searchBarError = document.querySelector('.error-searchBar');
-            searchBarError.innerHTML += 'Este Campo esta vacio';
+            searchBarError.innerText = ''
+            searchBarError.innerHTML += 'Este campo está vacío';
         }
     });
 });
