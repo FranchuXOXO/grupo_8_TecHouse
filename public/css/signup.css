@@ -14,6 +14,7 @@ main {
     gap: 64px;
     margin: 64px 0;
 }
+
 .cuadro {
     padding: 40px;
     flex-direction: column;
@@ -22,20 +23,24 @@ main {
     -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
     -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
 }
-.formSignup {
+
+.form-sign-up {
     display: flex;
     flex-direction: column;
 }
+
 h1 {
     font-size: 22px;
     margin: 0;
 }
+
 p {
     font-size: 12PX;
     margin: 4px 0 16px
 }
-#nombre,
-#apellido,
+
+#first_name,
+#last_name,
 #correo,
 #contraseña,
 #confirmaContraseña,
@@ -50,11 +55,13 @@ p {
     display: flex;
     align-items: center;
 }
+
 .boton-enviar {
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
 }
+
 .boton-enviar button {
     font-size: 16px;
     width: 100%;
@@ -63,12 +70,13 @@ p {
     padding: 8px;
     border-radius: 5px
 }
-.boton-enviar button,
 
+.boton-enviar button,
 .boton-redes button {
     padding: 8px;
     border-radius: 8px;
 }
+
 .boton-redes {
     gap: 12px;
     display: flex;
@@ -81,6 +89,7 @@ p {
     color: white;
     width: 180px
 }
+
 .botonFacebook i {
     font-size: 20px;
 }
@@ -94,19 +103,22 @@ p {
     width: 180px
 }
 
-.formSignup a {
+.form-sign-up a {
     text-align: end;
     font-size: 12px;
 }
+
 .caja {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .caja img {
     width: 40px;
     height: 40px;
 }
+
 .caja-envio,
 .caja-pago,
 .caja-seguridad {
@@ -115,21 +127,25 @@ p {
     padding: 24px;
     border-left: 1px solid black;
 }
+
 .caja-envio {
     border: none;
 }
+
 .caja-envio h4,
 .caja-pago h4,
 .caja-seguridad h4 {
     font-size: 16px;
     margin: 0 0 8px;
 }
+
 .caja-envio p,
 .caja-pago p,
 .caja-seguridad p {
     font-size: 12px;
     margin: 0;
 }
+
 @media (max-width: 450px) {
     .caja {
         display: flex;

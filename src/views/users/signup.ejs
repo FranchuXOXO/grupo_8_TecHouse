@@ -1,100 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include ("../partials/head.ejs") %>
-    <link rel="stylesheet" href="./css/signup.css">
-</head>
-<body>
-    <%- include ("../partials/header.ejs") %>
-    <main>
-        <div class="cuadro"> 
-            <h1>Crear una cuenta</h1>
-            <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
-            <form class="formSignup" action="/Signup" method="POST" enctype="multipart/form-data">
-                
-                <label for="nombre">Primer Nombre</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" name="first_name" value="<%= locals.old && old.first_name %>" />
-                <% if (locals.errors && errors.first_name) { %>
-                    <p><%= errors.first_name.msg %></p>
+    <head>
+        <%- include ("../partials/head.ejs") %>
+        <link rel="stylesheet" href="./css/signup.css">
+    </head>
+    <body>
+        <%- include ("../partials/header.ejs") %>
+
+        <main>
+            <div class="cuadro"> 
+                <h1>Crear una cuenta</h1>
+                <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
+                <form class="form-sign-up" action="/Signup" method="POST" enctype="multipart/form-data">
+                    <label for="first_name">Primer Nombre</label>
+                    <input type="text" id="first_name" placeholder="Escribe tu nombre" name="first_name" value="<%= locals.old && old.first_name %>" />
+                    <div class="error-message-first-name">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
+                    <% if (locals.errors && errors.first_name) { %>
+                        <p><%= errors.first_name.msg %></p>
                     <% } %>
 
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" placeholder="Escribe tu apellido" name="last_name" value="<%= locals.old && old.last_name %>" />
-                <% if (locals.errors && errors.last_name) { %>
-                    <p><%= errors.last_name.msg %></p>
+                    <label for="last_name">Apellido</label>
+                    <input type="text" id="last_name" placeholder="Escribe tu apellido" name="last_name" value="<%= locals.old && old.last_name %>" />
+                    <div class="error-message-last-name">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
+                    <% if (locals.errors && errors.last_name) { %>
+                        <p><%= errors.last_name.msg %></p>
                     <% } %>
 
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
-                <% if (locals.errors && errors.email) { %>
-                    <p><%= errors.email.msg %></p>
-                    <% } %>
-
-                <label>Categoría del usuario</label>
-                        <br />
-                        <select name="id_category">
-                            <option value="1">Administrador</option>
-                            <option value="2">Usuario</option>
-                        </select>
-
-                <div class="form-container">
-                    <label for="foto">Imagen del usuario</label>
-                    <input type="file" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
-                    <% if (locals.errors && errors.profile_image) { %>
-                        <p><%= errors.profile_image.msg %></p>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
+                    <% if (locals.errors && errors.email) { %>
+                        <p><%= errors.email.msg %></p>
                         <% } %>
-                </div> 
-    
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="password" />
-                <% if (locals.errors && errors.password) { %>
-                    <p><%= errors.password.msg %></p>
-                <% } %>
 
-                <!-- <label for="confirmaContraseña">Confirma contraseña</label>
-                <input type="password" id="confirmaContraseña" name="password" />
-                
-                <label id="recuerdame"> <input type="checkbox" > Deseo recibir ofertas por mail</label>-->
-    
-                <div class="boton-enviar">
-                    <button type="submit">Enviar</button>
-                </div>
+                    <label>Categoría del usuario</label>
+                            <br />
+                            <select name="id_category">
+                                <option value="1">Administrador</option>
+                                <option value="2">Usuario</option>
+                            </select>
 
-                <div class="boton-redes">
-                    <button class="botonGoogle" type="submit"><i class="fab fa-google"></i> Entrar con Google</button>
-                    <button class="botonFacebook" type="submit"><i class="fab fa-facebook"></i> Entrar con Facebook</button>
-                </div>
+                    <div class="form-container">
+                        <label for="foto">Imagen del usuario</label>
+                        <input type="file" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
+                        <% if (locals.errors && errors.profile_image) { %>
+                            <p><%= errors.profile_image.msg %></p>
+                            <% } %>
+                    </div> 
+        
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="password" />
+                    <% if (locals.errors && errors.password) { %>
+                        <p><%= errors.password.msg %></p>
+                    <% } %>
 
-                <a href="/Login">¿Ya tienes un usuario? Inicia sesión</a>
-            </form>
-        </div>
-        <div class="caja">
-            <div class="caja-envio">
-                <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>
-                <div class="caja-envio-texto">
-                    <h4>Enviamos tu compra</h4>
-                    <p>Entregas en todo el pais</p>
-                </div>
-                
+                    <!-- <label for="confirmaContraseña">Confirma contraseña</label>
+                    <input type="password" id="confirmaContraseña" name="password" />
+                    
+                    <label id="recuerdame"> <input type="checkbox" > Deseo recibir ofertas por mail</label>-->
+        
+                    <div class="boton-enviar">
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                    <div class="boton-redes">
+                        <button class="botonGoogle" type="submit"><i class="fab fa-google"></i> Entrar con Google</button>
+                        <button class="botonFacebook" type="submit"><i class="fab fa-facebook"></i> Entrar con Facebook</button>
+                    </div>
+
+                    <a href="/Login">¿Ya tienes un usuario? Inicia sesión</a>
+                </form>
             </div>
+            <div class="caja">
+                <div class="caja-envio">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>
+                    <div class="caja-envio-texto">
+                        <h4>Enviamos tu compra</h4>
+                        <p>Entregas en todo el pais</p>
+                    </div>
+                    
+                </div>
 
-            <div class="caja-pago">
-                <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png"/>
-                <div class="caja-envio-texto">
-                    <h4>Paga como quieras</h4>
-                    <p>Tarjetas de crédito o efectivo</p>
+                <div class="caja-pago">
+                    <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png"/>
+                    <div class="caja-envio-texto">
+                        <h4>Paga como quieras</h4>
+                        <p>Tarjetas de crédito o efectivo</p>
+                    </div>
+                </div>
+
+                <div class="caja-seguridad">
+                    <img src="https://img.icons8.com/windows/32/000000/security-block.png"/>
+                    <div class="caja-envio-texto">
+                        <h4>Compra con seguridad</h4>
+                        <p>Tus datos siempre protegidos</p>
+                    </div>
                 </div>
             </div>
+        </main>
 
-            <div class="caja-seguridad">
-                <img src="https://img.icons8.com/windows/32/000000/security-block.png"/>
-                <div class="caja-envio-texto">
-                    <h4>Compra con seguridad</h4>
-                    <p>Tus datos siempre protegidos</p>
-                </div>
-            </div>
-        </div>
-    </main> 
-    <%- include("../partials/footer.ejs") %>
-</body>
+        <%- include("../partials/footer.ejs") %>
+
+        <script src="/js/validations/users/signup.js"></script>
+    </body>
 </html>
