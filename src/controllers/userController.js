@@ -152,6 +152,7 @@ const controller = {
     // método (POST) para procesar la edición de un usuario
     update: (req, res) => {
         const update = req.body
+        
         db.Client.update(
             {
                 first_name: update.first_name,
@@ -165,6 +166,12 @@ const controller = {
             return res.send('usuario editado')
         })
             .catch(error => res.send(error))
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 

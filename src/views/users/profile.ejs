@@ -12,11 +12,17 @@
                 <img src="/images/users/<%= user.profile_image %> ">
                 <div class="col">
                     <h2>Hola <%= user.first_name %> </h2>
-                <a href="/user/<%= user.id %>/useredit"> <button type="button"> Editar perfil</button> </a>
+                    <a href="/user/<%= user.id %>/useredit">
+                        <button type="button"> Editar perfil </button>
+                    </a>
                     <br>
                     <div class="email">
                         <%= user.email %> 
                     </div>
+                    <br>
+                    <a href="/logout/">
+                        <button type="button"> Cerrar sesión </button>
+                    </a>
                 </div>
             </div>
         </main> 

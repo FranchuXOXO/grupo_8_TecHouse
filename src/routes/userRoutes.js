@@ -25,4 +25,6 @@ router.get("/profile", auth, userCont.profile);
 router.get("/user/:id/useredit", auth, userCont.edit);
 router.put("/user/:id", upload.single('profile_image'), userCont.update);
 
+router.get('/logout/', userCont.logout);
+
 module.exports = router;
