@@ -8,14 +8,14 @@ window.addEventListener('load', () => {
             e.preventDefault();
             
             let errorEmail = document.querySelector('.error-message-email');
-            errorEmail.innerHTML += 'Debes completar el email';
+            errorEmail.innerHTML += 'Por favor, ingresa tu email';
 
         }
         else if (!(userEmail.value.includes ("@") && userEmail.value.includes ("."))) {
             e.preventDefault();
             
             let errorEmail = document.querySelector('.error-message-email');
-            errorEmail.innerHTML += 'Tiene que ser un email válido';
+            errorEmail.innerHTML += 'Debes ingresar un email válido';
         }
 
         if (userPassword.value == '') {

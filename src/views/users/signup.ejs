@@ -12,7 +12,7 @@
                 <h1>Crear una cuenta</h1>
                 <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
                 <form class="form-sign-up" action="/Signup" method="POST" enctype="multipart/form-data">
-                    <label for="first_name">Primer Nombre</label>
+                    <label class="form-label" for="first_name">Primer Nombre</label>
                     <input type="text" id="first_name" placeholder="Escribe tu nombre" name="first_name" value="<%= locals.old && old.first_name %>" />
                     <div class="error-message-first-name">
                         <!-- contenido generado por validación en Front (signup.js) -->
@@ -21,7 +21,7 @@
                         <p><%= errors.first_name.msg %></p>
                     <% } %>
 
-                    <label for="last_name">Apellido</label>
+                    <label class="form-label" for="last_name">Apellido</label>
                     <input type="text" id="last_name" placeholder="Escribe tu apellido" name="last_name" value="<%= locals.old && old.last_name %>" />
                     <div class="error-message-last-name">
                         <!-- contenido generado por validación en Front (signup.js) -->
@@ -30,32 +30,52 @@
                         <p><%= errors.last_name.msg %></p>
                     <% } %>
 
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
+                    <label class="form-label" for="email">
+                        Correo electrónico
+                    </label>
+                    <input type="email" id="email" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
+                    <div class="error-message-email">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
                     <% if (locals.errors && errors.email) { %>
-                        <p><%= errors.email.msg %></p>
-                        <% } %>
+                        <div class="error-message-email">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
 
-                    <label>Categoría del usuario</label>
-                            <br />
-                            <select name="id_category">
-                                <option value="1">Administrador</option>
-                                <option value="2">Usuario</option>
-                            </select>
+                    <label class="form-label" for="id_category">Categoría del usuario</label>
+                    <select name="id_category" id="id_category">
+                        <option value="">Elige una categoría...</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Usuario</option>
+                    </select>
+                    <div class="error-message-category">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
 
                     <div class="form-container">
-                        <label for="foto">Imagen del usuario</label>
-                        <input type="file" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
+                        <label class="form-label" for="foto">
+                            Imagen del usuario
+                        </label>
+                        <input type="file" id="profile_image" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
                         <% if (locals.errors && errors.profile_image) { %>
                             <p><%= errors.profile_image.msg %></p>
-                            <% } %>
-                    </div> 
+                        <% } %>
+                    </div>
+                    <div class="error-message-userImage">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
         
-                    <label for="contraseña">Contraseña</label>
-                    <input type="password" id="contraseña" name="password" />
+                    <label class="form-label" for="password">
+                        Contraseña
+                    </label>
+                    <input type="password" id="password" name="password" />
                     <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %></p>
                     <% } %>
+                    <div class="error-message-password">
+                        <!-- contenido generado por validación en Front (signup.js) -->
+                    </div>
 
                     <!-- <label for="confirmaContraseña">Confirma contraseña</label>
                     <input type="password" id="confirmaContraseña" name="password" />
