@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/styleIndex.css">
+<link rel="stylesheet" href="../css/header.css">
 <header>
     <!-- Vista MOBILE -->
     <div class="header-top">
@@ -44,7 +44,9 @@
                             <div class = "userContainer">
                                 <!-- <img class = "userImage" src="/images/users/<%= user.profile_image %> "> -->
                                 <div class="userName">
-                                    <p> Hola <%= user.first_name %> </p>
+                                    <p>
+                                        <a href="/profile">Hola <%= user.first_name %></a>
+                                    </p>
                                 </div>
                             </div>
                        <% } else  {  %>

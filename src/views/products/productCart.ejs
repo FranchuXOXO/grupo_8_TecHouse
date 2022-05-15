@@ -3,33 +3,10 @@
     <head>
         <%- include ("../partials/head.ejs") %>
         <link rel="stylesheet" href="./css/normalize.css">
-        <link rel="stylesheet" href="./css/styleCarrito.css">
+        <link rel="stylesheet" href="./css/cart.css">
     </head>
     <body>
-        <header>
-            <div class="top-header">
-                <div class="header-first-line">
-                    <a href="/"><img class="TecHouse-logo" src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse"></a>
-                    <div class="first-line-buttons">
-                        <div class="productCart-support">
-                            ¿Necesitas ayuda? <i class="fas fa-question-circle"></i>
-                        </div>
-                        <div class="productCart-close">
-                            <a href="/"><i class="far fa-times-circle"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-wishlist-bar">
-                <div class="cart-list">
-                    Tú Carrito
-                </div>
-                <div class="wish-list">
-                    Tú Wishlist
-                </div>
-            </div>
-            <!-- visualización Desktop -->
-        </header>
+        <%- include("../partials/header.ejs") %>
         <main>
             <section class="products-viewer">
                 <%- include('cartItem.ejs') %> 

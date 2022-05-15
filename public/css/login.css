@@ -1,152 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
-}
-
-main {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-    margin: 64px
-}
-
-.cuadro {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    border-radius: 5%;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-.formLogin {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    width: 300px;    
-}
-#email {
-    margin-bottom: 10px;
-    font-size: 12px 
-     
-}
-#password {
-    margin-bottom: 4px;
-    font-size: 12px 
-}
-
-#recuerdame {
-    margin-bottom: 10px;
-    font-size: 12px   
-}
-
-#recuerdame input
- {
-    width: 16px;
-    height: 16px;
- }
-
-.boton {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
-}
-.boton button {
-    background-color: #00A997;
-    width: 300px;
-    padding: 8px;
-    border-radius: 5px;
-}
-.formLogin a {
-    text-align: end;
-    font-size: 12px;
-}
-
-.caja {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.caja img {
-    width: 40px;
-    height: 40px;
-}
-.caja-envio,
-.caja-pago,
-.caja-seguridad {
-    display: flex;
-    gap: 32px;
-    padding: 24px;
-    border-left: 1px solid black;
-}
-.caja-envio {
-    border: none;
-}
-.caja-envio h4,
-.caja-pago h4,
-.caja-seguridad h4 {
-    font-size: 16px;
-    margin: 0 0 8px;
-}
-.caja-envio p,
-.caja-pago p,
-.caja-seguridad p {
-    font-size: 12px;
-    margin: 0;
-}
-@media (max-width: 450px) {
-    .caja {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .caja img {
-        width: 40px;
-        height: 40px;
-    }
-    .caja-envio,
-    .caja-pago,
-    .caja-seguridad {
-        border-bottom: 1px solid black;
-        text-align: center;
-        padding: 32px 0;
-    }
-    .caja-pago,
-    .caja-seguridad {
-        border-left: none;
-    }
-    .caja-seguridad {
-        border-bottom: none;
-    }
-}
-
- /* Estilos para el header y el footer*/
- body {
     margin: 0px;
+    box-sizing: border-box;
 }
-.header-top-desktop{
-    display: none;
-}
-.navBar-top-desktop{
-    display: none;
-}
-.formulario {
+
+/*  Estilos para el Header  */
+.header-top-desktop {
     display: none;
 }
 
-.header-top{
+.navBar-top-desktop {
+    display: none;
+}
+
+.header-top {
     margin-top: 0;
     display: flex;
     width: 100vw;
@@ -210,51 +80,135 @@ h1 {
     font-size: 100%;
 
 }
-/* acá comienza el estilo del main general*/
 
-.imgCarrousel {
+/*  Estilos para el Main  */
+main {
+    background-color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin: 64px;
 }
-.imgCarrousel img{
+
+h1 {
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
     width: 100%;
 }
-.experiencesMain {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    padding-top: 1%;
-    padding-bottom: 1%;
+
+.form-container,
+#rememberMe {
+    margin-bottom: 12px;
+    box-sizing: border-box;
 }
-.experiencesMain video{
-    object-fit: cover;
-    width: 23.5vw;
-    box-shadow: 10px 5px 5px grey;
+
+.form-container label {
+    font-weight: bold;
+    font-size: 14px;    
 }
-.experiencesMain a{
-    width: 23.5vw;
-}
-.container { position:relative; }
-.container video {
-    position:relative;
-    z-index:0;
-}
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
+
+#email,
+#password {
+    margin-bottom: 10px;
     width: 100%;
-    background-color: #00A997; opacity: 0.7;
+    border-radius: 0.375em;
+    border: 1px solid silver;
+    min-height: 40px;
+    box-sizing: border-box;
 }
-.overlay p{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2vw;
-    padding-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 6%;
+
+.error-message-email,
+.error-message-password {
+    color: red;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
-/* acá comienza el estilo del footer mobile*/
+
+#rememberMe {
+    display: flex;
+    align-items: center;
+}
+
+#rememberMe input {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+ }
+
+.form-submit-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.form-submit-button button {
+    background-color: #F8E0D8;
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-login a {
+    text-align: end;
+    font-size: 12px;
+}
+
+.caja {
+    display: none;
+    /* width: 100%;
+    display: flex;
+    justify-content: center; */
+}
+
+.caja img {
+    width: 40px;
+    height: 40px;
+}
+
+.caja-envio,
+.caja-pago,
+.caja-seguridad {
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+    border-left: 1px solid black;
+}
+
+.caja-envio {
+    border: none;
+}
+
+.caja-envio h4,
+.caja-pago h4,
+.caja-seguridad h4 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.caja-envio p,
+.caja-pago p,
+.caja-seguridad p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Estilos para el Footer*/
 .footer-top{
     display: flex;
     background-color: black;
@@ -279,34 +233,34 @@ color: #F8E0D8;
 .footer-top li{
     list-style: none;
 }
+
 .formulario{
     display: none;
 }
-/* acá comienza el estilo del header desktop*/
+
+/* Especificaciones de estílo para Desktop*/
 @media (min-width: 450px){
+    /*  Para el Header  */    
+    .header-top {
+        display: none;
+    }
+    
     .header-global-desktop {
         position: fixed;
         top: 0;
         z-index: 2;
         height: 130px;
     }
-    .header-top-desktop{
-        display: flex;
+
+    .header-top-desktop {
         top: 0;
-        width: 100vw;
-        justify-content: space-between;
-        box-sizing: border-box;
-        background-color: black;
         color: #F8E0D8;
-        font-family: 'Roboto', sans-serif;
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
         height: 85%;
     }
-    .header-top{
-        display: none;
-    }
+    
     .header-top-desktop a {
         display: block;
         justify-content: space-around;
@@ -317,22 +271,27 @@ color: #F8E0D8;
         padding-left: 2px;
         padding-right: 2px;
     }
+
     .header-top-desktop i {
         padding-right: 5px;
         font-size: 1.5vw;
     }
+
     .header-top-desktop img {
         width: 170px;
     }
+
     .header-searchBar-desktop {
         font-size: 1.5vw;
         align-items: top;
         position:absolute;
         padding-bottom: 9%;
     }
-    .navBar-top{
+
+    .navBar-top {
         display:none;
     }
+
     .header-top-desktop-column1 {
         display: flex;
         flex-direction: column;
@@ -344,22 +303,26 @@ color: #F8E0D8;
         background-color: #F8E0D8;
         border-radius: 5px;
     }
+
     .header-top-desktop-column2 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
+
     .header-top-desktop-column2 p{
         padding-bottom: 5%;
         font-size: 1.5vw;
         text-align: right;
         text-decoration: none;
     }
+
     .header-top-desktop-column3 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
+
     .header-top-desktop-column3 p{
         padding-bottom: 1%;
         font-size: 1.5vw;
@@ -388,7 +351,60 @@ color: #F8E0D8;
         color: white;
         font-size: 1.2vw;
     }
-    /* Footer */
+    /*  Para el Main  */
+    .container {
+        margin-top: 110px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
+        -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
+        -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
+        border-radius: 0.375em;
+        width: 600px;
+    }
+
+    .caja {
+        /* display: none; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .caja img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .caja-envio,
+    .caja-pago,
+    .caja-seguridad {
+        display: flex;
+        gap: 32px;
+        padding: 24px;
+        border-left: 1px solid black;
+    }
+    
+    .caja-envio {
+        border: none;
+    }
+    
+    .caja-envio h4,
+    .caja-pago h4,
+    .caja-seguridad h4 {
+        font-size: 16px;
+        margin: 0 0 8px;
+    }
+    
+    .caja-envio p,
+    .caja-pago p,
+    .caja-seguridad p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    /* Para el Footer */
     .footer-top{
         display: flex;
         background-color: black;
@@ -440,16 +456,4 @@ color: #F8E0D8;
     .tituloForm {
         font-size: 2rem;
     }
-
-    .cuadro {
-        margin-top: 110px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-        -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-        -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    }
 }
-

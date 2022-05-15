@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* acá comienza el estilo del header mobile*/
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* acá comienza el estilo del main general*/
+.imgCarrousel {
+    margin-top: 45px;
+    display: flex;
+}
+
+.imgCarrousel img {
+    width: 100%;
+}
+
+/* acá comienza el estilo de los banners con videos mobile*/
+.experiencesMain {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.experiencesMain video {
+    object-fit: cover;
+    width: 49.5vw;
+}
+.experiencesMain a {
+    width: 49.5vw;
+}
+
+.container {
+    position:relative;
+}
+.container video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    width: 100%;
+    background-color: #00A997; opacity: 0.7;
+}
+.overlay p {
+    color: white;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 3vw;
+    padding-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+#container3 {
+    display: none;
+}
+
+#container4 {
+    display: none;
+}
+
+/* acá comienza el estilo de los banners con videos desktop*/
+@media (min-width: 450px){
+    .experiencesMain video{
+        object-fit: cover;
+        width: 24vw;
+        box-shadow: 5px 5px 5px grey;
+    }
+    
+    .container { 
+        position:relative;
+    }
+
+    .container video {
+        position:relative;
+        z-index:0;
+    }
+
+    .overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        width: 100%;
+        background-color: #00A997; opacity: 0.7;
+    }
+
+    .overlay p{
+        color: white;
+        font-size: 2vw;
+        padding-left: 5%;
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+
+    #container3 {
+        display: block;
+    }
+
+    #container4 {
+        display: block;
+    }
+}
+
+
+
+
+
+
+/* .header-top-desktop {
+    display: none;
+}
+
+.navBar-top-desktop {
+    display: none;
+}
+
+.formulario {
+    display: none;
+}
+
+.header-top {
+    margin-top: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: black;
+    height: 50px;
+    font-size: 10px;
+    position: fixed;
+    top: 0;
+}
+
+.header-top img {
+    width: 100%;
+    height: 33px;
+    margin-top: 10px;
+}
+
+.header-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.header-botones a {
+    text-align: right;
+    font-size: 120%;
+    color: #F8E0D8;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.header-botones p {
+    color: black;
+    margin: none;
+    font-weight: bold;
+    border: #F8E0D8 solid 1px;
+    border-radius: 5%;
+    padding: 3px 12px;
+    background-color: #F8E0D8;
+}
+
+.navBar-top {
+    display: flex;
+    background-color: #00A997;
+    color: white;
+    justify-content: space-around;
+    padding-top: 2px;
+    align-items: center;
+    position: fixed;
+    font-size: 12px;
+    width: 100vw;
+    top: 50px;
+}
+
+.navBar-top a {
+    text-decoration: none;
+    color: white;
+}
+
+.navBar-top i {
+    font-size: 100%;
+
+} */
+
+/* acá comienza el estilo del footer mobile*/
+/* .footer-top{
+    display: flex;
+    background-color: black;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3vw;
+}
+
+.footer-top a {
+text-decoration: none;
+color: #F8E0D8;
+}
+
+.footer-top ul {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.footer-top li{
+    list-style: none;
+} */
+
+/* acá comienza el estilo del header desktop*/
+/* @media (min-width: 450px){
+    .header-global-desktop {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        height: 130px;
+    }
+    .header-top-desktop{
+        display: flex;
+        top: 0;
+        width: 100vw;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-color: black;
+        color: #F8E0D8;
+        align-items: flex-end;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 85%;
+    }
+    .header-top{
+        display: none;
+    }
+    .header-top-desktop a {
+        display: block;
+        justify-content: space-around;
+        color: #F8E0D8;
+        text-decoration: none;
+        padding-bottom: 10px;
+        font-size: 1.2vw;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .header-top-desktop i {
+        padding-right: 5px;
+        font-size: 1.5vw;
+    }
+    .header-top-desktop img {
+        width: 170px;
+    }
+    .header-searchBar-desktop {
+        font-size: 1.5vw;
+        align-items: top;
+        position:absolute;
+        padding-bottom: 9%;
+    }
+    .navBar-top{
+        display:none;
+    }
+    .header-top-desktop-column1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header-searchBar-desktop input{
+        font-size: 1.5vw;
+        background-color: #F8E0D8;
+        border-radius: 5px;
+    }
+    .header-top-desktop-column2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-top-desktop-column2 p{
+        padding-bottom: 5%;
+        font-size: 1.5vw;
+        text-align: right;
+        text-decoration: none;
+    }
+    .header-top-desktop-column3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-top-desktop-column3 p{
+        padding-bottom: 1%;
+        font-size: 1.5vw;
+        text-align: right;
+    }
+    .header-top-desktop-column3 em{
+        font-size: 2.5vw;
+    }
+    .header-searchBar-desktop {
+        text-align: left;
+    }
+    .navBar-top-desktop {
+        display: flex;
+        width: 100vw;
+        background-color: #00A997;
+        color: white;
+        justify-content: space-around;
+        padding-top: 2px;
+        align-items: center;
+        height: 15%;
+    }
+    
+    .navBar-top-desktop a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2vw;
+    }
+    
+} */
+
+/* acá comienza el estilo del footer desktop*/
+/* @media (min-width: 450px){
+    .footer-top{
+        display: flex;
+        background-color: black;
+        color: #F8E0D8;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2vw;
+    }
+
+    .footer-top a {
+    text-decoration: none;
+    color: #F8E0D8;
+    }
+
+    .footer-top ul {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .footer-top li{
+        list-style: none;
+    }
+
+    .formulario {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #F8E0D8;
+        text-align: left;
+        background-color: black;
+        padding-bottom: 10px;
+        width: 400px;
+    }
+
+    .formNombre {
+        width: 70%;
+    }
+    .formMensaje {
+        width: 70%;
+    }
+    .formEmail {
+        width: 70%;
+    }
+    .tituloForm {
+        font-size: 2rem;
+    }
+} */

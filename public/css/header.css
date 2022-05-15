@@ -1,20 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* acá comienza el estilo del header mobile*/
-body {
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-}
-
 .header-top-desktop {
     display: none;
 }
 
 .navBar-top-desktop {
-    display: none;
-}
-
-.formulario {
     display: none;
 }
 
@@ -83,95 +73,7 @@ body {
 
 .navBar-top i {
     font-size: 100%;
-
 }
-
-/* acá comienza el estilo del main general*/
-.imgCarrousel {
-    margin-top: 45px;
-    display: flex;
-}
-
-.imgCarrousel img {
-    width: 100%;
-}
-
-
-/* acá comienza el estilo de los banners con videos mobile*/
-
-.experiencesMain {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-.experiencesMain video{
-    object-fit: cover;
-    width: 49.5vw;
-}
-.experiencesMain a{
-    width: 49.5vw;
-}
-
-.container {
-    position:relative;
-}
-.container video {
-    position:relative;
-    z-index:0;
-}
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-    width: 100%;
-    background-color: #00A997; opacity: 0.7;
-}
-.overlay p{
-    color: white;
-    /* font-family: 'Roboto', sans-serif; */
-    font-size: 3vw;
-    padding-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 6%;
-}
-#container3 {
-    display: none;
-}
-#container4 {
-    display: none;
-}
-
-/* acá comienza el estilo del footer mobile*/
-
-.footer-top{
-    display: flex;
-    background-color: black;
-    /* font-family: 'Roboto', sans-serif; */
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
-}
-
-.footer-top a {
-text-decoration: none;
-color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li{
-    list-style: none;
-}
-
-/* acá comienza el estilo del header desktop*/
 
 @media (min-width: 450px){
     .header-global-desktop {
@@ -277,101 +179,5 @@ color: #F8E0D8;
         text-decoration: none;
         color: white;
         font-size: 1.2vw;
-    }
-    
-}
-
-/* acá comienza el estilo del footer desktop*/
-
-@media (min-width: 450px){
-    .footer-top{
-        display: flex;
-        background-color: black;
-        /* font-family: 'Roboto', sans-serif; */
-        color: #F8E0D8;
-        justify-content: space-between;
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: 2vw;
-    }
-
-    .footer-top a {
-    text-decoration: none;
-    color: #F8E0D8;
-    }
-
-    .footer-top ul {
-        padding: 0;
-        padding-top: 10px;
-    }
-
-    .footer-top li{
-        list-style: none;
-    }
-
-    .formulario {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.4;
-        color: #F8E0D8;
-        text-align: left;
-        background-color: black;
-        padding-bottom: 10px;
-        width: 400px;
-    }
-
-    .formNombre {
-        width: 70%;
-    }
-    .formMensaje {
-        width: 70%;
-    }
-    .formEmail {
-        width: 70%;
-    }
-    .tituloForm {
-        font-size: 2rem;
-    }
-}
-
-/* acá comienza el estilo de los banners con videos desktop*/
-
-@media (min-width: 450px){
-    .experiencesMain video{
-        object-fit: cover;
-        width: 24vw;
-        box-shadow: 5px 5px 5px grey;
-    }
-    .container { 
-        position:relative;
-    }
-    .container video {
-        position:relative;
-        z-index:0;
-    }
-    .overlay {
-        position:absolute;
-        top:0;
-        left:0;
-        z-index:1;
-        width: 100%;
-        background-color: #00A997; opacity: 0.7;
-    }
-    .overlay p{
-        color: white;
-        /* font-family: 'Roboto', sans-serif; */
-        font-size: 2vw;
-        padding-left: 5%;
-        margin-top: 3%;
-        margin-bottom: 6%;
-    }
-    #container3 {
-        display: block;
-    }
-    #container4 {
-        display: block;
-    }
+    }   
 }

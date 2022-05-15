@@ -1,96 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
-
-/*=========================================================================== */
-/* Acá arrancan los estilos del "header"===================================== */
-/*=========================================================================== */
-header {
-    background-color: black;
-}
-
-div.top-header {
-    width: 100vw;
-    height: 100px;  
-}
-
-div.header-first-line {
-    display: flex;
-    width: 100%;
-    height: 130px;
-    color: #F8E0D8;
-}
-
-.TecHouse-logo {
-    width: 110px;
-    margin: 5px;
-}
-
-div.first-line-buttons {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    height: 30px;
-    align-items: center;
-    padding-top: 10px;
-}
-
-.first-line-buttons a {
-    text-decoration: none;
-    color: #F8E0D8;
-}
-
-.productCart-support {
-    position: absolute;
-    right: 20%;
-    border: solid #F8E0D8 1px;
-    background-color: #00A997;
-    border-radius: 5px;
-    width: 135px;
-    padding: 5px;
-    text-align: center;
-}
-
-.productCart-support i {
-    display: none;
-    content-visibility: hidden;
-}
-
-.productCart-close {
-    margin: 1px;
-    font-size: 28px;
-    position: absolute;
-    right: 3%;
-}
-
-div.cart-wishlist-bar {
-    display: flex;
-    width: 100vw;
-    height: 6vh;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #00A997;
-}
-
-.cart-list,
-.wish-list {
-    border: solid #F8E0D8 1px;
-    background-color: #F8E0D8;
-    border-radius: 5px;
-    padding: 5px;
-    width: 150px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/*=========================================================================== */
-/* Acá arrancan los estilos del "main"======================================= */
-/*=========================================================================== */
 
 section.products-viewer {
     background-color:white;
@@ -277,77 +192,14 @@ div.full-cart-options-bar {
 }
 
 /*=========================================================================== */
-/* Acá arrancan los estilos del "footer"===================================== */
-/*=========================================================================== */
-
-.footer-top{
-    display: flex;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
-}
-
-.footer-top a {
-text-decoration: none;
-color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li{
-    list-style: none;
-}
-.formulario{
-    display: none;
-}
-
-/*=========================================================================== */
 /* La media mínima de 450px incluye la visualización Desktop================= */
 /*=========================================================================== */
-
 @media (min-width: 450px) {
-    
     body {
         background-color: white;
         margin: 0px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
-    }
-
-    div.top-header {
-        height: 130px;
-    }
-
-    .TecHouse-logo {
-        width: 170px;
-    }
-    
-    .productCart-support {
-        border: solid #F8E0D8 1px;
-        background-color: #00A997;
-        border-radius: 5px;
-        width: 200px;
-        padding: 5px;
-        font-size: large;
-        position: absolute;
-        right: 10%;
-    }
-
-    .productCart-support i {
-        display: contents;
-        content-visibility: visible;
-    }
-
-    .productCart-close {
-        display: none;
-        content-visibility: hidden;
     }
 
     section.products-viewer {
@@ -394,57 +246,5 @@ color: #F8E0D8;
 
     .safety-mentions {
         flex-direction: row;
-    }
-
-    .footer-top{
-        display: flex;
-        background-color: black;
-        font-family: 'Roboto', sans-serif;
-        color: #F8E0D8;
-        justify-content: space-between;
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: 2vw;
-    }
-
-    .footer-top a {
-    text-decoration: none;
-    color: #F8E0D8;
-    }
-
-    .footer-top ul {
-        padding: 0;
-        padding-top: 10px;
-    }
-
-    .footer-top li{
-        list-style: none;
-    }
-
-    .formulario {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.4;
-        color: #F8E0D8;
-        text-align: left;
-        background-color: black;
-        padding-bottom: 10px;
-        width: 400px;
-    }
-
-    .formNombre {
-        width: 70%;
-    }
-    .formMensaje {
-        width: 70%;
-    }
-    .formEmail {
-        width: 70%;
-    }
-    .tituloForm {
-        font-size: 2rem;
     }
 }

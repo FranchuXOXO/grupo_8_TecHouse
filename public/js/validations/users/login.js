@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    let userForm = document.querySelector('.formLogin');
+    let userForm = document.querySelector('.form-login');
     let userEmail = document.querySelector('#email');
     let userPassword = document.querySelector('#password');
 
