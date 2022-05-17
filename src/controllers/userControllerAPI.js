@@ -8,7 +8,11 @@ const { response } = require('express');
 const controller = {
     // método (GET) para renderizar la vista de Login
     usersCount: (req, res) => {
-        db.ClientAPI.findAll()
+        db.Client.findAll({
+            attributes: {
+                exclude: ["password", "id_category", "profile_image", "last_name"]
+            }
+        })
         .then(users => {
             console.log(users);
             const response = {
@@ -16,7 +20,8 @@ const controller = {
                     status: 200,
                     total: users.length,
                 },
-                data: users
+                data: users,
+                detail: ""
             }
             return res.json (response);
         })
@@ -25,21 +30,18 @@ const controller = {
         })
     },
     usersArray: (req, res) => {
-        db.Client.findByPK({
-            include: ["client_category"]
+        const userIdToFind = req.params.id;
+        db.Client.findByPk( userIdToFind,
+          {  attributes: {
+                exclude: ["password", "id_category"]
+            }
         })
         .then(user => {
             const response = {
                 meta: {
                     status: 200,
                 },
-                user: {
-                    id: user.id,
-                    firstname: user.first_name,
-                    lastname: user.last_name,
-                    profile_image: "/users/image",
-                    email: user.email
-                }
+                user
             }
             return res.json (response);
         })
