@@ -8,6 +8,9 @@ const rutasIndex = require("./routes/indexRoutes");
 const rutasProduct = require("./routes/productRoutes"); 
 const rutasUser = require("./routes/userRoutes");
 const rutasUsersAPI = require ("./routes/userRoutesAPI");
+const rutasProductsAPI = require ("./routes/productRoutesAPI");
+
+
 
 const methodOverride = require('method-override');
 const session = require("express-session");
@@ -38,3 +41,5 @@ app.use('/', rutasProduct);
 app.use('/', rutasUser);
 
 app.use('/api/', rutasUsersAPI);
+
+app.use('/api/', rutasProductsAPI);

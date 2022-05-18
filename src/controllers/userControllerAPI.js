@@ -18,7 +18,7 @@ const controller = {
             const response = {
                 meta: {
                     status: 200,
-                    total: users.length,
+                    count: users.length,
                 },
                 data: users,
                 detail: ""
