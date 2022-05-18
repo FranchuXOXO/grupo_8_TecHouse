@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+header {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
 .header-top-desktop {
     display: none;
 }
@@ -55,7 +60,6 @@
 .navBar-top {
     display: flex;
     background-color: #00A997;
-    font-family: 'Roboto', sans-serif;
     color: white;
     justify-content: space-around;
     padding-top: 2px;
@@ -82,6 +86,7 @@
         z-index: 2;
         height: 130px;
     }
+
     .header-top-desktop{
         display: flex;
         top: 0;
@@ -90,15 +95,16 @@
         box-sizing: border-box;
         background-color: black;
         color: #F8E0D8;
-        font-family: 'Roboto', sans-serif;
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
         height: 85%;
     }
+
     .header-top{
         display: none;
     }
+
     .header-top-desktop a {
         display: block;
         justify-content: space-around;
@@ -109,22 +115,27 @@
         padding-left: 2px;
         padding-right: 2px;
     }
+
     .header-top-desktop i {
         padding-right: 5px;
         font-size: 1.5vw;
     }
+
     .header-top-desktop img {
         width: 170px;
     }
+
     .header-searchBar-desktop {
         font-size: 1.5vw;
         align-items: top;
         position:absolute;
         padding-bottom: 9%;
     }
+
     .navBar-top{
         display:none;
     }
+
     .header-top-desktop-column1 {
         display: flex;
         flex-direction: column;
@@ -136,38 +147,44 @@
         background-color: #F8E0D8;
         border-radius: 5px;
     }
+
     .header-top-desktop-column2 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
+
     .header-top-desktop-column2 p{
         padding-bottom: 5%;
         font-size: 1.5vw;
         text-align: right;
         text-decoration: none;
     }
+
     .header-top-desktop-column3 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
+
     .header-top-desktop-column3 p{
         padding-bottom: 1%;
         font-size: 1.5vw;
         text-align: right;
     }
+
     .header-top-desktop-column3 em{
         font-size: 2.5vw;
     }
+
     .header-searchBar-desktop {
         text-align: left;
     }
+    
     .navBar-top-desktop {
         display: flex;
         width: 100vw;
         background-color: #00A997;
-        font-family: 'Roboto', sans-serif;
         color: white;
         justify-content: space-around;
         padding-top: 2px;
