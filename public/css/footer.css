@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+footer {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
 .formulario {
     display: none;
 }
@@ -7,7 +12,6 @@
 .footer-top{
     display: flex;
     background-color: black;
-    font-family: 'Roboto', sans-serif;
     color: #F8E0D8;
     justify-content: space-between;
     padding-left: 5%;
@@ -33,7 +37,6 @@ color: #F8E0D8;
     .footer-top{
         display: flex;
         background-color: black;
-        font-family: 'Roboto', sans-serif;
         color: #F8E0D8;
         justify-content: space-between;
         padding-left: 5%;
