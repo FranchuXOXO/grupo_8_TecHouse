@@ -55,7 +55,7 @@
 .navBar-top {
     display: flex;
     background-color: #00A997;
-    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     color: white;
     justify-content: space-around;
     padding-top: 2px;
@@ -90,7 +90,7 @@
         box-sizing: border-box;
         background-color: black;
         color: #F8E0D8;
-        /* font-family: 'Roboto', sans-serif; */
+        font-family: 'Roboto', sans-serif;
         align-items: flex-end;
         padding-left: 5%;
         padding-right: 5%;
@@ -167,7 +167,7 @@
         display: flex;
         width: 100vw;
         background-color: #00A997;
-        /* font-family: 'Roboto', sans-serif; */
+        font-family: 'Roboto', sans-serif;
         color: white;
         justify-content: space-around;
         padding-top: 2px;

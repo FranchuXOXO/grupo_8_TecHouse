@@ -7,7 +7,7 @@
 .footer-top{
     display: flex;
     background-color: black;
-    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     color: #F8E0D8;
     justify-content: space-between;
     padding-left: 5%;
@@ -33,7 +33,7 @@ color: #F8E0D8;
     .footer-top{
         display: flex;
         background-color: black;
-        /* font-family: 'Roboto', sans-serif; */
+        font-family: 'Roboto', sans-serif;
         color: #F8E0D8;
         justify-content: space-between;
         padding-left: 5%;
