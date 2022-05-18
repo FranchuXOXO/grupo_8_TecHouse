@@ -68,7 +68,19 @@ main article img {
         margin-top: 40px;
         height: 400px;
         width: 300px;
+        }
+    
+    main:hover article:not(:hover){
+        filter: grayscale(100%);
+        }
+    main::after {
+        background-color: rgba(#000, 0.5);
+      }
+    article::after {
+        background-color: rgba(#000, 0);
+        transition: .3s;
     }
+
     .product_img{
         height: 90%;
         width: auto;
