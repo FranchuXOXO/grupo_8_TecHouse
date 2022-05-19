@@ -31,23 +31,24 @@ const controller = {
     },
     usersArray: (req, res) => {
         const userIdToFind = req.params.id;
-        db.Client.findByPk( userIdToFind,
-          {  attributes: {
+
+        db.Client.findByPk(userIdToFind,{
+            attributes: {
                 exclude: ["password", "id_category"]
             }
         })
-        .then(user => {
-            const response = {
-                meta: {
-                    status: 200,
-                },
-                user
-            }
-            return res.json (response);
-        })
-        .catch ((err) => {
-            return res.send(err);
-        })   
+            .then(user => {
+                const response = {
+                    meta: {
+                        status: 200,
+                    },
+                    user
+                }
+                return res.json (response);
+            })
+            .catch ((err) => {
+                return res.send(err);
+            });   
     },
     userImage: (req, res) => {
         db.Client.findByPK({
