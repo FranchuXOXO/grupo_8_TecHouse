@@ -9,7 +9,7 @@ body {
     display: none;
 }
 
-.navBar-top-desktop{
+.separationBar{
     display: none;
 }
 
@@ -179,7 +179,7 @@ body {
     .header-searchBar-desktop {
         text-align: left;
     }
-    .navBar-top-desktop {
+    .separationBar {
         display: flex;
         width: 100vw;
         background-color: #00A997;
@@ -191,7 +191,7 @@ body {
         height: 15%;
     }
     
-    .navBar-top-desktop a{
+    .separationBar a{
         text-decoration: none;
         color: white;
         font-size: 1.2vw;
