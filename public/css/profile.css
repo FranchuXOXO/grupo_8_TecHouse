@@ -14,12 +14,12 @@ main {
     align-content: center;
     flex-direction: column;
     align-items: center;
-    height: 500px;
+    height: 250px;
 }
 
 main .profileContainer {
     margin: 5px;
-    margin-top: 20px;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,14 +28,15 @@ main .profileContainer {
     border: 1px solid #000000;
     border-radius: 2%;
     padding: 10px;
+    font-size: 8px;
 }
 
 main .profileContainer img {
     margin: 5px;
     border: 1px solid #000000;
     border-radius: 2%;
-    padding: 10px;
-    width: 50%;
+    padding: 5px;
+    width: 100px;
 }
 
 main .profileContainer .col {
@@ -48,17 +49,17 @@ main .profileContainer .col {
 /* acá comienza el estilo desktop*/
 @media (min-width: 450px){
     main {
-        margin-top: 130px;
+        margin-top: 100px;
         width: 100%;
+        height: 300px;
     }
 
-    /* main .profileContainer {
-        margin-top: 40px;
-        width: 60%;
-    } */
+    main .profileContainer {
+        font-size: 15px;
+    }
 
     main .profileContainer img {
-        width: 80px;
+        width: 30%;
     }
 }
 
@@ -66,9 +67,10 @@ main .profileContainer .col {
 {
     main .profileContainer {
         width: 30%;
+        font-size: 15px;
     }
     
     main .profileContainer img {
-        width: 100px;
+        width: 30%;
     }
 }

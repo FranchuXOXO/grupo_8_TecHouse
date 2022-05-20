@@ -64,7 +64,7 @@ main article img {
 
 @media (min-width: 450px){
     main {
-        margin-top: 130px;
+        margin-top: 100px;
         display: flex;
         align-content: center;
         flex-direction: row;
@@ -75,6 +75,7 @@ main article img {
         margin-top: 40px;
         height: 400px;
         width: 300px;
+        margin-bottom: 40px;
         }
     
     main:hover article:not(:hover){
