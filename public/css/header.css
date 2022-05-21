@@ -219,9 +219,9 @@ header {
     }
 
     .header-searchBar-desktop input{
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         background-color: #F8E0D8;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     .header-top-desktop-column2 {
