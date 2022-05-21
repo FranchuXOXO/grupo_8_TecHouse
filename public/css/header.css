@@ -260,13 +260,12 @@ header {
     .separationBar {
         display: flex;
         width: 100vw;
-        background-color: #00A997;
         color: white;
         justify-content: space-around;
         padding-top: 2px;
         align-items: center;
         height: 5px;
-        background: linear-gradient(-45deg, #2b110a, #f8f8f8, #002735, #104135);
+        background: linear-gradient(-45deg, #2b110a, #F8E0D8, #002735, #00A997);
         background-size: 400% 400%;        
         animation: gradient 15s ease infinite;
     }
