@@ -56,7 +56,7 @@ const controller = {
                         status: 200,
                     },
                     product,
-                    URLimage: ""
+                    URLimage: product.setDataValue('URLdetail', "http://localhost:3000/api/products/image/" + product.id)
                 }
                 return res.json(response);
             })
@@ -121,7 +121,18 @@ const controller = {
             .catch ((err) => {
                 return res.send(err);
             });
+    },
+    productImage: (req, res) => {
+        const productToFind = req.params.id
+        db.Product.findByPk(productToFind)
+        .then(productImage => {         
+         res.sendFile(path.join(__dirname, "../../public/images/Products/" + productImage.product_image))
+        })
+        .catch ((err) => {
+            return res.send(err);
+        }) 
     }
+
 }
 
 module.exports = controller;
