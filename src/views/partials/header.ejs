@@ -5,9 +5,11 @@
         <a href="/"><img src="../images/Logo-TecHouse-header-cut.png" alt="Logo TecHouse"></a>
         <% if (locals.user && user) {   %>
             <div class="header-botones">
+                <a href="/profile">
                 <p>
                     Hola <%= user.first_name %>
                 </p>
+                </a>
             </div>
         <% } else  {  %>
             <div class="header-botones">

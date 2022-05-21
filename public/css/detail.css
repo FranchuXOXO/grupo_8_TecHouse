@@ -10,7 +10,7 @@ body{
 
 main{
     color: black;
-    padding-top: 100px;
+    padding-top: 80px;
     justify-content: center;
     text-align: center;
 }
@@ -30,7 +30,7 @@ main article {
     border: 1px solid #000000;
     background-color: #FFF;
     border-radius: 2%;
-    width: 250px;
+    width: 285px;
     height: auto;
     padding: 10px;
     font-family: Roboto;
@@ -57,12 +57,12 @@ main article a {
     margin-bottom: 5px;
 }
 
-    .buttons{
-        display: flex;
-        justify-content: space-around;
+.buttons{
+    display: flex;
+    justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 10px;
-    }
+}
 
 .price{
     margin-bottom: 10px;
@@ -73,10 +73,57 @@ main article a {
     width: auto;
 }
 
+main article .button-50 {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 2px 2px 0 0,#000 2px 2px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 220px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 7px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    }
+
+    main article a .button-50:focus {
+    text-decoration: none;
+    }
+
+    main article a .button-50:hover {
+    text-decoration: none;
+    }
+
+    main article a .button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 1px 3px inset;
+    outline: 0;
+    }
+
+    main article a .button-50:not([disabled]):active {
+    box-shadow: #fff 1px 1px 0 0, #000 1px 1px 0 1px;
+    transform: translate(2px, 2px);
+    }
+
+
 @media(min-width: 450px){
 
     main {
-        margin-top: 100px;
+        margin-top: 70px;
         padding-top: 0px;
         display: flex;
         flex-direction: row;
@@ -84,21 +131,20 @@ main article a {
         justify-content: center;
     }
     main article {
-        margin-top: 70px;
+        margin-top: 60px;
         display: flex;
         align-content: center;
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        height: 280px;
+        height: 300px;
         width: 450px;
-        
     }
 
     main article .button-flex-container {
         text-decoration: none;
         color: white;
-        padding-left: 315px;
+        padding-left: 215px;
         margin-top: 0px;
     }
     main article .article-flex-container {
@@ -125,24 +171,25 @@ main article a {
         margin-top: 50px;
     }
  
-    main article a .button-50 {
+    main article .button-50 {
     appearance: button;
     background-color: #000;
     background-image: none;
     border: 1px solid #000;
     border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-shadow: #fff 2px 2px 0 0,#000 2px 2px 0 1px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
     display: inline-block;
     font-family: Roboto,Arial,sans-serif;
+    width: 200px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    margin: 0 5px 30px 0;
+    margin: 0 0px 10px 0;
     overflow: visible;
-    padding: 7px 30px;
+    padding: 7px 20px;
     text-align: center;
     text-transform: none;
     touch-action: manipulation;
@@ -152,21 +199,21 @@ main article a {
     white-space: nowrap;
     }
 
-    main article a .button-50:focus {
+    main article .button-50:focus {
     text-decoration: none;
     }
 
-    main article a .button-50:hover {
+    main article .button-50:hover {
     text-decoration: none;
     }
 
-    main article a .button-50:active {
-    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    main article .button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 1px 3px inset;
     outline: 0;
     }
 
-    main article a .button-50:not([disabled]):active {
-    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    main article .button-50:not([disabled]):active {
+    box-shadow: #fff 1px 1px 0 0, #000 1px 1px 0 1px;
     transform: translate(2px, 2px);
     }
 
