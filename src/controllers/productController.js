@@ -14,8 +14,8 @@ const operatorsAliases = {
 
 const productController = {
     detailMethod: (req, res) => {
-
         const productIdToFind = req.params.id;
+        
         db.Product.findByPk(productIdToFind,
             {
                 include: [
@@ -24,6 +24,9 @@ const productController = {
             }).then(article =>
                 res.render('products/Detalle', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
             )
+            .catch((err) => {
+                return res.send(err);
+            });
     },
 
     cart: (req, res) => {
@@ -79,7 +82,9 @@ const productController = {
             .then(article => {
                 res.render("products/productList", { article, siteTitle: "Lista de Productos", user: req.session.userLogged })
             })
-
+            .catch((err) => {
+                return res.send(err);
+            });
     },
 
     /*(req, res) => {
@@ -94,6 +99,7 @@ const productController = {
 
     edit: (req, res) => {
         let idProducto = req.params.id;
+        
         const result = db.Product.findByPk(idProducto, {
             include: [
                 "product_colors", "product_compatibilities"
@@ -104,7 +110,10 @@ const productController = {
                     res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto", user: req.session.userLogged })
                 else
                     res.send("Este producto no existe en la base de datos")
-            }).catch(error => res.send(error))
+            })
+            .catch((err) => {
+                return res.send(err);
+            });
     },
 
     update: (req, res) => {
