@@ -42,44 +42,58 @@
 
     <!-- Vista DESKTOP -->
     <div class="header-global-desktop">
-        <div class="header-top-desktop">
-            <div class="header-top-desktop-column1">
-                <!-- Barra de busqueda-->
-                <form method = "GET" action = "/search" class="header-searchBar-desktop">
-                    <i class="fas fa-search"></i><input id="headerSearchBar" type="text" name = "word" placeholder="Buscar..">
+        <div class="top-header">
+            <div class="top-header part-1">
+              <a href="/">
+                <img src="./images/Logo-TecHouse-header.png" alt="Logo de TecHouse">
+              </a>
+            </div>
+            <div class="top-header part-2">
+              <div class="search-bar">
+                <form class="search-form" action="/search" method="GET">
+                  <input id="headerSearchBar" type="text" name="word" placeholder="Buscar..." />
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
-                <div class="error-searchBar"></div>
-                <!-- Finaliza Barra de busqueda-->
-                <a href="#"><i class="fas fa-square"></i>Experiencias</a>
-            </div>    
-                <a href="/List"><i class="fas fa-square"></i>Productos</a>
-                <a href="/"><img src="/images/Logo-TecHouse-header.png" alt="acá iría el logo"></a>
-                    <div class="header-top-desktop-column2">
-                        <% if (locals.user && user) {   %>
-                            <div class = "userContainer">
-                                <!-- <img class = "userImage" src="/images/users/<%= user.profile_image %> "> -->
-                                <div class="userName">
-                                    <p>
-                                        <a href="/profile">Hola <%= user.first_name %></a>
-                                    </p>
-                                </div>
-                            </div>
-                       <% } else  {  %>
+              </div>
+              <div class="error-searchBar">
+                  <!-- contenido generado por validación en Front -->
+              </div>
+            </div>
+            <div class="top-header part-3">
+              <div class="link">
+                <a href="#">
+                  Sobre Nosotros
+                </a>
+              </div>
+              <div class="link">
+                <a href="#">
+                  Soporte
+                </a>
+              </div>
+            </div>
+            <div class="top-header part-4">
+                <% if (locals.user && user) {   %>
+                <button>
+                    <a href="/profile">
+                        Hola <%= user.first_name %>  
+                    </a>
+                </button>
+                <% } else  {  %>
+                    <button>
                         <a href="/Login">
-                        <p><i class="fas fa-sign-in-alt"></i>
-                        Login
-                        </p></a> 
-                        <%  } %> 
-                        <a href="#"><i class="fas fa-square"></i>Sobre nosotros</a> 
-                    </div>
-                    <div class="header-top-desktop-column3">
-                        <p>
-                        <a href="/carrito"><em class="fas fa-shopping-cart"></em></a>
-                        </p>
-                        <a href="#"><i class="fas fa-square"></i>Soporte</a>
-                    </div>
-                
-        </div>
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </button>
+                <% } %>
+            </div>
+            <div class="top-header part-5">
+              <a href="/cart">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
         <div class="separationBar">
         </div>
     </div>
