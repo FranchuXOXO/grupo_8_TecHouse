@@ -4,6 +4,7 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require("../../db/models");
 const { response } = require('express');
+const { dirname } = require('path');
 
 const controller = {
     // método (GET) para renderizar la vista de Login
@@ -21,7 +22,9 @@ const controller = {
                     count: users.length,
                 },
                 data: users,
-                detail: ""
+               detail: users.forEach(user => {    
+                    user.setDataValue('URLdetail', 'http://localhost:3000/profile/' + user.id);
+                })
             }
             return res.json (response);
         })
@@ -42,7 +45,8 @@ const controller = {
                     meta: {
                         status: 200,
                     },
-                    user
+                    user,
+                    image: user.setDataValue('URLdetail', "http://localhost:3000/api/users/image/" + user.id) 
                 }
                 return res.json (response);
             })
@@ -51,11 +55,13 @@ const controller = {
             });   
     },
     userImage: (req, res) => {
-        db.Client.findByPK({
+        const userToFind = req.params.id
+        console.log(userToFind)
+        db.Client.findByPk(userToFind, { 
             include: ["client_category"]
-        })
-        .then(userImage => {
-          res.sendFile("/images/users/" + userImage.profile_image)
+         })
+        .then(userImage => {         
+         res.sendFile(path.join(__dirname, "../../public/images/users/" + userImage.profile_image))
         })
         .catch ((err) => {
             return res.send(err);

@@ -10,6 +10,6 @@ const userContAPI = require("../controllers/userControllerAPI");
 
 router.get("/users/", userContAPI.usersCount);
 router.get("/users/:id", userContAPI.usersArray);
-router.get("/users/image", userContAPI.userImage);
+router.get("/users/image/:id", userContAPI.userImage);
 
 module.exports = router;
