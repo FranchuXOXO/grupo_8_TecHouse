@@ -29,8 +29,8 @@ app.use(cookies());
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
-app.listen(3000, () => {
-    console.log("Servidor corriendo - http://localhost:3000");
+app.listen(3001, () => {
+    console.log("Servidor corriendo - http://localhost:3001");
 });
 
 app.use('/', rutasIndex);
