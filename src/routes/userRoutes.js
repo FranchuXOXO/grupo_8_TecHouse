@@ -22,7 +22,7 @@ router.post('/Signup', upload.single("profile_image"), signupVal, userCont.creat
 
 router.get("/profile", auth, userCont.profile);
 
-router.get("/user/:id/useredit", auth, userCont.edit);
+router.get("/user/:id/edit", auth, userCont.edit);
 router.put("/user/:id", upload.single('profile_image'), userCont.update);
 
 router.get('/logout/', userCont.logout);

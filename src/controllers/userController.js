@@ -139,7 +139,7 @@ const controller = {
             .then(UserToEdit => {
                 if (UserToEdit != null) {
                     if (idUser == req.session.userLogged.id)
-                        return res.render("users/UserEdit", { UserToEdit, siteTitle: "Edición del usuario", user: req.session.userLogged });
+                        return res.render("users/edit", { UserToEdit, siteTitle: "Edición del usuario", user: req.session.userLogged });
                     else
                         return res.send("No pude editar este usuario");
                 }
