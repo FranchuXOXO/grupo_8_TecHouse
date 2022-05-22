@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Resets básicos */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
@@ -7,30 +8,31 @@ body {
     box-sizing: border-box;
 }
 
-section.products-viewer {
+.products-viewer {
     background-color:white;
-    padding: 5px;
+    margin-top: 75px;
+    padding: 5px 20px;
 }
 
-div.product {
+.product {
     background-color: #F8E0D8;
     margin-bottom: 5px;
     border-radius: 5px;
     border: solid silver 1px;
 }
 
-div.product-info {
+.product-info {
     display: flex;
 }
 
-div.product-info img {
+.product-info img {
     width: 100px;
     border-radius: 7px;
     padding: 5px;
     margin: 10px 10px 5px 10px;
 }
 
-div.product-info-header {
+.product-info-header {
     display: flex;
     justify-content: space-between;
 }
@@ -39,32 +41,32 @@ div.product-info-header {
     margin: 10px 15px 10px 10px;
 }
 
-div.product-details {
+.product-details {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-div.product-details h3 {
+.product-details h3 {
     margin-bottom: 5px;
 }
 
-div.product-details p {
+.product-details p {
     margin: 5px 0px;
     font-size: 14px;
 }
 
-div.product-details i {
+.product-details i {
     margin: 5px 0px;
     font-size: 14px;
     color: goldenrod;
 }
 
-div.product-pricing {
+.product-pricing {
     display: flex;
 }
 
-div.unit-price {
+.unit-price {
     width: 95px;
     padding: 2px;
     margin: 0px 5px 5px 15px;
@@ -74,16 +76,16 @@ div.unit-price {
     text-align: center;
 }
 
-div.product-amount {
+.product-amount {
     display: flex;
     margin: 0px 10px 5px 10px
 }
 
-div.product-amount i {
+.product-amount i {
     font-size: 22px;
 }
 
-div.unit-amount {
+.unit-amount {
     width: 50px;
     margin: 0px 5px;
     background-color: white;
@@ -91,18 +93,18 @@ div.unit-amount {
     text-align: center;
 }
 
-div.product-subtotal {
+.product-subtotal {
     display: flex;
     margin: 0px 5px;
     width: 140px;
     font-weight:bold;
 }
 
-div.subtotal-label {
+.subtotal-label {
     margin-top: 3px;
 }
 
-div.subtotal-price {
+.subtotal-price {
     flex-grow: 1;
     padding: 2px;
     margin: 0px 5px 5px 5px;
@@ -112,12 +114,7 @@ div.subtotal-price {
     text-align: center;
 }
 
-section.bottom-cart {
-    background-color:white;
-    width: 100vw;
-}
-
-div.full-cart-options-bar {
+.full-cart-options-bar {
     display: flex;
     height: 12vh;
     justify-content: space-around;
@@ -154,15 +151,7 @@ div.full-cart-options-bar {
 }
 
 .safety-mentions {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 40px;
-}
-
-.safety-mentions img {
-    width: 40px;
-    height: 40px;
+    display: none;
 }
 
 .caja-envio,
@@ -191,20 +180,10 @@ div.full-cart-options-bar {
     margin: 0;
 }
 
-/*=========================================================================== */
-/* La media mínima de 450px incluye la visualización Desktop================= */
-/*=========================================================================== */
 @media (min-width: 450px) {
-    body {
-        background-color: white;
-        margin: 0px;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    section.products-viewer {
-        width: 80vw;
-        margin: auto;
+    .products-viewer {
+        margin-top: 135px;
+        padding: 5px 60px;
     }
 
     div.full-cart-options-bar {
@@ -242,9 +221,17 @@ div.full-cart-options-bar {
         margin: 0px 3px;
         text-decoration: none;
         color: black;
-    }
+    } */
 
     .safety-mentions {
-        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        padding: 5px 40px;
+    }
+
+    .safety-mentions img {
+        width: 40px;
+        height: 40px;
     }
 }

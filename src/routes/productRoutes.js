@@ -14,7 +14,7 @@ const productController = require("../controllers/productController");
 
 // Routes
 router.get("/Detalle/:id", productController.detailMethod);
-router.get("/carrito", auth, productController.cartMethod);
+router.get("/carrito", auth, productController.cart);
 
 router.get("/productos", auth, administrator, productController.stockMethod);
 router.post("/productos", upload.single("product_image"), validator, productController.createProduct)

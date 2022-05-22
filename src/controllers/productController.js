@@ -26,7 +26,7 @@ const productController = {
             )
     },
 
-    cartMethod: (req, res) => {
+    cart: (req, res) => {
         /* Necesito el ID del usuario*/
 
         /* Necesito el ID del producto a comprar */
@@ -41,7 +41,7 @@ const productController = {
 
         /* Hay que colocar un botón de guardar carrito */
 
-        res.render("products/productCart", {
+        res.render("products/cart", {
             siteTitle: "Carrito",
         });
     },
