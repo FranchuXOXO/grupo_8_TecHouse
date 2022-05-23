@@ -9,13 +9,15 @@ window.addEventListener('load', () => {
             
             let errorEmail = document.querySelector('.error-message-email');
             errorEmail.innerHTML += 'Por favor, ingresa tu email';
-
+            userEmail.classList.add('input-error');
         }
         else if (!(userEmail.value.includes ("@") && userEmail.value.includes ("."))) {
             e.preventDefault();
             
             let errorEmail = document.querySelector('.error-message-email');
             errorEmail.innerHTML += 'Debes ingresar un email válido';
+            userEmail.classList.toggle('form-input');
+            userEmail.classList.add('input-error');
         }
 
         if (userPassword.value == '') {
@@ -23,6 +25,8 @@ window.addEventListener('load', () => {
             
             let errorPassword = document.querySelector('.error-message-password');
             errorPassword.innerHTML += 'Debes completar la contraseña';
+            userPassword.classList.toggle('form-input');
+            userPassword.classList.add('input-error');
         }
     });
 });

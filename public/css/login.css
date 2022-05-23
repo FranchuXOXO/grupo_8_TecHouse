@@ -123,12 +123,15 @@ h1 {
     font-size: 14px;    
 }
 
+.form-input {
+    border: 1px solid silver;
+}
+
 #email,
 #password {
     margin-bottom: 10px;
     width: 100%;
     border-radius: 0.375em;
-    border: 1px solid silver;
     min-height: 40px;
     box-sizing: border-box;
 }
@@ -138,6 +141,10 @@ h1 {
     color: red;
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+.input-error {
+    border: solid crimson 2px;
 }
 
 #rememberMe {
