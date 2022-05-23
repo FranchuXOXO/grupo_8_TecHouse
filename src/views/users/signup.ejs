@@ -13,7 +13,7 @@
                 <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
                 <form class="form-sign-up" action="/Signup" method="POST" enctype="multipart/form-data">
                     <label class="form-label" for="first_name">Primer Nombre</label>
-                    <input type="text" id="first_name" placeholder="Escribe tu nombre" name="first_name" value="<%= locals.old && old.first_name %>" />
+                    <input type="text" class="form-input" id="first_name" placeholder="Escribe tu nombre" name="first_name" value="<%= locals.old && old.first_name %>" />
                     <div class="error-message-first-name">
                         <!-- contenido generado por validación en Front (signup.js) -->
                     </div>
@@ -22,7 +22,7 @@
                     <% } %>
 
                     <label class="form-label" for="last_name">Apellido</label>
-                    <input type="text" id="last_name" placeholder="Escribe tu apellido" name="last_name" value="<%= locals.old && old.last_name %>" />
+                    <input type="text" class="form-input" id="last_name" placeholder="Escribe tu apellido" name="last_name" value="<%= locals.old && old.last_name %>" />
                     <div class="error-message-last-name">
                         <!-- contenido generado por validación en Front (signup.js) -->
                     </div>
@@ -33,7 +33,7 @@
                     <label class="form-label" for="email">
                         Correo electrónico
                     </label>
-                    <input type="email" id="email" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
+                    <input type="email" class="form-input" id="email" placeholder="correo@correo.com" name="email" value="<%= locals.old && old.email %>" />
                     <div class="error-message-email">
                         <!-- contenido generado por validación en Front (signup.js) -->
                     </div>
@@ -44,7 +44,7 @@
                     <% } %>
 
                     <label class="form-label" for="id_category">Categoría del usuario</label>
-                    <select name="id_category" id="id_category">
+                    <select class="form-input" name="id_category" id="id_category">
                         <option value="">Elige una categoría...</option>
                         <option value="1">Administrador</option>
                         <option value="2">Usuario</option>
@@ -57,7 +57,7 @@
                         <label class="form-label" for="foto">
                             Imagen del usuario
                         </label>
-                        <input type="file" id="profile_image" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
+                        <input class="form-input" type="file" id="profile_image" name="profile_image" accept=".jpg, .png, .jpeg, .gif" value="<%= locals.old && old.profile_image %>" />
                         <% if (locals.errors && errors.profile_image) { %>
                             <p><%= errors.profile_image.msg %></p>
                         <% } %>
@@ -69,7 +69,7 @@
                     <label class="form-label" for="password">
                         Contraseña
                     </label>
-                    <input type="password" id="password" name="password" />
+                    <input class="form-input" type="password" id="password" name="password" />
                     <% if (locals.errors && errors.password) { %>
                         <p><%= errors.password.msg %></p>
                     <% } %>
