@@ -56,7 +56,7 @@ const controller = {
                         status: 200,
                     },
                     product,
-                    URLimage: product.setDataValue('URLdetail', "http://localhost:3000/api/products/image/" + product.id)
+                    URLimage: product.setDataValue('URLdetail', "http://localhost:3001/api/products/image/" + product.id)
                 }
                 return res.json(response);
             })
