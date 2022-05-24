@@ -156,6 +156,14 @@ p {
     margin: 0;
 }
 
+.form-input {
+    border: 1px solid silver;
+}
+
+.input-error {
+    border: solid crimson 2px;
+}
+
 .form-container {
     margin: 8px 0px;
     display: flex;
