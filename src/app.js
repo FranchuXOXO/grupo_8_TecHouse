@@ -15,11 +15,6 @@ const methodOverride = require('method-override');
 const session = require("express-session");
 const cookies = require('cookie-parser');
 
-app.use((req, res, next) => {
-    return res.status(404).render('error404', {
-        title: 'Ups...'
-    });
-});
 app.use(express.static(publicPath));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
@@ -47,3 +42,10 @@ app.use('/', rutasUser);
 app.use('/api/', rutasUsersAPI);
 
 app.use('/api/', rutasProductsAPI);
+
+// redireccionamiento a vista por error HTTP 404 - IMPORTANTE: este middleware debe ir al final del resto del ruteo del sitio!
+app.use((req, res, next) => {
+    res.status(404).render('error404', {
+        title: 'Ups...'
+    });
+});
