@@ -6,7 +6,7 @@ const db = require("../../db/models")
 
 const controller = {
     // método (GET) para renderizar la vista de Login
-    logMethod: (req, res) => {
+    login: (req, res) => {
         return res.render("users/login", {
             siteTitle: "Login",
             user: req.session.userLogged
@@ -14,7 +14,7 @@ const controller = {
     },
 
     // método (GET) para renderizar la vista de SignUp
-    regMethod: (req, res) => {
+    register: (req, res) => {
         return res.render("users/signup", {
             siteTitle: "Signup",
             user: req.session.userLogged
@@ -34,7 +34,6 @@ const controller = {
                 email: req.body.email,
             }
         });
-
         if (userEmailSearch) {
 			return res.render('users/signup', {
 				errors: {
@@ -73,21 +72,21 @@ const controller = {
         let errors = validationResult(req);
         
         if (errors.isEmpty()) {
-            console.log("Valide si errores");
-            db.Client.findOne({ where: { email: req.body.email } })
+            db.Client.findOne({ where: {
+                    email: req.body.email
+                } 
+            })
                 .then((userLogCheck) => {
                     if (userLogCheck) {
                         let isOkThePassword = bcryptjs.compareSync(req.body.password, userLogCheck.password);
                         
                         if (isOkThePassword) {
                             delete userLogCheck.password;
-                            // Probamos session y cookies
                             req.session.userLogged = userLogCheck;
-
                             if (req.body.remember_user) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                             }
-                            // Hasta acá es la prueba
+
                             return controller.profile(req, res);
                         }
 
@@ -109,14 +108,20 @@ const controller = {
                             }
                         }, siteTitle: "Login",
                         user: req.session.userLogged
-                    })
+                    });
                 })
-                .catch(error => res.send(error));
+                .catch((error) => {
+                    return res.send(error)
+                });
         }
         else {
             console.log(errors);
-            
-            return res.render('users/login', { errors: errors.mapped(), old: req.body, siteTitle: "Login", user: req.session.userLogged });
+            return res.render('users/login', {
+                errors: errors.mapped(),
+                old: req.body,
+                siteTitle: "Login",
+                user: req.session.userLogged 
+            });
         }
     },
 

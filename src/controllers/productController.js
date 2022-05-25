@@ -22,7 +22,7 @@ const productController = {
                     "product_colors", "product_compatibilities"
                 ]
             }).then(article =>
-                res.render('products/Detalle', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
+                res.render('products/detail', { article, siteTitle: 'Detalle del producto', user: req.session.userLogged })
             )
             .catch((err) => {
                 return res.send(err);
@@ -46,6 +46,7 @@ const productController = {
 
         res.render("products/cart", {
             siteTitle: "Carrito",
+            user: req.session.userLogged
         });
     },
 

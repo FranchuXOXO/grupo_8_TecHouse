@@ -14,11 +14,11 @@ const signupVal = require ("../middlewares/signupValidator");
 const userCont = require("../controllers/userController");
 
 // Routes
-router.get("/Login", logged, userCont.logMethod);
-router.post("/Login", loginValidation, userCont.loginMethod);
+router.get("/login", logged, userCont.login);
+router.post("/login", loginValidation, userCont.loginMethod);
 
-router.get('/Signup', userCont.regMethod);
-router.post('/Signup', upload.single("profile_image"), signupVal, userCont.createMethod);
+router.get('/signup', userCont.register);
+router.post('/signup', upload.single("profile_image"), signupVal, userCont.createMethod);
 
 router.get("/profile", auth, userCont.profile);
 
