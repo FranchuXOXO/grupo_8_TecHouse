@@ -15,6 +15,11 @@ const methodOverride = require('method-override');
 const session = require("express-session");
 const cookies = require('cookie-parser');
 
+app.use((req, res, next) => {
+    return res.status(404).render('error404', {
+        title: 'Ups...'
+    });
+});
 app.use(express.static(publicPath));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
