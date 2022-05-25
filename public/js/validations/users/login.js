@@ -8,14 +8,18 @@ window.addEventListener('load', () => {
             e.preventDefault();
             
             let errorEmail = document.querySelector('.error-message-email');
-            errorEmail.innerHTML += 'Por favor, ingresa tu email';
+            if (errorEmail.innerText == ''){
+                errorEmail.innerHTML += 'Por favor, ingresa tu email';
+            }
             userEmail.classList.add('input-error');
         }
         else if (!(userEmail.value.includes ("@") && userEmail.value.includes ("."))) {
             e.preventDefault();
             
             let errorEmail = document.querySelector('.error-message-email');
-            errorEmail.innerHTML += 'Debes ingresar un email válido';
+            if (errorEmail.innerText == ''){
+                errorEmail.innerHTML += 'Por favor, ingresa tu email';
+            }
             userEmail.classList.toggle('form-input');
             userEmail.classList.add('input-error');
         }
@@ -24,7 +28,9 @@ window.addEventListener('load', () => {
             e.preventDefault();
             
             let errorPassword = document.querySelector('.error-message-password');
-            errorPassword.innerHTML += 'Debes completar la contraseña';
+            if (errorPassword.innerText == ''){
+                errorPassword.innerHTML += 'Por favor, ingresa tu email';
+            }
             userPassword.classList.toggle('form-input');
             userPassword.classList.add('input-error');
         }
