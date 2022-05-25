@@ -9,14 +9,16 @@
 
 body {
     background-color: gainsboro;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .container {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 500px;
     text-align: center;
+    padding-top: 100px;
 }
 
 .container img {
@@ -26,6 +28,13 @@ body {
 }
 
 .container-text {
-    font-size: large;
+    font-size: small;
     font-weight: bold;
+}
+
+@media (min-width: 450px){
+    .container-text {
+        font-size: large;
+        font-weight: bold;
+    }
 }
