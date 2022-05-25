@@ -64,12 +64,13 @@ main article img {
 
 @media (min-width: 450px){
     main {
-        margin-top: 100px;
+        margin-top: 0px;
         display: flex;
         align-content: center;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
     main article {
         margin-top: 40px;
