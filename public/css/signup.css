@@ -9,22 +9,22 @@ body{
 }
 
 main {
-    background-color: white;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 64px;
-    margin: 64px 0;
 }
 
 .cuadro {
     padding: 40px;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    -webkit-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
-    -moz-box-shadow: 2px 4px 20px -2px rgba(0,0,0,0.83);
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 0.375em;
+    width: 290px;
 }
 
 .form-sign-up {
@@ -176,6 +176,7 @@ p {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        background-color: white;
     }
 
     .caja img {
@@ -203,6 +204,9 @@ p {
 
 @media (min-width: 450px){
     .cuadro{
-        margin-top: 110px;
+        margin-top: 50px;
+        background-color: white;
+        border-radius: 0.375em;
+        width: 500px;
     }
 }
