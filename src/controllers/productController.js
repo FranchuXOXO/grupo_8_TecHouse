@@ -50,13 +50,13 @@ const productController = {
         });
     },
 
-    stockMethod: (req, res) => {
-        res.render("products/productCreate", {
+    create: (req, res) => {
+        res.render("products/create", {
             siteTitle: "Manejo de Stock"
         });
     },
 
-    createProduct: (req, res) => {
+    store: (req, res) => {
         const created = req.body
         created.product_price = Number(created.product_price)
         created.id_color = Number(created.id_color)
@@ -70,7 +70,7 @@ const productController = {
                 .catch(error => res.send(error))
         } else {
             console.log(errors);
-            res.render('products/productCreate', { errors: errors.mapped(), old: req.body, siteTitle: "Formulario de creación de productos" });
+            res.render('products/create', { errors: errors.mapped(), old: req.body, siteTitle: "Formulario de creación de productos" });
         }
     },
 

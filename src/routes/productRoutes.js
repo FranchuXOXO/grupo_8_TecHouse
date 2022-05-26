@@ -16,8 +16,8 @@ const productController = require("../controllers/productController");
 router.get("/Detalle/:id", productController.detailMethod);
 router.get("/cart", auth, productController.cart);
 
-router.get("/productos", auth, administrator, productController.stockMethod);
-router.post("/productos", upload.single("product_image"), validator, productController.createProduct)
+router.get("/products", auth, administrator, productController.create);
+router.post("/products", upload.single("product_image"), validator, productController.store)
 
 router.get("/list", productController.listMethod);
 
