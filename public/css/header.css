@@ -206,15 +206,16 @@ header {
     }
     
     .top-header.part-2 {
-        width: 50%;
-        margin: 12px;
+        width: 40%;
+        margin: 8px;
     }
     
     .top-header.part-3 {
-        width: 20%;
+        width: 30%;
         margin: 3px;
         justify-content: center;
-        padding-left: 40px;
+        padding-left: 30px;
+        font-size: 14px;
     }
     
     .top-header.part-4 {
@@ -332,102 +333,20 @@ header {
     }   
 }
 
-/* HEADER VIEJO -> sin media query */
-    /* .header-top-desktop {
-        display: none;
-    } */
-
-/* HEADER VIEJO -> media query 450px width */
-    /* .header-top-desktop{
-        display: flex;
-        top: 0;
-        width: 100vw;
-        justify-content: space-between;
-        box-sizing: border-box;
-        background-color: black;
-        color: #F8E0D8;
-        align-items: flex-end;
-        padding-left: 5%;
-        padding-right: 5%;
-        height: 85%;
+@media (min-width: 1080px) {
+    .top-header.part-3 {
+        font-size: 16px;
     }
+}
 
-    .header-top{
-        display: none;
+@media (min-width: 1400px) {
+    .top-header.part-2 {
+        width: 50%;
+        margin: 12px;
     }
-
-    .header-top-desktop a {
-        display: block;
-        justify-content: space-around;
-        color: #F8E0D8;
-        text-decoration: none;
-        padding-bottom: 5px;
-        font-size: 1.2vw;
-        padding-left: 2px;
-        padding-right: 2px;
-    }
-
-    .header-top-desktop i {
-        padding-right: 5px;
-        font-size: 1.5vw;
-    }
-
-    .header-top-desktop img {
-        width: 170px;
-    }
-
-    .header-searchBar-desktop {
-        font-size: 1.5vw;
-        align-items: top;
-        position:absolute;
-        padding-bottom: 9%;
-    }
-
-    .navBar-top{
-        display:none;
-    }
-
-    .header-top-desktop-column1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .header-searchBar-desktop input{
-        font-size: 1.3vw;
-        background-color: #F8E0D8;
-        border-radius: 3px;
-    }
-
-    .header-top-desktop-column2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .header-top-desktop-column2 p{
-        padding-bottom: 5%;
-        font-size: 1.5vw;
-        text-align: right;
-        text-decoration: none;
-    }
-
-    .header-top-desktop-column3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .header-top-desktop-column3 p{
-        padding-bottom: 1%;
-        font-size: 1.5vw;
-        text-align: right;
-    }
-
-    .header-top-desktop-column3 em{
-        font-size: 2.5vw;
-    }
-
-    .header-searchBar-desktop {
-        text-align: left;
-    } */
+    
+    .top-header.part-3 {
+        width: 20%;
+        padding-left: 40px;
+    }  
+}
