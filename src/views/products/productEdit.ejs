@@ -17,6 +17,7 @@
                     <div class="column1">
                         <div class="nombreProducto">
                             <label for="name" class="form-label">Nombre del producto:</label>
+                            <br>
                             <input type="text"  id="name" name="product_name"
                                 placeholder="Ej: Amazon Echo Dot" class="form-input"
                                 value="<%= locals.old ? old.product_name: productToEdit.product_name %>" />
@@ -30,6 +31,7 @@
                     </div>
                     <div class="column2">
                         <label for="description" class="form-label">Descripción:</label>
+                        <br>
                         <textarea name="product_description" id="description" class="form-input"><%= locals.old ? old.product_description : productToEdit.product_description %></textarea>
                         <% if (locals.errors && errors.product_description) { %>
                             <p>
@@ -50,6 +52,7 @@
                     </div>
                     <div class="colores">
                         <label for="colores">Colores</label>
+                        <br>
                         <select name="id_color" id="colores" required>
                             <option value="<%= productToEdit.id_color %>">
                                 <%= productToEdit.product_colors.color %>
@@ -61,17 +64,18 @@
                     </div>
                     <div class="form-container">
                         <label for="categoria">Categoría del producto</label>
-                        <br />
+                        <br>
                         <select name="id_compatibility">
                             <option value="<%= productToEdit.id_compatibility %>">
                                 <%= productToEdit.product_compatibilities.device_name %>
                             </option>
-                            <option value="1">Alexa</option>
-                            <option value="2">Siri</option>
+                            <option value="1">Amazon Alexa</option>
+                            <option value="2">Apple Siri</option>
                         </select>
                     </div>
                     <div class="column3">
                         <label for="price" class="form-label">Precio del producto:</label>
+                        <br>
                         <input type="text"  id="price" name="product_price"
                              class="form-input"
                             value="<%= locals.old ? old.product_price : productToEdit.product_price %>" />
@@ -82,7 +86,7 @@
                             <% } %>
                     </div>
                     <div class="column4">
-                        <button type="submit" class="buy-now-button">Guardar producto</button>
+                        <button type="submit" class="button-50">Guardar producto</button>
                     </div>
                 </form>
             </div>
