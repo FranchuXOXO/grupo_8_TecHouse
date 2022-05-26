@@ -35,6 +35,5 @@ body {
 @media (min-width: 450px){
     .container-text {
         font-size: large;
-        font-weight: bold;
     }
 }
