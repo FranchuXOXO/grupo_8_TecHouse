@@ -74,7 +74,7 @@ const productController = {
         }
     },
 
-    listMethod: (req, res) => {
+    list: (req, res) => {
         db.Product.findAll({
             include: [
                 "product_colors", "product_compatibilities"

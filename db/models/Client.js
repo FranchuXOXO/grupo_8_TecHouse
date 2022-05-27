@@ -33,12 +33,12 @@ module.exports = (sequelize, DataTypes) => {
        });
 
        Client.belongsToMany(allModels.Product, {
-        as: "client_product",
-        through: "carts",
-        foreignKey: "id_client",
-        otherKey: "id_product",
-        timestamps: false
-        })
+            as: "client_product",
+            through: "sales",
+            foreignKey: "id_client",
+            otherKey: "id_product",
+            timestamps: false
+        });
     }
-    return Client
+    return Client;
 };

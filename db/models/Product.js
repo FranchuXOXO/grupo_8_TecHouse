@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
 
         Product.belongsToMany(allModels.Client, {
             as: "product_client",
-            through: "carts",
+            through: "sales",
             foreignKey: "id_product",
             otherKey: "id_client",
             timestamps: false
