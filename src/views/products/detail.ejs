@@ -9,24 +9,29 @@
         <main>
             <article>
                 <div class="article-flex-container">
+                    <div class="product-photo-gallery">
+                        galería
+                    </div>
                     <div class="titlePic">
                         <h2> <%= article.product_name %> </h2>
                         <a href="/Detalle/<%= article.id %>">
                         <img class="product_img" src="/images/Products/<%= article.product_image %>" alt="<%= article.product_name %>" ></a>  
                     </div>            
                     <div class="main-article">
-                        <p class="price">
-                            Precio: $ <%= article.product_price %>
-                        </p>
-                        <h4 class="description">
-                            <%= article.product_description %>
-                        </h4>
-                        <p class="colours">
-                            Colores: <%= article.product_colors.color %>
-                        </p>
-                        <p class="compatiblity">
-                            Compatible con: <%= article.product_compatibilities.device_name %>
-                        </p>
+                        <div class="product-info">
+                            <p class="price">
+                                Precio: $ <%= article.product_price %>
+                            </p>
+                            <h4 class="description">
+                                <%= article.product_description %>
+                            </h4>
+                            <p class="colours">
+                                Colores: <%= article.product_colors.color %>
+                            </p>
+                            <p class="compatiblity">
+                                Compatible con: <%= article.product_compatibilities.device_name %>
+                            </p>
+                        </div>
                         <div 
                             <% if (locals.user && user.id_category=="1") {   %>
                             class="Show"
@@ -44,16 +49,28 @@
                                     Eliminar producto
                                 </button> 
                             </form>
-                        </div>  
+                        </div>
+                        <div class="button-flex-container">
+                            <form action="/addToCart" method="POST">
+                                <div class="form-input">
+                                    <label for="product_quantity">
+                                        Cantidad:
+                                    </label>
+                                    <input name="product_quantity" value="1" />
+                                </div>
+                                <button type="button" class="button-50">
+                                    Comprar
+                                </button>
+                            </form>
+                            <!-- <a href="/cart">
+                                <button type="button" class="button-50">
+                                    Comprar
+                                </button>
+                            </a> -->
+                        </div> 
                     </div>
                 </div>
-                <div class="button-flex-container">
-                    <a href="/cart">
-                        <button type="button" class="button-50">
-                            Comprar
-                        </button>
-                    </a>
-                </div> 
+                
             </article>
         </main>
         <%- include("../partials/footer.ejs") %>
