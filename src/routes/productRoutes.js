@@ -19,7 +19,7 @@ router.get("/cart", auth, productController.cart);
 router.get("/products", auth, administrator, productController.create);
 router.post("/products", upload.single("product_image"), validator, productController.store)
 
-router.get("/list", productController.listMethod);
+router.get("/list", productController.list);
 
 router.get("/:id/edit", auth, administrator, productController.edit);
 router.put("/:id", upload.single('product_image'), validator, productController.update);
