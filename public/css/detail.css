@@ -161,12 +161,12 @@ main article a .button-50:not([disabled]):active {
         text-align: initial;
     }
 
-    main article .article-flex-container .titlePic .product_img {
+    .product_img {
         width: 300px;
         height: 300px;
     }
 
-    main article .article-flex-container .main-article {
+    .main-article {
         text-align: initial;
         padding: 0 20px 0 70px;
         display: flex;
@@ -174,13 +174,14 @@ main article a .button-50:not([disabled]):active {
         justify-content: space-around;
         background-color: var(--light-color);
         border-radius: 4px;
+        width: 70%;
     }
 
     .main-article p {
         margin: 20px 0;
     }
 
-    .main-article .product-info .description {
+    .product-info .description {
         font-size: 0.8rem;
         text-align: initial;
     }
@@ -211,10 +212,6 @@ main article a .button-50:not([disabled]):active {
     }
  
     main article .button-50 {
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
         width: 200px;
         font-size: 16px;
         font-weight: 400;
