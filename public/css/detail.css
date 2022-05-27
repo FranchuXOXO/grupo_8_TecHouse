@@ -30,13 +30,6 @@ main article {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    /* justify-content: center; */
-    /* margin: 5px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* height: auto; */
-    /* font-family: Roboto; */
 }
 
 main article a {
@@ -61,22 +54,8 @@ main article a {
     font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 5px;
-    background-color: #00A997;
-    border-radius: 4px;
     font-weight: bold;
 }
-
-/* .main-article .product-info .description {
-    font-size: 0.6rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.main-article .product-info .colors {
-    font-size: 0.6rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-} */
 
 .buttons {
     display: flex;
@@ -90,7 +69,7 @@ main article a {
     width: auto;
 }
 
-main article .button-50 {
+.button-50 {
     appearance: button;
     background-color: #000;
     background-image: none;
@@ -183,8 +162,8 @@ main article a .button-50:not([disabled]):active {
     }
 
     main article .article-flex-container .titlePic .product_img {
-        width: auto;
-        height: auto;
+        width: 300px;
+        height: 300px;
     }
 
     main article .article-flex-container .main-article {
@@ -203,8 +182,6 @@ main article a .button-50:not([disabled]):active {
 
     .main-article .product-info .description {
         font-size: 0.8rem;
-        /* margin-top: 15px; */
-        /* margin-bottom: 10px; */
         text-align: initial;
     }
 

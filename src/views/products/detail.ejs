@@ -17,9 +17,9 @@
                     </div>            
                     <div class="main-article">
                         <div class="product-info">
-                            <p class="price">
+                            <h3 class="price">
                                 Precio: $ <%= article.product_price %>
-                            </p>
+                            </h3>
                             <p class="description">
                                 <%= article.product_description %>
                             </p>
@@ -31,7 +31,7 @@
                             </p>
                         </div>
                         <div class="button-flex-container">
-                            <form action="/addToCart" method="POST">
+                            <form action="/cart" method="POST">
                                 <div class="form-input">
                                     <label for="product_quantity">
                                         Cantidad:
