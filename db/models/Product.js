@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
         product_image: DataTypes.STRING,
         id_compatibility: DataTypes.INTEGER,
         id_color: DataTypes.INTEGER,
-        product_price: DataTypes.DOUBLE
+        product_price: DataTypes.DOUBLE,
+        id_product: DataTypes.INTEGER
     }
 
     const Product = sequelize.define(alias, columns, config);
@@ -38,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
 
         Product.belongsToMany(allModels.Client, {
             as: "product_client",
-            through: "carts",
+            through: "sales",
             foreignKey: "id_product",
             otherKey: "id_client",
             timestamps: false
