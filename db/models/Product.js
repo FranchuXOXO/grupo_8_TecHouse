@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         id_compatibility: DataTypes.INTEGER,
         id_color: DataTypes.INTEGER,
         product_price: DataTypes.DOUBLE,
-        id_product: DataTypes.INTEGER
     }
 
     const Product = sequelize.define(alias, columns, config);
