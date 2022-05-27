@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+:root {
+    --light-color: #F8E0D8;
+    --green-color: #289991;
+    --grey-bcg: rgba(0, 0, 0, .125);
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
+    background-color: var(--grey-bcg);
 }
 
 main {
@@ -19,12 +25,12 @@ main {
 }
 
 main article {
-    border: 1px solid #000000;
     background-color: #FFF;
     border-radius: 4px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    /* border: 1px solid #000000; */
     /* justify-content: center; */
     /* margin: 5px; */
     /* display: flex; */
@@ -46,34 +52,36 @@ main article a {
     flex-direction: column;
 }
 
-.main-article .product-info .price {
+.product-info p {
+    font-size: 0.6rem;
+    margin: 5px 0;
+}
+
+.price {
     font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 5px;
     background-color: #00A997;
     border-radius: 4px;
+    font-weight: bold;
 }
 
-.main-article .product-info .description {
+/* .main-article .product-info .description {
     font-size: 0.6rem;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.main-article .product-info .colours {
+.main-article .product-info .colors {
     font-size: 0.6rem;
     margin-top: 5px;
     margin-bottom: 5px;
-}
+} */
 
 .buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.price {
     margin-bottom: 10px;
 }
 
@@ -93,7 +101,6 @@ main article .button-50 {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: Roboto,Arial,sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -153,9 +160,10 @@ main article a .button-50:not([disabled]):active {
         flex-direction: column;
         justify-content: center;
         width: 900px;
+        padding: 30px;
     }
 
-    main article .article-flex-container {
+    .article-flex-container {
         display: flex;
         align-content: center;
         flex-direction: row;
@@ -163,40 +171,53 @@ main article a .button-50:not([disabled]):active {
         box-sizing: border-box;
     }
 
-    main article .article-flex-container .titlePic {
+    .titlePic {
         display: flex;
         flex-direction: column;
-        margin: 0 20px;
-        width: 25%;
-        /* justify-content: center; */
+        margin: 0 30px;
+        width: 35%;
+    }
+
+    .titlePic h2 {
+        text-align: initial;
     }
 
     main article .article-flex-container .titlePic .product_img {
         width: auto;
-        /* height: 200px; */
+        height: auto;
     }
 
     main article .article-flex-container .main-article {
-        text-align: center;
-        padding: 0 100px;
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* margin-top: 50px; */
+        text-align: initial;
+        padding: 0 20px 0 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: var(--light-color);
+        border-radius: 4px;
+    }
+
+    .main-article p {
+        margin: 20px 0;
+    }
+
+    .main-article .product-info .description {
+        font-size: 0.8rem;
+        /* margin-top: 15px; */
+        /* margin-bottom: 10px; */
+        text-align: initial;
     }
 
     .button-flex-container {
         margin-top: 15px;
+        display: flex;
+        justify-content: center;
     }
 
     .button-flex-container form {
         display: flex;
         flex-direction: row;
         align-items: center;
-        /* text-decoration: none; */
-        /* color: white; */
-        /* padding-left: 215px; */
-        /* margin-top: 0px; */
     }
 
     .form-input {
@@ -204,7 +225,7 @@ main article a .button-50:not([disabled]):active {
         flex-direction: row;
         justify-content: space-between;
         height: 20px;
-        
+        margin: 0 60px;
     }
 
     .form-input input {
@@ -213,22 +234,14 @@ main article a .button-50:not([disabled]):active {
     }
  
     main article .button-50 {
-        appearance: button;
-        background-color: #000;
-        background-image: none;
-        border: 1px solid #000;
-        border-radius: 4px;
-        box-shadow: #fff 2px 2px 0 0,#000 2px 2px 0 1px;
         box-sizing: border-box;
         color: #fff;
         cursor: pointer;
         display: inline-block;
-        font-family: Roboto,Arial,sans-serif;
         width: 200px;
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
-        /* margin: 0 0px 10px 0; */
         overflow: visible;
         padding: 7px 15px;
         text-align: center;
@@ -241,21 +254,21 @@ main article a .button-50:not([disabled]):active {
     }
 
     main article .button-50:focus {
-    text-decoration: none;
+        text-decoration: none;
     }
 
     main article .button-50:hover {
-    text-decoration: none;
+        text-decoration: none;
     }
 
     main article .button-50:active {
-    box-shadow: rgba(0, 0, 0, .125) 0 1px 3px inset;
-    outline: 0;
+        box-shadow: rgba(0, 0, 0, .125) 0 1px 3px inset;
+        outline: 0;
     }
 
     main article .button-50:not([disabled]):active {
-    box-shadow: #fff 1px 1px 0 0, #000 1px 1px 0 1px;
-    transform: translate(2px, 2px);
+        box-shadow: #fff 1px 1px 0 0, #000 1px 1px 0 1px;
+        transform: translate(2px, 2px);
     }
 }
 
