@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--grey-bcg);
+    background-color: black;
 }
 
 main {
@@ -22,6 +22,7 @@ main {
     display: flex;
     flex-direction: column;
     margin: 5px 8px;
+    background-color: black;
 }
 
 main article {
@@ -130,6 +131,7 @@ main article a .button-50:not([disabled]):active {
         flex-direction: row;
         text-align: center;
         justify-content: center;
+        margin: auto;
     }
 
     main article {
@@ -168,21 +170,31 @@ main article a .button-50:not([disabled]):active {
 
     .main-article {
         text-align: initial;
-        padding: 0 20px 0 70px;
+        padding: 0 20px 0 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         background-color: var(--light-color);
         border-radius: 4px;
-        width: 70%;
+        width: 50%;
     }
 
     .main-article p {
         margin: 20px 0;
     }
 
-    .product-info .description {
+    .product-info h3 {
+        font-size: 1.3rem;
+        background-color: var(--green-color);
+        text-align: center;
+    }
+
+    .product-info p {
         font-size: 0.8rem;
+    }
+
+    .product-info .description {
+        font-size: 1rem;
         text-align: initial;
     }
 
