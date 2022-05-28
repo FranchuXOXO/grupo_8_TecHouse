@@ -3,52 +3,63 @@
     <div class="navBar-footer">
     </div>
     <nav class="footer-top">
-        <ul class="contactInfo">
-            <li><h3>Gracias por visitarnos</h3></li>
+        <ul class="site-map">
+            <li>
+                <h3>Mapa del sitio</h3>
+            </li>
+            <li>Productos</li>
+            <li>Experiencias</li>
+            <li>Sobre Nosotros</li>
+            <li>Soporte</li>
+            <li>Carrito</li>
+        </ul>
+        <ul class="contact-info">
+            <li>
+                <h3>Gracias por visitarnos</h3>
+            </li>
             <li>Si quieres conocernos:</li>
             <li>Av. Córdoba 3458</li>
             <li>Ciudad de Buenos Aires</li>
             <li>Argentina</li>
         </ul> 
-        <ul class="socialNetworks">
-            <li><h3>Redes sociales</h3></li>
-            <li> <i class="fab fa-facebook"></i> /TecHouse</li>
-            <li> <i class="fab fa-instagram"></i> @TecHouse</li>
+        <ul class="social-networks">
+            <li>
+                <h3>Redes sociales</h3>
+            </li>
+            <li><i class="fab fa-facebook"></i> /TecHouse</li>
+            <li><i class="fab fa-instagram"></i> @TecHouse</li>
             <li><i class="fab fa-twitter"></i>  @TecHouse</li>
-            <li> <i class="fab fa-whatsapp"></i> #1144445555</li>
+            <li><i class="fab fa-whatsapp"></i> #1144445555</li>
         </ul>
-        <div class="formulario">
-            <div id="formulario">
-                <h3 class="tituloForm">Formulario de contacto</h3>
-                <form id="formID" class="formClass" method="post" action=""> 
-                    <div class="formularioNombre-global">
-                        <label for="formNombre" class="tituloNombre">Nombre completo</label>
-                        <div class="formularioNombre">
-                            <input type="text" id="formNombre" name="formNombre" class="formNombre" required>
-                        </div>
-                    </div>
-            
-                    <div class="formularioEmail-global">
-                        <label for="formEmail" class="tituloEmail">Dirección de email</label>
-                        <div class="formularioEmail">
-                            <input type="email" id="formEmail" name="formEmail" class="formEmail" required>
-                        </div>
-                    </div>
-            
-                    <div class="formularioIngresar-global">
-                        <label for="formMensaje" class="tituloMensaje">Escriba su mensaje</label>
-                        <div class="formularioIngresar">
-                            <textarea id="formMensaje" name="formMensaje" class="formMensaje" rows="5" maxlength="2000" required></textarea>
-                        </div>
-                    </div>
-                    <div class="formularioEnviar">
-                        <button type="submit" id="formEnviar" class="formEnviar">Enviar mensaje</button>
-                    </div>
-            
-                </form>
-            </div>
+        <div class="contact-form">
+            <h3>
+                Formulario de contacto
+            </h3>
+            <form id="formID" class="formClass" method="POST" action="/contact"> 
+                <div class="contact-form-input">
+                    <label for="contact-name" class="tituloNombre">
+                        Nombre completo
+                    </label>
+                    <input type="text" class="form-field" id="contact-name" name="contact-name" required>
+                </div>
+                <div class="contact-form-input">
+                    <label for="contact-email" class="tituloEmail">
+                        Dirección de email
+                    </label>
+                    <input type="email" class="form-field" id="contact-email" name="contact-email" required>
+                </div>
+                <div class="contact-form-input">
+                    <label for="contact-message" class="tituloMensaje">
+                        Escriba su mensaje
+                    </label>
+                    <textarea class="form-field" id="contact-message" name="contact-message" rows="4" maxlength="2000" required></textarea>
+                </div>
+                <div class="formularioEnviar">
+                    <button type="submit">
+                        Enviar mensaje
+                    </button>
+                </div>
+            </form>
         </div>
     </nav>
 </footer>
-<!-- Bootstrap JS -->
-<script src="/js/bootstrap/bootstrap.min.js"></script>

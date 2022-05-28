@@ -217,36 +217,6 @@ h1 {
     margin: 0;
 }
 
-/* Estilos para el Footer*/
-.footer-top{
-    display: flex;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
-}
-
-.footer-top a {
-text-decoration: none;
-color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li{
-    list-style: none;
-}
-
-.formulario{
-    display: none;
-}
-
 /* Especificaciones de estílo para Desktop*/
 @media (min-width: 450px){
     /*  Para el Header  */    
@@ -413,8 +383,47 @@ color: #F8E0D8;
         font-size: 12px;
         margin: 0;
     }
+}
 
-    /* Para el Footer */
+
+
+
+
+
+
+
+
+/* 
+.footer-top{
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3vw;
+}
+
+.footer-top a {
+text-decoration: none;
+color: #F8E0D8;
+}
+
+.footer-top ul {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.footer-top li{
+    list-style: none;
+}
+
+.formulario{
+    display: none;
+} */
+
+/*     
     .footer-top{
         display: flex;
         background-color: black;
@@ -466,4 +475,4 @@ color: #F8E0D8;
     .tituloForm {
         font-size: 2rem;
     }
-}
+} */

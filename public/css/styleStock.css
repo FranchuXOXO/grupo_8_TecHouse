@@ -76,38 +76,6 @@ main form {
     border: 1px solid #666;
 }
 
-/* ========================================================
-    Footer
-======================================================== */
-
-.footer-top {
-    display: flex;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
-}
-
-.footer-top a {
-    text-decoration: none;
-    color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li {
-    list-style: none;
-}
-.formulario {
-    display: none;
-}
-
 
 /* ========================================================
     Responsive - Tablet & Desktop viewport
@@ -144,58 +112,88 @@ main form {
         margin: 10px 23px;
     }
 
-    .footer-top {
-        display: flex;
-        background-color: black;
-        font-family: 'Roboto', sans-serif;
-        color: #F8E0D8;
-        justify-content: space-between;
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: 2vw;
-    }
-
-    .footer-top a {
-    text-decoration: none;
-    color: #F8E0D8;
-    }
-
-    .footer-top ul {
-        padding: 0;
-        padding-top: 10px;
-    }
-
-    .footer-top li {
-        list-style: none;
-    }
-
-    .formulario {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.4;
-        color: #F8E0D8;
-        text-align: left;
-        background-color: black;
-        padding-bottom: 10px;
-        width: 400px;
-    }
-
-    .formNombre {
-        width: 70%;
-    }
-    .formMensaje {
-        width: 70%;
-    }
-    .formEmail {
-        width: 70%;
-    }
-    .tituloForm {
-        font-size: 2rem;
-    }
+    /*  */
     .error-product-name {
         color: red;
     }
 }
+
+/* .footer-top {
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3vw;
+}
+
+.footer-top a {
+    text-decoration: none;
+    color: #F8E0D8;
+}
+
+.footer-top ul {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.footer-top li {
+    list-style: none;
+}
+.formulario {
+    display: none;
+}
+
+.footer-top {
+    display: flex;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: #F8E0D8;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 2vw;
+}
+
+.footer-top a {
+text-decoration: none;
+color: #F8E0D8;
+}
+
+.footer-top ul {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.footer-top li {
+    list-style: none;
+}
+
+.formulario {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #F8E0D8;
+    text-align: left;
+    background-color: black;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+.formNombre {
+    width: 70%;
+}
+.formMensaje {
+    width: 70%;
+}
+.formEmail {
+    width: 70%;
+}
+.tituloForm {
+    font-size: 2rem;
+} */
