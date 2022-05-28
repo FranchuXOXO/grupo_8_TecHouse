@@ -2,17 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const { sequelize } = require('../../db/models');
 
-
 const { validationResult } = require('express-validator');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const db = require("../../db/models")
-const Op = db.Sequelize.Op
+// const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require("../../db/models");
+const Op = db.Sequelize.Op;
 const operatorsAliases = {
     $like: Op.like
 }
 
-const productController = {
+const controller = {
     detailMethod: (req, res) => {
         const productIdToFind = req.params.id;
         
@@ -32,34 +31,32 @@ const productController = {
     buy: (req, res) => {
         const productIdtoBuy = req.params.id;
         db.Product.findByPk(productIdtoBuy,
-            {
-                include: [
-                    "product_colors", "product_compatibilities"
-                ]
-            }).then(article =>
-                { 
+                {
+                    include: [
+                        "product_colors", "product_compatibilities"
+                    ]
+                }
+            )
+            .then(article => { 
                 userID = req.session.userLogged.id;
-                console.log (article);
-
                 db.Sale.create(
                     { 
                         id_product: article.id,
                         id_client: userID
                     }
-                    )
+                )
                 .then(() => {
-                    return res.render('products/cart', { siteTitle: 'Carrito de compras', user: req.session.userLogged })
+                    return res.redirect('/cart');
+                    // return res.render('products/cart', { siteTitle: 'Carrito de compras', user: req.session.userLogged })
                 })
                 .catch((err) => {
                     return res.send(err);
-                    }  
-                 )
+                });
+            })
             .catch((err) => {
                 return res.send(err);
             });
-            })
-        },
-        
+    },
 
     cart: (req, res) => {
         /* Necesito el ID del usuario*/
@@ -119,16 +116,6 @@ const productController = {
                 return res.send(err);
             });
     },
-
-    /*(req, res) => {
-        const products=db.Product.findAll().then( results =>
-                 results
-            )
-        res.render("products/productList", {
-            siteTitle: "Lista de Productos",
-            products
-        });
-    }, */
 
     edit: (req, res) => {
         let idProducto = req.params.id;
@@ -207,4 +194,4 @@ const productController = {
     }
 }
 
-module.exports = productController;
+module.exports = controller;
