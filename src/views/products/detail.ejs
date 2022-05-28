@@ -47,14 +47,8 @@
                                     Comprar
                                 </button>
                             </a>
-                        </div> 
-                        <div 
-                            <% if (locals.user && user.id_category=="1") {   %>
-                            class="Show"
-                            <% } else  {  %>
-                            class="Edition-Delete"  
-                            <%  } %>
-                        >
+                        </div>
+                        <div class="<%= (locals.user && user.id_category=="1") ? 'Show' : 'Edition-Delete' %>">
                             <a href="/<%= article.id %>/edit">
                                 <button type="button" class="button-50">
                                     Editar producto

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --light-color: #F8E0D8;
+    --green-color: #289991;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
@@ -18,28 +23,27 @@ main {
 }
 
 article {
-    margin: 20px 5px 20px 5px;
+    margin: 21px 6px 21px 6px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     text-align: center;
-    border: 1px solid #000000;
     background-color: #FFF;
     border-radius: 2%;
     width: auto;
     padding: 5px;
 }
 
-article a {
-    height: 50%;
+.image-link {
+    padding: 8px 0;
 }
 
-article img {
-    width: 60%;
+.image-link img {
+    width: 50%;
 }
 
-article img {
-    width: 60%;
+.main-article {
+    box-sizing: border-box;
 }
 
 .main-article .price {
@@ -74,7 +78,7 @@ article img {
     }
 
     article {
-        height: 400px;
+        height: 450px;
         width: 300px;
     }
     
@@ -96,10 +100,3 @@ article img {
         width: auto;
     }
 }
-
-/* @media(min-width: 900px) {
-    .product_img{
-        height: 90%;
-        width: auto;
-    }
-} */

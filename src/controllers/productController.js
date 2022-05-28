@@ -12,7 +12,7 @@ const operatorsAliases = {
 }
 
 const controller = {
-    detailMethod: (req, res) => {
+    detail: (req, res) => {
         const productIdToFind = req.params.id;
         
         db.Product.findByPk(productIdToFind,
@@ -83,18 +83,10 @@ const controller = {
             .catch((err) => {
                 return res.send(err);
             });
-
-        /* 5.Hay que colocar un botón de eliminar para borrar el contenido del carrito con un destroy(where: ID del usuario) */
-        /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
     },
-
-    create: (req, res) => {
-        res.render("products/create", {
-            siteTitle: "Manejo de Stock"
-        });
-    },
-
+    
     emptyCart: (req, res) => {
+        /* 5.Hay que colocar un botón de eliminar para borrar el contenido del carrito con un destroy(where: ID del usuario) */
         const userId = req.session.userLogged.id;
         db.Sale.destroy({
             where: {
@@ -107,6 +99,16 @@ const controller = {
             .catch((err) => {
                 return res.send(err);
             });
+    },
+
+    checkout: (req, res) => {
+        /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
+    },
+
+    create: (req, res) => {
+        res.render("products/create", {
+            siteTitle: "Manejo de Stock"
+        });
     },
 
     store: (req, res) => {

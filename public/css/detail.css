@@ -31,7 +31,7 @@ article {
     box-sizing: border-box;
 }
 
-main article a {
+article a {
     height: 50%;
 }
 
@@ -70,11 +70,9 @@ main article a {
 
 .button-50 {
     appearance: button;
-    background-color: #000;
+    background-color: var(--green-color);
     background-image: none;
-    border: 1px solid #000;
     border-radius: 4px;
-    box-shadow: #fff 2px 2px 0 0,#000 2px 2px 0 1px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -93,6 +91,8 @@ main article a {
     -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+    /* box-shadow: #fff 2px 2px 0 0,#000 2px 2px 0 1px; */
+    /* border: 1px solid #000; */
 }
 
 main article a .button-50:focus {
@@ -220,12 +220,14 @@ main article a .button-50:not([disabled]):active {
         width: 50px;
         margin: 0 10px;
     }
+
+    .Show {
+        display: flex;
+        justify-content: center;
+    }
  
-    main article .button-50 {
+    .button-50 {
         width: 200px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
         overflow: visible;
         padding: 7px 15px;
         text-align: center;
@@ -243,11 +245,6 @@ main article a .button-50:not([disabled]):active {
 
     main article .button-50:hover {
         text-decoration: none;
-    }
-
-    main article .button-50:active {
-        box-shadow: rgba(0, 0, 0, .125) 0 1px 3px inset;
-        outline: 0;
     }
 
     main article .button-50:not([disabled]):active {
