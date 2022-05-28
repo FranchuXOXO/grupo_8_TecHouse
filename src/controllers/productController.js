@@ -60,16 +60,32 @@ const controller = {
 
     cart: (req, res) => {
         /* 1.Necesito el ID del usuario*/
+        const userId = req.session.userLogged.id;
+
         /* 2.Necesito consultar que productos tiene el usuario en la tabla "sales" con un findAll(where: ID del usuario) */
-        /* 3.Necesito visualizar en la vista los productos del carrito actual (tabla "sales") */
-        /* 4.Hay que incluir el total de precio por el carrito según la suma de los precios de los productos incluidos */
+        db.Sale.findAll({
+            where: {
+                id_client: userId
+            },
+            include: [
+                "sale_products"
+            ]
+            })
+            .then(article => {
+                /* 4.Hay que incluir el total de precio por el carrito según la suma de los precios de los productos incluidos */
+                let suma = 0;
+                article.forEach(sumador => {
+                    suma += sumador.sale_products.product_price
+                })
+                 /* 3.Necesito visualizar en la vista los productos del carrito actual (tabla "sales") */
+                res.render("products/cart", { article, suma, siteTitle: "Carrito de compras", user: req.session.userLogged })
+            })
+            .catch((err) => {
+                return res.send(err);
+            });
+
         /* 5.Hay que colocar un botón de eliminar para borrar el contenido del carrito con un destroy(where: ID del usuario) */
         /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
-
-        res.render("products/cart", {
-            siteTitle: "Carrito",
-            user: req.session.userLogged
-        });
     },
 
     create: (req, res) => {
@@ -77,6 +93,24 @@ const controller = {
             siteTitle: "Manejo de Stock"
         });
     },
+
+    deleteCart: (req, res) => {
+        const userId = req.session.userLogged.id;
+        console.log(userId);
+        db.Sale.destroy({
+            where: {
+                id_client: userId
+                }
+            })
+            .then(() => {
+            res.render("products/cart", {siteTitle: "Carrito de compras", user: req.session.userLogged })
+              })
+
+            .catch((err) => {
+                return res.send(err);
+            });
+    },
+
 
     store: (req, res) => {
         const created = req.body
