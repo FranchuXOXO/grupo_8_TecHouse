@@ -8,42 +8,47 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-            <% if (article == ""){ %>
-                <h1>El carrito está vacío</h1>
-                <% } else { %>
+            <div class="cart-title">
+                <p>Tu Carrito:</p>
+            </div>
+            <% if (article == "") { %>
+                <div class="cart-empty-alert">
+                    <p>Tú carrito está vacío</p>
+                </div>
+            <% } else { %>
                 <div class="products-viewer">
-                <% article.forEach(product => { %>
-                    <div class="product">
-                        <div class="product-info">
-                            <div class="product-info-header">
-                                <img src="/images/Products/<%= product.sale_products.product_image %>" alt= "Foto de producto">
-                                <div class="product-details">
-                                    <h3><%= product.sale_products.product_name %></h3>
+                    <% article.forEach(product => { %>
+                        <div class="product">
+                            <div class="product-info">
+                                <div class="product-info-header">
+                                    <img src="/images/Products/<%= product.sale_products.product_image %>" alt= "Foto de producto">
+                                    <div class="product-details">
+                                        <h3><%= product.sale_products.product_name %></h3>
                                         <p>
                                             <%= product.sale_products.product_description %>
                                         </p>
+                                    </div>
+                                    <div class="product-trash-can">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </div>
                                 </div>
-                                <div class="product-trash-can">
-                                    <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <div class="product-pricing">
+                                <div class="unit-price">
+                                    $ <%= product.sale_products.product_price %>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-pricing">
-                            <div class="unit-price">
-                                $ <%= product.sale_products.product_price %>
-                            </div>
-                        </div>
-                    </div>
-                <% }) %>
+                    <% }); %>
                 </div> 
             <% } %>
-            <div>
-                <h3>Sumatoria: $ <%= suma %></h3>
+            <div class="cart-bottom">
+                <p>Sumatoria: $ <%= suma %></p>
             </div>
             <div class="full-cart-options-bar">
                 <form method="POST" action="/cart" enctype="multipart/form-data">
                     <button class="empty-cart">
-                        <a href="/cart">
+                        <a href="/cart/empty">
                             Limpiar Carrito <i class="fas fa-trash-alt"></i>
                         </a>
                     </button>

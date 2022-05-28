@@ -15,7 +15,8 @@ const productController = require("../controllers/productController");
 // Routes
 router.get("/Detalle/:id", productController.detailMethod);
 router.get("/cart", auth, productController.cart);
-router.post("/cart", auth, productController.deleteCart);
+router.get("/cart/empty", auth, productController.emptyCart);
+// router.post("/cart", auth, productController.emptyCart);
 
 router.get("/buy/:id", auth, productController.buy)
 

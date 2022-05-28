@@ -64,13 +64,13 @@ const controller = {
 
         /* 2.Necesito consultar que productos tiene el usuario en la tabla "sales" con un findAll(where: ID del usuario) */
         db.Sale.findAll({
-            where: {
-                id_client: userId
-            },
-            include: [
-                "sale_products"
-            ]
-            })
+                where: {
+                    id_client: userId
+                },
+                include: [
+                    "sale_products"
+                ]
+        })
             .then(article => {
                 /* 4.Hay que incluir el total de precio por el carrito según la suma de los precios de los productos incluidos */
                 let suma = 0;
@@ -94,23 +94,20 @@ const controller = {
         });
     },
 
-    deleteCart: (req, res) => {
+    emptyCart: (req, res) => {
         const userId = req.session.userLogged.id;
-        console.log(userId);
         db.Sale.destroy({
             where: {
                 id_client: userId
-                }
-            })
+            }
+        })
             .then(() => {
-            res.render("products/cart", {siteTitle: "Carrito de compras", user: req.session.userLogged })
-              })
-
+                return res.redirect('/cart');
+            })
             .catch((err) => {
                 return res.send(err);
             });
     },
-
 
     store: (req, res) => {
         const created = req.body

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Resets básicos */
+:root {
+    --light-color: #F8E0D8;
+    --green-color: #289991;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
@@ -8,14 +12,16 @@ body {
     box-sizing: border-box;
 }
 
+.cart-title p {
+    margin: 90px 20px 10px 20px;
+}
+
 .products-viewer {
-    background-color:white;
-    margin-top: 75px;
     padding: 5px 20px;
 }
 
 .product {
-    background-color: #F8E0D8;
+    background-color: var(--light-color);
     margin-bottom: 5px;
     border-radius: 5px;
     border: solid silver 1px;
@@ -126,8 +132,8 @@ body {
 
 .empty-cart,
 .confirm-cart {
-    border: solid #F8E0D8 1px;
-    background-color: #F8E0D8;
+    border: solid var(--light-color) 1px;
+    background-color: var(--light-color);
     border-radius: 5px;
     padding: 15px;
     width: 150px;
@@ -181,8 +187,21 @@ body {
 }
 
 @media (min-width: 450px) {
+    .cart-title p {
+        margin: 20px 0;
+        padding: 0 60px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .cart-empty-alert p {
+        margin: 20px 0;
+        padding: 0 60px;
+        font-size: 18px;
+    }
+
     .products-viewer {
-        margin-top: 135px;
+        margin-top: 0;
         padding: 5px 60px;
     }
 
@@ -197,18 +216,22 @@ body {
     
     .empty-cart,
     .confirm-cart {
-        border: solid #F8E0D8 1px;
-        background-color: #F8E0D8;
+        border: solid var(--light-color) 1px;
+        background-color: var(--light-color);
         border-radius: 5px;
         padding: 15px;
         width: 180px;
         text-align: center;
         font-weight: bold;
+        /* text-decoration: none; */
+        color: black;
+    }
+
+    .empty-cart a {
         text-decoration: none;
         color: black;
     }
 
-    .empty-cart,
     .confirm-cart a {
         text-decoration: none;
         color: black;
@@ -221,7 +244,14 @@ body {
         margin: 0px 3px;
         text-decoration: none;
         color: black;
-    } */
+    }
+
+    .cart-bottom p {
+        margin: 20px 0;
+        padding: 0 60px;
+        font-size: 18px;
+        font-weight: bold;
+    }
 
     .safety-mentions {
         display: flex;
