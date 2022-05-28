@@ -59,19 +59,12 @@ const controller = {
     },
 
     cart: (req, res) => {
-        /* Necesito el ID del usuario*/
-
-        /* Necesito el ID del producto a comprar */
-
-        /* Necesito consultar el carrito del usuario guardado en la base de datos*/
-
-        /* Necesito agregar el producto a comprar al carrito actual */
-
-        /* Hay que sumar los valores de los productos del carrito + el nuevo producto */
-
-        /* Hay que colocar un contador de producto, cuando el usuario quiere mas de uno */
-
-        /* Hay que colocar un botón de guardar carrito */
+        /* 1.Necesito el ID del usuario*/
+        /* 2.Necesito consultar que productos tiene el usuario en la tabla "sales" con un findAll(where: ID del usuario) */
+        /* 3.Necesito visualizar en la vista los productos del carrito actual (tabla "sales") */
+        /* 4.Hay que incluir el total de precio por el carrito según la suma de los precios de los productos incluidos */
+        /* 5.Hay que colocar un botón de eliminar para borrar el contenido del carrito con un destroy(where: ID del usuario) */
+        /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
 
         res.render("products/cart", {
             siteTitle: "Carrito",
