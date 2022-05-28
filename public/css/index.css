@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* acá comienza el estilo del header mobile*/
+:root {
+    --light-color: #F8E0D8;
+    --green-color: #289991;
+    --grey-bcg: rgba(0, 0, 0, .125);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
