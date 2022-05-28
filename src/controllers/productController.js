@@ -110,7 +110,7 @@ const controller = {
             ]
         })
             .then(article => {
-                res.render("products/productList", { article, siteTitle: "Lista de Productos", user: req.session.userLogged })
+                res.render("products/list", { article, siteTitle: "Lista de Productos", user: req.session.userLogged })
             })
             .catch((err) => {
                 return res.send(err);
@@ -189,7 +189,7 @@ const controller = {
             ]
         }).then(article => {
 
-            res.render('products/productList', { article, siteTitle: 'Resultado de la búsqueda', user: req.session.userLogged })
+            res.render('products/list', { article, siteTitle: 'Resultado de la búsqueda', user: req.session.userLogged })
         })
     }
 }

@@ -14,11 +14,11 @@ main {
     align-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Roboto';
+    box-sizing: border-box;
 }
-main article {
-    margin: 5px;
-    margin-top: 20px;
+
+article {
+    margin: 20px 5px 20px 5px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -26,19 +26,19 @@ main article {
     border: 1px solid #000000;
     background-color: #FFF;
     border-radius: 2%;
-    height: 60%;
     width: auto;
-    padding: 10px;
+    padding: 5px;
 }
-main article a {
+
+article a {
     height: 50%;
 }
 
-main article img {
+article img {
     width: 60%;
 }
 
-main article img {
+article img {
     width: 60%;
 }
 
@@ -49,22 +49,22 @@ main article img {
     background-color: #00A997;
     border-radius: 2%;
 }
+
 .main-article .description {
     font-size: 0.8rem;
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .main-article .colours {
     font-size: 0.8rem;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-/* acá comienza el estilo desktop*/
-
 @media (min-width: 450px){
     main {
-        margin-top: 0px;
+        margin-top: 0;
         display: flex;
         align-content: center;
         flex-direction: row;
@@ -72,33 +72,34 @@ main article img {
         justify-content: center;
         flex-wrap: wrap;
     }
-    main article {
-        margin-top: 40px;
+
+    article {
         height: 400px;
         width: 300px;
-        }
+    }
     
     main:hover article:not(:hover){
         filter: grayscale(100%);
-        }
+    }
+
     main::after {
         background-color: rgba(#000, 0.5);
-      }
+    }
+
     article::after {
         background-color: rgba(#000, 0);
         transition: .3s;
     }
 
     .product_img{
-        height: 90%;
+        height: 150px;
         width: auto;
-
     }
 }
-@media(min-width: 900px)
-{
+
+/* @media(min-width: 900px) {
     .product_img{
         height: 90%;
         width: auto;
     }
-}
+} */

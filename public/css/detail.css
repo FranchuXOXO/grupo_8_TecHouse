@@ -15,17 +15,16 @@ body {
 }
 
 main {
-    color: black;
+    display: flex;
+    flex-direction: column;
     padding-top: 80px;
     text-align: center;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     margin: 5px 8px;
     background-color: black;
 }
 
-main article {
+article {
     background-color: #FFF;
     border-radius: 4px;
     width: 100%;
@@ -134,14 +133,14 @@ main article a .button-50:not([disabled]):active {
         margin: auto;
     }
 
-    main article {
+    article {
         margin: 15px 0;
         display: flex;
         align-content: center;
         flex-direction: column;
         justify-content: center;
         width: 900px;
-        padding: 30px;
+        padding: 20px;
     }
 
     .article-flex-container {

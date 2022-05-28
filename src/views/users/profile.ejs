@@ -6,14 +6,17 @@
     </head>
     <body>
         <%- include("../partials/header.ejs") %>
-        
         <main>
-            <div class="profileContainer">
+            <div class="profile-container">
                 <img src="/images/users/<%= user.profile_image %> ">
-                <div class="col">
-                    <h2>Hola <%= user.first_name %> </h2>
+                <div class="profile-info">
+                    <h2>
+                        Hola <%= user.first_name %>
+                    </h2>
                     <a href="/user/<%= user.id %>/edit">
-                        <button type="button"> Editar perfil </button>
+                        <button type="button">
+                            Editar perfil
+                        </button>
                     </a>
                     <br>
                     <div class="email">
@@ -21,12 +24,13 @@
                     </div>
                     <br>
                     <a href="/logout/">
-                        <button type="button"> Cerrar sesión </button>
+                        <button type="button">
+                            Cerrar sesión
+                        </button>
                     </a>
                 </div>
             </div>
         </main> 
-
         <%- include("../partials/footer.ejs") %>
     </body>
 </html>
