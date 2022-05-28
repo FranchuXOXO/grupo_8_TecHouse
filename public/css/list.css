@@ -22,6 +22,13 @@ main {
     box-sizing: border-box;
 }
 
+.no-results-found-alert p {
+    margin: 220px 0;
+    padding: 0 60px;
+    font-size: 18px;
+    color: white;
+}
+
 article {
     margin: 21px 6px 21px 6px;
     display: flex;
