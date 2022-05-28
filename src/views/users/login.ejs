@@ -9,7 +9,8 @@
         <%- include("../partials/header.ejs") %>
         <main>
             <div class="container"> 
-                <h1>Iniciar sesión</h1>
+                <h1>¡Hola visitante!</h1>
+                <h3>Tienes que loguearte para comprar productos</h3>
                 <form class="form-login" action="/Login" method="POST">
                     <div class="form-container">
                         <label for="correo">
@@ -44,34 +45,8 @@
                         </button>
                     </div>        
                     <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="/signup">¿Aun no estas registrado? Crea una cuenta</a>
+                    <a href="/signup">Si no tienes cuenta, regístrate aquí.</a>
                 </form>
-            </div>
-            <div class="caja">
-                <div class="caja-envio">
-                    <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>
-                    <div class="caja-envio-texto">
-                        <h4>Enviamos tu compra</h4>
-                        <p>Entregas en todo el pais</p>
-                    </div>
-                    
-                </div>
-
-                <div class="caja-pago">
-                    <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-credit-card-finance-kiranshastry-lineal-kiranshastry-1.png"/>
-                    <div class="caja-envio-texto">
-                        <h4>Paga como quieras</h4>
-                        <p>Tarjetas de crédito o efectivo</p>
-                    </div>
-                </div>
-
-                <div class="caja-seguridad">
-                    <img src="https://img.icons8.com/windows/32/000000/security-block.png"/>
-                    <div class="caja-envio-texto">
-                        <h4>Compra con seguridad</h4>
-                        <p>Tus datos siempre protegidos</p>
-                    </div>
-                </div>
             </div>
         </main> 
         <%- include("../partials/footer.ejs") %>

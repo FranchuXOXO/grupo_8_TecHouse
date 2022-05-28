@@ -29,6 +29,38 @@ const productController = {
             });
     },
 
+    buy: (req, res) => {
+        const productIdtoBuy = req.params.id;
+        db.Product.findByPk(productIdtoBuy,
+            {
+                include: [
+                    "product_colors", "product_compatibilities"
+                ]
+            }).then(article =>
+                { 
+                userID = req.session.userLogged.id;
+                console.log (article);
+
+                db.Sale.create(
+                    { 
+                        id_product: article.id,
+                        id_client: userID
+                    }
+                    )
+                .then(() => {
+                    return res.render('products/cart', { siteTitle: 'Carrito de compras', user: req.session.userLogged })
+                })
+                .catch((err) => {
+                    return res.send(err);
+                    }  
+                 )
+            .catch((err) => {
+                return res.send(err);
+            });
+            })
+        },
+        
+
     cart: (req, res) => {
         /* Necesito el ID del usuario*/
 

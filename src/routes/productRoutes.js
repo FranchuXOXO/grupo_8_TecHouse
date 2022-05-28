@@ -15,6 +15,7 @@ const productController = require("../controllers/productController");
 // Routes
 router.get("/Detalle/:id", productController.detailMethod);
 router.get("/cart", auth, productController.cart);
+router.get("/buy/:id", auth, productController.buy)
 
 router.get("/products", auth, administrator, productController.create);
 router.post("/products", upload.single("product_image"), validator, productController.store)
