@@ -34,6 +34,14 @@
                 <% }) %>
             <% } %>
         </main>
+        <div class="<%= (locals.user && user.id_category=="1") ? 'show' : 'create-button' %>">
+            <!-- <div class="create-buttom"> -->
+                <a href="/products">
+                    <button type="button" class="button-50">
+                        Crear producto
+                    </button>
+                </a>
+            </div>
         <%- include("../partials/footer.ejs") %>
     </body>
 </html>

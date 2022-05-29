@@ -49,20 +49,24 @@
                 <a href="/list">Haz click aquí si quieres continuar comprando</a>
             </div>
             <% } %>
-            <div class="full-cart-options-bar">
-                <form method="POST" action="/cart" enctype="multipart/form-data">
-                    <button class="empty-cart">
-                        <a href="/cart/empty">
-                            Limpiar Carrito <i class="fas fa-trash-alt"></i>
-                        </a>
-                    </button>
-                    <button class="confirm-cart">
-                        <a href="/cart/checkout">
-                            Comprar Carrito <i class="fas fa-check"></i>
-                        </a>
-                    </button>
-                </form>
-            </div>
+            <% if (article == '') { %>
+                <!-- En caso de no haber items en el carrito, no se muestran los botones -->
+            <% } else { %>
+                <div class="full-cart-options-bar">
+                    <form method="POST" action="/cart" enctype="multipart/form-data">
+                        <button class="empty-cart">
+                            <a href="/cart/empty">
+                                Limpiar Carrito <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </button>
+                        <button class="confirm-cart">
+                            <a href="/cart/checkout">
+                                Comprar Carrito <i class="fas fa-check"></i>
+                            </a>
+                        </button>
+                    </form>
+                </div>
+            <% } %>
             <div class="safety-mentions">
                 <div class="caja-envio">
                     <img src="https://img.icons8.com/pastel-glyph/64/000000/shipping-service--v2.png"/>

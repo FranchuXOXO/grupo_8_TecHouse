@@ -118,9 +118,20 @@ const controller = {
 
     checkout: (req, res) => {
         /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
-        res.render("users/cartPost", {
-            siteTitle: "Gracias por tu compra"
-        });
+        const userId = req.session.userLogged.id;
+        db.Sale.destroy({
+            where: {
+                id_client: userId
+            }
+        })
+            .then(() => {
+                return res.render("users/cartPost", {
+                    siteTitle: "Gracias por tu compra"
+                });
+            })
+            .catch((err) => {
+                return res.send(err);
+            });
     },
 
     create: (req, res) => {
