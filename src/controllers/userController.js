@@ -87,7 +87,8 @@ const controller = {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                             }
 
-                            return controller.profile(req, res);
+                            res.redirect(req.session.persistedUrl || '/profile');
+                            return delete req.session.persistedUrl;
                         }
 
                         return res.render('users/login', {
