@@ -13,7 +13,8 @@
             </div>
             <% if (article == "") { %>
                 <div class="cart-empty-alert">
-                    <p>Tú carrito está vacío</p>
+                    <p>Tu carrito está vacío</p>
+                    <a href="/list">Haz click aquí si quieres adquirir algún producto</a>
                 </div>
             <% } else { %>
                 <div class="products-viewer">
@@ -43,6 +44,7 @@
                 </div> 
             <div class="cart-bottom">
                 <p>Sumatoria: $ <%= suma %></p>
+                <a href="/list">Haz click aquí si quieres continuar comprando</a>
             </div>
             <% } %>
             <div class="full-cart-options-bar">

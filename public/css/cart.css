@@ -16,6 +16,21 @@ body {
     margin: 90px 20px 10px 20px;
 }
 
+.cart-empty-alert {
+    margin: 10px 20px 10px 0px;
+}
+
+.cart-empty-alert p {
+    margin: 5px 20px 10px 20px;
+    font-size: 0.8rem;
+}
+
+.cart-empty-alert a {
+    margin: 5px 20px 10px 20px;
+    font-size: 0.6rem;
+    text-decoration: none;
+}
+
 .products-viewer {
     padding: 5px 20px;
 }
@@ -194,10 +209,21 @@ body {
         font-weight: bold;
     }
 
+    .cart-empty-alert {
+        margin-bottom: 10px;
+    }
+
     .cart-empty-alert p {
         margin: 20px 0;
         padding: 0 60px;
         font-size: 18px;
+    }
+
+    .cart-empty-alert a {
+        margin: 20px 0;
+        padding: 0 60px;
+        font-size: 18px;
+        text-decoration: none;
     }
 
     .products-viewer {
@@ -250,6 +276,12 @@ body {
         padding: 0 60px;
         font-size: 18px;
         font-weight: bold;
+    }
+    .cart-bottom a {
+        margin: 20px 0;
+        padding: 0 60px;
+        font-size: 14px;
+        text-decoration: none;
     }
 
     .safety-mentions {
