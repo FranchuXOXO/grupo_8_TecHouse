@@ -84,6 +84,21 @@ const controller = {
                 return res.send(err);
             });
     },
+
+    removeItem: (req, res) => {
+        db.Sale.destroy({
+            where: {
+                id: req.params.id,
+                id_client: req.session.userLogged.id,
+            }
+        })
+            .then(() => {
+                return res.redirect('/cart');
+            })
+            .catch((err) => {
+                return res.send(err);
+            });
+    },
     
     emptyCart: (req, res) => {
         /* 5.Hay que colocar un botón de eliminar para borrar el contenido del carrito con un destroy(where: ID del usuario) */
