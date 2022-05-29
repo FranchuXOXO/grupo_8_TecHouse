@@ -13,24 +13,22 @@ const validator = require("../middlewares/productValidator");
 const productController = require("../controllers/productController");
 
 // Routes
+router.get("/list", productController.list);
+router.get("/search", productController.search);
 router.get("/Detalle/:id", productController.detail);
+
+router.get("/buy/:id", auth, productController.buy);
+
 router.get("/cart", auth, productController.cart);
 router.get("/cart/empty", productController.emptyCart);
 router.get("/cart/checkout", productController.checkout);
 router.get("/cart/remove/:id", productController.removeItem);
 
-router.get("/buy/:id", auth, productController.buy);
-
-
 router.get("/products", auth, administrator, productController.create);
 router.post("/products", upload.single("product_image"), validator, productController.store)
 
-router.get("/list", productController.list);
-
 router.get("/:id/edit", auth, administrator, productController.edit);
 router.put("/:id", upload.single('product_image'), validator, productController.update);
-
-router.get("/search", productController.search);
 
 router.delete("/:id", auth, administrator, productController.delete);
 

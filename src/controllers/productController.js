@@ -171,7 +171,7 @@ const controller = {
         })
             .then(productToEdit => {
                 if (productToEdit != null)
-                    res.render("products/productEdit", { productToEdit, siteTitle: "Edición del producto", user: req.session.userLogged })
+                    res.render("products/edit", { productToEdit, siteTitle: "Edición del producto", user: req.session.userLogged })
                 else
                     res.send("Este producto no existe en la base de datos")
             })
@@ -208,7 +208,7 @@ const controller = {
                 ]
             })
                 .then(productToEdit => {
-                    res.render('products/productEdit', { errors: errors.mapped(), productToEdit, old: req.body, siteTitle: "Formulario de edición de productos" })
+                    res.render('products/edit', { errors: errors.mapped(), productToEdit, old: req.body, siteTitle: "Formulario de edición de productos" })
                 }).catch(error => res.send(error))
         }
     },
