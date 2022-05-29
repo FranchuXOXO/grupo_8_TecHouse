@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin: 64px 0;
+}
+
+.cuadro {
+    margin: 32px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    box-shadow: 0px 0px 4px 13px rgba(201,201,201,0.5);
+    -webkit-box-shadow: 0px 0px 4px 13px rgba(201,201,201,0.5);
+    -moz-box-shadow: 0px 0px 4px 13px rgba(201,201,201,0.5);
+    width: 50%;
+}
+
+.cuadro h1 {
+    font-size: 40px;
+    color: #289991;
+}
+.cuadro p {
+    font-size: 1.2rem;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback .iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    margin-top: 10px;
+}
+.feedback i {
+    font-size: 64px;
+    color: black;
+}
+#good:hover{
+    color: green;
+}
+#regular:hover{
+    color: grey;
+}
+#bad:hover{
+    color: red;
+}
+.feedback a {
+    text-decoration: none;
+}
+.feedback h4 {
+    font-size: 24px;
+    margin: 0;
+}

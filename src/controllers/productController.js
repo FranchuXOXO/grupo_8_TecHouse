@@ -103,6 +103,9 @@ const controller = {
 
     checkout: (req, res) => {
         /* 6.Hay que colocar un botón de comprar para el carrito y mandarte hacia Mercado Pago */
+        res.render("users/cartPost", {
+            siteTitle: "Gracias por tu compra"
+        });
     },
 
     create: (req, res) => {

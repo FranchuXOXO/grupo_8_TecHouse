@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vistaPost.css">
+    <%- include ("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+        <div class="cuadro">
+            <h1>¡Muchas gracias por tu compra!</h1>
+            <p>En TecHouse estamos felices que nos hayas escogido para formar parte de tu experiencia inteligente.Te llegara un código a tu mail con el cual podrás hacerle seguimiento a tu pedido.</p>
+        </div>
+        <div class = "feedback">
+        <h4>Cuentanos ¿Cómo fue la experiencia de compra en nuestra web?</h4>
+        <div class="iconos">
+            <a href="#" >
+                <i id="good" class="fa-regular fa-face-smile"></i>
+            </a>
+            <a href="#">
+                <i id="regular" class="fa-regular fa-face-meh"></i>
+            </a>
+            <a href="#">
+                <i id="bad" class="fa-regular fa-face-frown"></i>
+            </a>
+        </div>
+    </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+    <script src="https://kit.fontawesome.com/08e5deb443.js" crossorigin="anonymous"></script>
+</body>
+</html>
