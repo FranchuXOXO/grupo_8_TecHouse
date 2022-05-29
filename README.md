@@ -1,4 +1,5 @@
 # TecHouse
+<h2> "TecHouse" es el proyecto de desarrollo Front/Back dev del Grupo 8 en Digital House. Comencemos definiendo a TecHouse:</h2>
 <p>
     Es una empresa lider de soluciones tecnológicas para automatizar ambientes hogareños, ofreciendo a sus clientes las mejores alternativas inalámbricas para acondicionar los lugares más especiales. 
 </p>
@@ -80,4 +81,9 @@
 <h2><u>Acceso al tablero de Sprints</u></h2>
 <ul>
 <li>https://trello.com/b/Bn7DnKOr/proyecto-dh</li>
+</ul>
+
+<h2><u>Acceso a la presentación final del proyecto</u></h2>
+<ul>
+<li>https://my.visme.co/view/dmyz3w97-oq6lx9jjpvr0l9wp</li>
 </ul>
