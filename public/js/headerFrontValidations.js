@@ -1,13 +1,15 @@
 window.addEventListener('load', () => {
-    let headerSearchBardesktop = document.querySelector('.header-searchBar-desktop');
+    let searchForm = document.querySelector('.search-form');
     let headerSearchBar = document.querySelector('#headerSearchBar');
 
-    headerSearchBardesktop.addEventListener('submit', (e) => {
+    searchForm.addEventListener('submit', (e) => {
         if (headerSearchBar.value == '') {
             e.preventDefault();
-            let searchBarError = document.querySelector('.error-searchBar');
-            searchBarError.innerText = ''
-            searchBarError.innerHTML += 'Este campo está vacío';
+           alert("Debes escribir algo")
+           headerSearchBar.focus()
+            // let searchBarError = document.querySelector('.error-searchBar');
+          //  searchBarError.innerText = ''
+           // searchBarError.innerHTML += 'Este campo está vacío';
         }
     });
 });
