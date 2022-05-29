@@ -346,7 +346,11 @@ header {
     }
     
     .top-header.part-3 {
-        width: 20%;
+        width: 23%;
         padding-left: 40px;
-    }  
+    }
+    
+    .top-header.part-4 {
+        width: 9%;
+    }
 }
