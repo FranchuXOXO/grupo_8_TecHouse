@@ -174,7 +174,7 @@ const controller = {
                 where: { id: req.params.id }
             }
         ).then(() => {
-            return res.send('usuario editado')
+            res.redirect('/profile');
         })
             .catch(error => res.send(error))
     },
