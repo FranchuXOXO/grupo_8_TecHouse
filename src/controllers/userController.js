@@ -49,9 +49,15 @@ const controller = {
         if (errors.isEmpty()) {
             created.profile_image = req.file.filename
             db.Client.create(created)
-                .then(() => {
+                .then( async () => {
+                    let user = await db.Client.findOne({
+                        where: {
+                            email: created.email,
+                        }
+                    });
+                    req.session.userLogged = user;
                     return res.render('users/profile', {
-                        user: created,
+                        user: user,
                         siteTitle: "Perfil"
                     });
                 })
@@ -140,7 +146,6 @@ const controller = {
     // método (GET) para renderizar la vista de edición de usuario
     edit: (req, res) => {
         let idUser = req.params.id;
-        
         db.Client.findByPk(idUser)
             .then(UserToEdit => {
                 if (UserToEdit != null) {
