@@ -120,17 +120,23 @@ h1 {
 
 .form-container label {
     font-weight: bold;
-    font-size: 14px;    
+    font-size: 14px;  
+    margin-left: 5px;  
 }
 
 .form-input {
     border: 1px solid silver;
 }
-
+#h3{
+font-size:medium;
+margin-left: 5px;
+margin-bottom: 25px;
+}
 #email,
 #password {
     margin-bottom: 10px;
-    width: 100%;
+    margin-left: 5px;
+    width: 82%;
     border-radius: 0.375em;
     min-height: 40px;
     box-sizing: border-box;
@@ -223,7 +229,20 @@ h1 {
     .header-top {
         display: none;
     }
-    
+    .form-container label {
+        margin-left: 0px;  
+    }
+    #h3{
+        font-size:large;
+        margin-left: 0px;
+        }
+
+    #email,
+#password {
+    margin-left: 0px;
+    width: 100%;
+   
+}
     .header-global-desktop {
         position: fixed;
         top: 0;
