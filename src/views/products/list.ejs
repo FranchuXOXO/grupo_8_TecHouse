@@ -14,7 +14,9 @@
             <% } else { %>
                 <% article.forEach(product => { %>
                     <article>
-                        <h2><%= product.product_name %></h2>
+                        <div class="article-title">
+                            <h2><%= product.product_name %></h2>
+                        </div>
                         <div class="image-link">
                             <a href="/Detalle/<%= product.id %>">
                                 <img src="/images/Products/<%= product.product_image %>" alt="<%= product.product_name %>" class="product_img">

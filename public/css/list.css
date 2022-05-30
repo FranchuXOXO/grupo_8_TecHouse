@@ -33,12 +33,16 @@ article {
     margin: 21px 6px 21px 6px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-evenly;
     text-align: center;
     background-color: #FFF;
     border-radius: 2%;
     width: auto;
     padding: 5px;
+}
+
+.article-title {
+    height: 100px;
 }
 
 .image-link {
