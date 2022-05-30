@@ -27,11 +27,11 @@ main {
     width: 290px;
 }
 
-.formSignup {
+.form-sign-up {
     display: flex;
     flex-direction: column;
 }
-.formSignup input {
+.form-sign-up input {
     margin-bottom: 16px;
 }
 
