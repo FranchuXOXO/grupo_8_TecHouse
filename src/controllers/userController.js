@@ -173,10 +173,15 @@ const controller = {
             {
                 where: { id: req.params.id }
             }
-        ).then(() => {
-            res.redirect('/profile');
-        })
-            .catch(error => res.send(error))
+        )
+            .then( async () => {
+                let user = await db.Client.findByPk(req.params.id);
+                req.session.userLogged = user;
+                return res.redirect('/profile');
+            })
+            .catch((err) => {
+                return res.send(err);
+            });
     },
 
     logout: (req, res) => {
