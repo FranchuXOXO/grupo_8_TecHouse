@@ -126,7 +126,8 @@ const controller = {
         })
             .then(() => {
                 return res.render("users/cartPost", {
-                    siteTitle: "Gracias por tu compra"
+                    siteTitle: "Gracias por tu compra", 
+                    user: req.session.userLogged
                 });
             })
             .catch((err) => {
