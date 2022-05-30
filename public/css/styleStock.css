@@ -6,37 +6,9 @@ body {
     padding: 0px;
     box-sizing: border-box;
     line-height: 1.5;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
-h2 {
-    font-size: 24px;
-}
-
-/* ========================================================
-    Header
-======================================================== */
-
-header {
-    background-color: black;
-}
-
-div.top-header {
-    width: 100vw;
-    height: 100px;  
-}
-
-div.header-first-line {
-    display: flex;
-    width: 100%;
-    height: 130px;
-    color: #F8E0D8;
-}
-
-.TecHouse-logo {
-    width: 100px;
-    margin: 5px;
-}
 
 /* ========================================================
     Main
@@ -44,12 +16,34 @@ div.header-first-line {
 
 main {
     margin: auto;
-    width: 90vw;
+    background-color: black;
 }
 
-main form {
-    padding: 20px 20px;
-    width: 100%;
+article {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+article h2 {
+    font-size: 1rem;
+}
+
+main .article-flex-container {
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+main .formProductCreate {
+    padding: 10px 10px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-main {
@@ -60,10 +54,10 @@ main form {
     width: 100%
 }
 
-.stock-manager-form form {
+.form-container-buttons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-container, .form-container-description, .form-container-buttons  {
@@ -84,27 +78,24 @@ main form {
 @media (min-width: 450px) {
     
     body {
-        background-color: white;
+        background-color: black;
         margin: 0px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
     }
 
-    .top-header {
-        height: 130px;
+    article {
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    .TecHouse-logo {
-        width: 140px;
-    }
-
-    .top-main {
-        display: flex;
-        justify-content: space-between;
+    article h2 {
+        font-size: 1.4rem;
     }
 
     .form-container, .form-button {
-        width: 45%;
+        width: 30%;
     }
 
     .form-button {
@@ -116,84 +107,12 @@ main form {
     .error-product-name {
         color: red;
     }
-}
 
-/* .footer-top {
-    display: flex;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
+    main .article-flex-container {
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        width: 60%;
+        padding-left: 20px;
+    }
 }
-
-.footer-top a {
-    text-decoration: none;
-    color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li {
-    list-style: none;
-}
-.formulario {
-    display: none;
-}
-
-.footer-top {
-    display: flex;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    color: #F8E0D8;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 2vw;
-}
-
-.footer-top a {
-text-decoration: none;
-color: #F8E0D8;
-}
-
-.footer-top ul {
-    padding: 0;
-    padding-top: 10px;
-}
-
-.footer-top li {
-    list-style: none;
-}
-
-.formulario {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #F8E0D8;
-    text-align: left;
-    background-color: black;
-    padding-bottom: 10px;
-    width: 400px;
-}
-
-.formNombre {
-    width: 70%;
-}
-.formMensaje {
-    width: 70%;
-}
-.formEmail {
-    width: 70%;
-}
-.tituloForm {
-    font-size: 2rem;
-} */
