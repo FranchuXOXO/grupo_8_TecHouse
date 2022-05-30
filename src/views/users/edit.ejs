@@ -10,8 +10,8 @@
         <%- include ("../partials/header.ejs") %>
         <main>
             <div class="cuadro">
-                <h1>Crear una cuenta</h1>
-                <p>Ingresa tus datos personales y disfruta de una experiencia de compra más rápida</p>
+                <h1>Modifica tus datos</h1>
+                <br>
                 <form class="formSignup" action="/user/<%= UserToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <label for="nombre">
                         Primer Nombre

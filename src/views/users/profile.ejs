@@ -3,31 +3,49 @@
     ​<head>
         <%- include ("../partials/head.ejs") %>
         <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="./css/detail.css">
     </head>
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
             <div class="profile-container">
-                <img src="/images/users/<%= user.profile_image %> ">
-                <div class="profile-info">
-                    <h2>
-                        Hola <%= user.first_name %>
-                    </h2>
-                    <a href="/user/<%= user.id %>/edit">
-                        <button type="button">
-                            Editar perfil
-                        </button>
-                    </a>
-                    <br>
-                    <div class="email">
-                        <%= user.email %> 
+                <div class="profile-logged">
+                    <div class="profile-logged-image">
+                        <img src="/images/users/<%= user.profile_image %> ">
                     </div>
-                    <br>
-                    <a href="/logout/">
-                        <button type="button">
+
+                    <div class="profile-logged-info">
+                        <h2>
+                            Hola <%= user.first_name %> 
+                        </h2>
+
+                        <p class="email">
+                            <%= user.email %> 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <div class="profile-info-user">
+                        <h3>Mis Datos:</h3>
+                    <h4>Nombre: <span><%= user.first_name %></span></h4>
+
+                    <h4>Apellido: <span><%= user.last_name %></span></h4>
+                    </div>
+
+                    <div class="profile-info-buttons">
+                        <a href="/user/<%= user.id %>/edit">
+                            <button class="button-50" type="button">
+                            Editar perfil
+                            </button>
+                        </a>
+
+                        <a href="/logout/">
+                            <button class="button-50" type="button">
                             Cerrar sesión
-                        </button>
-                    </a>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </main> 
