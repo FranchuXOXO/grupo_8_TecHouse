@@ -87,3 +87,8 @@
 <ul>
 <li>https://my.visme.co/view/dmyz3w97-oq6lx9jjpvr0l9wp</li>
 </ul>
+
+<h2><u>Acceso al repo del dashboard en React</u></h2>
+<ul>
+<li>https://github.com/FranciscoSalanova/grupo_8_Techouse_dashboard</li>
+</ul>
