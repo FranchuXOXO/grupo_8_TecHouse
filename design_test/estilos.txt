@@ -1,7 +1,0 @@
-Home font: Roboto
-Colores:
-    Fonts-menu: #F8E0D8
-    Fonts: #FFFFFF
-    Iconos: #F8E0D8
-    Background: #000000
-    Background navbar: #00A997
